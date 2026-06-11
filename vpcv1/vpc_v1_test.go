@@ -8471,7 +8471,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "network_interfaces": [{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}], "next": {"href": "Href"}, "total_count": 132}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "network_interfaces": [{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}], "next": {"href": "Href"}, "total_count": 132}`)
 				}))
 			})
 			It(`Invoke ListBareMetalServerNetworkInterfaces successfully with retries`, func() {
@@ -8532,7 +8532,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "network_interfaces": [{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}], "next": {"href": "Href"}, "total_count": 132}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "network_interfaces": [{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}], "next": {"href": "Href"}, "total_count": 132}`)
 				}))
 			})
 			It(`Invoke ListBareMetalServerNetworkInterfaces successfully`, func() {
@@ -8680,9 +8680,9 @@ var _ = Describe(`VpcV1`, func() {
 					res.WriteHeader(200)
 					requestNumber++
 					if requestNumber == 1 {
-						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"network_interfaces":[{"allow_ip_spoofing":true,"created_at":"2026-01-02T03:04:05.006Z","enable_infrastructure_nat":true,"floating_ips":[{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip"}],"href":"https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6","id":"0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6","mac_address":"02:00:04:00:C4:6A","name":"my-bare-metal-server-network-interface","port_speed":1000,"primary_ip":{"address":"192.168.3.4","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","id":"0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","name":"my-reserved-ip","resource_type":"subnet_reserved_ip"},"resource_type":"network_interface","security_groups":[{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","id":"r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","name":"my-security-group"}],"status":"available","subnet":{"crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","id":"0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","name":"my-subnet","resource_type":"subnet"},"type":"primary","interface_type":"hipersocket"}]}`)
+						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"network_interfaces":[{"allow_ip_spoofing":true,"created_at":"2026-01-02T03:04:05.006Z","enable_infrastructure_nat":true,"floating_ips":[{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","resource_type":"floating_ip"}],"href":"https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6","id":"0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6","mac_address":"02:00:04:00:C4:6A","name":"my-bare-metal-server-network-interface","port_speed":1000,"primary_ip":{"address":"192.168.3.4","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","id":"0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","name":"my-reserved-ip","resource_type":"subnet_reserved_ip"},"resource_type":"network_interface","security_groups":[{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","id":"r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","name":"my-security-group"}],"status":"available","subnet":{"crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","id":"0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","name":"my-subnet","resource_type":"subnet"},"type":"primary","interface_type":"hipersocket"}]}`)
 					} else if requestNumber == 2 {
-						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"network_interfaces":[{"allow_ip_spoofing":true,"created_at":"2026-01-02T03:04:05.006Z","enable_infrastructure_nat":true,"floating_ips":[{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip"}],"href":"https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6","id":"0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6","mac_address":"02:00:04:00:C4:6A","name":"my-bare-metal-server-network-interface","port_speed":1000,"primary_ip":{"address":"192.168.3.4","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","id":"0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","name":"my-reserved-ip","resource_type":"subnet_reserved_ip"},"resource_type":"network_interface","security_groups":[{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","id":"r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","name":"my-security-group"}],"status":"available","subnet":{"crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","id":"0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","name":"my-subnet","resource_type":"subnet"},"type":"primary","interface_type":"hipersocket"}]}`)
+						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"network_interfaces":[{"allow_ip_spoofing":true,"created_at":"2026-01-02T03:04:05.006Z","enable_infrastructure_nat":true,"floating_ips":[{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","resource_type":"floating_ip"}],"href":"https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6","id":"0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6","mac_address":"02:00:04:00:C4:6A","name":"my-bare-metal-server-network-interface","port_speed":1000,"primary_ip":{"address":"192.168.3.4","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","id":"0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","name":"my-reserved-ip","resource_type":"subnet_reserved_ip"},"resource_type":"network_interface","security_groups":[{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","id":"r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","name":"my-security-group"}],"status":"available","subnet":{"crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","id":"0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e","name":"my-subnet","resource_type":"subnet"},"type":"primary","interface_type":"hipersocket"}]}`)
 					} else {
 						res.WriteHeader(400)
 					}
@@ -8848,7 +8848,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
 				}))
 			})
 			It(`Invoke CreateBareMetalServerNetworkInterface successfully with retries`, func() {
@@ -8944,7 +8944,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
 				}))
 			})
 			It(`Invoke CreateBareMetalServerNetworkInterface successfully`, func() {
@@ -9257,7 +9257,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
 				}))
 			})
 			It(`Invoke GetBareMetalServerNetworkInterface successfully with retries`, func() {
@@ -9315,7 +9315,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
 				}))
 			})
 			It(`Invoke GetBareMetalServerNetworkInterface successfully`, func() {
@@ -9513,7 +9513,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
 				}))
 			})
 			It(`Invoke UpdateBareMetalServerNetworkInterface successfully with retries`, func() {
@@ -9597,7 +9597,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "enable_infrastructure_nat": true, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/bare_metal_servers/0717-aad10fd7-8a02-4f3e-97f3-b18bd82cf304/network_interfaces/0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "id": "0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6", "mac_address": "02:00:04:00:C4:6A", "name": "my-bare-metal-server-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary", "interface_type": "hipersocket"}`)
 				}))
 			})
 			It(`Invoke UpdateBareMetalServerNetworkInterface successfully`, func() {
@@ -9799,7 +9799,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"floating_ips": [{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}]}`)
+					fmt.Fprintf(res, "%s", `{"floating_ips": [{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}]}`)
 				}))
 			})
 			It(`Invoke ListBareMetalServerNetworkInterfaceFloatingIps successfully with retries`, func() {
@@ -9857,7 +9857,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"floating_ips": [{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}]}`)
+					fmt.Fprintf(res, "%s", `{"floating_ips": [{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}]}`)
 				}))
 			})
 			It(`Invoke ListBareMetalServerNetworkInterfaceFloatingIps successfully`, func() {
@@ -10107,7 +10107,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke GetBareMetalServerNetworkInterfaceFloatingIP successfully with retries`, func() {
@@ -10166,7 +10166,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke GetBareMetalServerNetworkInterfaceFloatingIP successfully`, func() {
@@ -10342,7 +10342,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke AddBareMetalServerNetworkInterfaceFloatingIP successfully with retries`, func() {
@@ -10401,7 +10401,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke AddBareMetalServerNetworkInterfaceFloatingIP successfully`, func() {
@@ -26418,6 +26418,561 @@ var _ = Describe(`VpcV1`, func() {
 			})
 		})
 	})
+	Describe(`ListFloatingIPProfiles(listFloatingIPProfilesOptions *ListFloatingIPProfilesOptions) - Operation response error`, func() {
+		version := "2024-06-23"
+		listFloatingIPProfilesPath := "/floating_ip/profiles"
+		Context(`Using mock server endpoint with invalid JSON response`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listFloatingIPProfilesPath))
+					Expect(req.Method).To(Equal("GET"))
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprint(res, `} this is not valid json {`)
+				}))
+			})
+			It(`Invoke ListFloatingIPProfiles with error: Operation response processing error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListFloatingIPProfilesOptions model
+				listFloatingIPProfilesOptionsModel := new(vpcv1.ListFloatingIPProfilesOptions)
+				listFloatingIPProfilesOptionsModel.Start = core.StringPtr("testString")
+				listFloatingIPProfilesOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listFloatingIPProfilesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Expect response parsing to fail since we are receiving a text/plain response
+				result, response, operationErr := vpcService.ListFloatingIPProfiles(listFloatingIPProfilesOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+
+				// Enable retries and test again
+				vpcService.EnableRetries(0, 0)
+				result, response, operationErr = vpcService.ListFloatingIPProfiles(listFloatingIPProfilesOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
+	Describe(`ListFloatingIPProfiles(listFloatingIPProfilesOptions *ListFloatingIPProfilesOptions)`, func() {
+		version := "2024-06-23"
+		listFloatingIPProfilesPath := "/floating_ip/profiles"
+		Context(`Using mock server endpoint with timeout`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listFloatingIPProfilesPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					// Sleep a short time to support a timeout test
+					time.Sleep(100 * time.Millisecond)
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "profiles": [{"family": "user", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "ip_version": "ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}], "total_count": 132}`)
+				}))
+			})
+			It(`Invoke ListFloatingIPProfiles successfully with retries`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+				vpcService.EnableRetries(0, 0)
+
+				// Construct an instance of the ListFloatingIPProfilesOptions model
+				listFloatingIPProfilesOptionsModel := new(vpcv1.ListFloatingIPProfilesOptions)
+				listFloatingIPProfilesOptionsModel.Start = core.StringPtr("testString")
+				listFloatingIPProfilesOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listFloatingIPProfilesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with a Context to test a timeout error
+				ctx, cancelFunc := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc()
+				_, _, operationErr := vpcService.ListFloatingIPProfilesWithContext(ctx, listFloatingIPProfilesOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+
+				// Disable retries and test again
+				vpcService.DisableRetries()
+				result, response, operationErr := vpcService.ListFloatingIPProfiles(listFloatingIPProfilesOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+				// Re-test the timeout error with retries disabled
+				ctx, cancelFunc2 := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc2()
+				_, _, operationErr = vpcService.ListFloatingIPProfilesWithContext(ctx, listFloatingIPProfilesOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listFloatingIPProfilesPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "profiles": [{"family": "user", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "ip_version": "ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}], "total_count": 132}`)
+				}))
+			})
+			It(`Invoke ListFloatingIPProfiles successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Invoke operation with nil options model (negative test)
+				result, response, operationErr := vpcService.ListFloatingIPProfiles(nil)
+				Expect(operationErr).NotTo(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+
+				// Construct an instance of the ListFloatingIPProfilesOptions model
+				listFloatingIPProfilesOptionsModel := new(vpcv1.ListFloatingIPProfilesOptions)
+				listFloatingIPProfilesOptionsModel.Start = core.StringPtr("testString")
+				listFloatingIPProfilesOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listFloatingIPProfilesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with valid options model (positive test)
+				result, response, operationErr = vpcService.ListFloatingIPProfiles(listFloatingIPProfilesOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+			})
+			It(`Invoke ListFloatingIPProfiles with error: Operation request error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListFloatingIPProfilesOptions model
+				listFloatingIPProfilesOptionsModel := new(vpcv1.ListFloatingIPProfilesOptions)
+				listFloatingIPProfilesOptionsModel.Start = core.StringPtr("testString")
+				listFloatingIPProfilesOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listFloatingIPProfilesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Invoke operation with empty URL (negative test)
+				err := vpcService.SetServiceURL("")
+				Expect(err).To(BeNil())
+				result, response, operationErr := vpcService.ListFloatingIPProfiles(listFloatingIPProfilesOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring(core.ERRORMSG_SERVICE_URL_MISSING))
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint with missing response body`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Set success status code with no respoonse body
+					res.WriteHeader(200)
+				}))
+			})
+			It(`Invoke ListFloatingIPProfiles successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListFloatingIPProfilesOptions model
+				listFloatingIPProfilesOptionsModel := new(vpcv1.ListFloatingIPProfilesOptions)
+				listFloatingIPProfilesOptionsModel.Start = core.StringPtr("testString")
+				listFloatingIPProfilesOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listFloatingIPProfilesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation
+				result, response, operationErr := vpcService.ListFloatingIPProfiles(listFloatingIPProfilesOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+
+				// Verify a nil result
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Test pagination helper method on response`, func() {
+			It(`Invoke GetNextStart successfully`, func() {
+				responseObject := new(vpcv1.FloatingIPProfileCollection)
+				nextObject := new(vpcv1.PageLink)
+				nextObject.Href = core.StringPtr("ibm.com?start=abc-123")
+				responseObject.Next = nextObject
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(Equal(core.StringPtr("abc-123")))
+			})
+			It(`Invoke GetNextStart without a "Next" property in the response`, func() {
+				responseObject := new(vpcv1.FloatingIPProfileCollection)
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(BeNil())
+			})
+			It(`Invoke GetNextStart without any query params in the "Next" URL`, func() {
+				responseObject := new(vpcv1.FloatingIPProfileCollection)
+				nextObject := new(vpcv1.PageLink)
+				nextObject.Href = core.StringPtr("ibm.com")
+				responseObject.Next = nextObject
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(BeNil())
+			})
+		})
+		Context(`Using mock server endpoint - paginated response`, func() {
+			BeforeEach(func() {
+				var requestNumber int = 0
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listFloatingIPProfilesPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					requestNumber++
+					if requestNumber == 1 {
+						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"profiles":[{"family":"user","href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4","ip_version":"ipv4","name":"floating-ip-user-ipv4","resource_type":"floating_ip_profile"}]}`)
+					} else if requestNumber == 2 {
+						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"profiles":[{"family":"user","href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4","ip_version":"ipv4","name":"floating-ip-user-ipv4","resource_type":"floating_ip_profile"}]}`)
+					} else {
+						res.WriteHeader(400)
+					}
+				}))
+			})
+			It(`Use FloatingIPProfilesPager.GetNext successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				listFloatingIPProfilesOptionsModel := &vpcv1.ListFloatingIPProfilesOptions{
+					Limit: core.Int64Ptr(int64(10)),
+				}
+
+				pager, err := vpcService.NewFloatingIPProfilesPager(listFloatingIPProfilesOptionsModel)
+				Expect(err).To(BeNil())
+				Expect(pager).ToNot(BeNil())
+
+				var allResults []vpcv1.FloatingIPProfile
+				for pager.HasNext() {
+					nextPage, err := pager.GetNext()
+					Expect(err).To(BeNil())
+					Expect(nextPage).ToNot(BeNil())
+					allResults = append(allResults, nextPage...)
+				}
+				Expect(len(allResults)).To(Equal(2))
+			})
+			It(`Use FloatingIPProfilesPager.GetAll successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				listFloatingIPProfilesOptionsModel := &vpcv1.ListFloatingIPProfilesOptions{
+					Limit: core.Int64Ptr(int64(10)),
+				}
+
+				pager, err := vpcService.NewFloatingIPProfilesPager(listFloatingIPProfilesOptionsModel)
+				Expect(err).To(BeNil())
+				Expect(pager).ToNot(BeNil())
+
+				allResults, err := pager.GetAll()
+				Expect(err).To(BeNil())
+				Expect(allResults).ToNot(BeNil())
+				Expect(len(allResults)).To(Equal(2))
+			})
+		})
+	})
+	Describe(`GetFloatingIPProfile(getFloatingIPProfileOptions *GetFloatingIPProfileOptions) - Operation response error`, func() {
+		version := "2024-06-23"
+		getFloatingIPProfilePath := "/floating_ip/profiles/floating-ip-user-ipv4"
+		Context(`Using mock server endpoint with invalid JSON response`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getFloatingIPProfilePath))
+					Expect(req.Method).To(Equal("GET"))
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprint(res, `} this is not valid json {`)
+				}))
+			})
+			It(`Invoke GetFloatingIPProfile with error: Operation response processing error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetFloatingIPProfileOptions model
+				getFloatingIPProfileOptionsModel := new(vpcv1.GetFloatingIPProfileOptions)
+				getFloatingIPProfileOptionsModel.Name = core.StringPtr("floating-ip-user-ipv4")
+				getFloatingIPProfileOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Expect response parsing to fail since we are receiving a text/plain response
+				result, response, operationErr := vpcService.GetFloatingIPProfile(getFloatingIPProfileOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+
+				// Enable retries and test again
+				vpcService.EnableRetries(0, 0)
+				result, response, operationErr = vpcService.GetFloatingIPProfile(getFloatingIPProfileOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
+	Describe(`GetFloatingIPProfile(getFloatingIPProfileOptions *GetFloatingIPProfileOptions)`, func() {
+		version := "2024-06-23"
+		getFloatingIPProfilePath := "/floating_ip/profiles/floating-ip-user-ipv4"
+		Context(`Using mock server endpoint with timeout`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getFloatingIPProfilePath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					// Sleep a short time to support a timeout test
+					time.Sleep(100 * time.Millisecond)
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"family": "user", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "ip_version": "ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}`)
+				}))
+			})
+			It(`Invoke GetFloatingIPProfile successfully with retries`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+				vpcService.EnableRetries(0, 0)
+
+				// Construct an instance of the GetFloatingIPProfileOptions model
+				getFloatingIPProfileOptionsModel := new(vpcv1.GetFloatingIPProfileOptions)
+				getFloatingIPProfileOptionsModel.Name = core.StringPtr("floating-ip-user-ipv4")
+				getFloatingIPProfileOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with a Context to test a timeout error
+				ctx, cancelFunc := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc()
+				_, _, operationErr := vpcService.GetFloatingIPProfileWithContext(ctx, getFloatingIPProfileOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+
+				// Disable retries and test again
+				vpcService.DisableRetries()
+				result, response, operationErr := vpcService.GetFloatingIPProfile(getFloatingIPProfileOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+				// Re-test the timeout error with retries disabled
+				ctx, cancelFunc2 := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc2()
+				_, _, operationErr = vpcService.GetFloatingIPProfileWithContext(ctx, getFloatingIPProfileOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getFloatingIPProfilePath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"family": "user", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "ip_version": "ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}`)
+				}))
+			})
+			It(`Invoke GetFloatingIPProfile successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Invoke operation with nil options model (negative test)
+				result, response, operationErr := vpcService.GetFloatingIPProfile(nil)
+				Expect(operationErr).NotTo(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+
+				// Construct an instance of the GetFloatingIPProfileOptions model
+				getFloatingIPProfileOptionsModel := new(vpcv1.GetFloatingIPProfileOptions)
+				getFloatingIPProfileOptionsModel.Name = core.StringPtr("floating-ip-user-ipv4")
+				getFloatingIPProfileOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with valid options model (positive test)
+				result, response, operationErr = vpcService.GetFloatingIPProfile(getFloatingIPProfileOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+			})
+			It(`Invoke GetFloatingIPProfile with error: Operation validation and request error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetFloatingIPProfileOptions model
+				getFloatingIPProfileOptionsModel := new(vpcv1.GetFloatingIPProfileOptions)
+				getFloatingIPProfileOptionsModel.Name = core.StringPtr("floating-ip-user-ipv4")
+				getFloatingIPProfileOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Invoke operation with empty URL (negative test)
+				err := vpcService.SetServiceURL("")
+				Expect(err).To(BeNil())
+				result, response, operationErr := vpcService.GetFloatingIPProfile(getFloatingIPProfileOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring(core.ERRORMSG_SERVICE_URL_MISSING))
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+				// Construct a second instance of the GetFloatingIPProfileOptions model with no property values
+				getFloatingIPProfileOptionsModelNew := new(vpcv1.GetFloatingIPProfileOptions)
+				// Invoke operation with invalid model (negative test)
+				result, response, operationErr = vpcService.GetFloatingIPProfile(getFloatingIPProfileOptionsModelNew)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint with missing response body`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Set success status code with no respoonse body
+					res.WriteHeader(200)
+				}))
+			})
+			It(`Invoke GetFloatingIPProfile successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetFloatingIPProfileOptions model
+				getFloatingIPProfileOptionsModel := new(vpcv1.GetFloatingIPProfileOptions)
+				getFloatingIPProfileOptionsModel.Name = core.StringPtr("floating-ip-user-ipv4")
+				getFloatingIPProfileOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation
+				result, response, operationErr := vpcService.GetFloatingIPProfile(getFloatingIPProfileOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+
+				// Verify a nil result
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
 	Describe(`ListFloatingIps(listFloatingIpsOptions *ListFloatingIpsOptions) - Operation response error`, func() {
 		version := "2024-06-23"
 		listFloatingIpsPath := "/floating_ips"
@@ -26435,6 +26990,7 @@ var _ = Describe(`VpcV1`, func() {
 					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
 					Expect(req.URL.Query()["resource_group.id"]).To(Equal([]string{"testString"}))
 					Expect(req.URL.Query()["sort"]).To(Equal([]string{"name"}))
+					Expect(req.URL.Query()["profile.name"]).To(Equal([]string{"floating-ip-user-ipv4"}))
 					Expect(req.URL.Query()["target.id"]).To(Equal([]string{"testString"}))
 					Expect(req.URL.Query()["target.crn"]).To(Equal([]string{"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727"}))
 					Expect(req.URL.Query()["target.name"]).To(Equal([]string{"my-resource"}))
@@ -26459,6 +27015,7 @@ var _ = Describe(`VpcV1`, func() {
 				listFloatingIpsOptionsModel.Limit = core.Int64Ptr(int64(10))
 				listFloatingIpsOptionsModel.ResourceGroupID = core.StringPtr("testString")
 				listFloatingIpsOptionsModel.Sort = core.StringPtr("name")
+				listFloatingIpsOptionsModel.ProfileName = core.StringPtr("floating-ip-user-ipv4")
 				listFloatingIpsOptionsModel.TargetID = core.StringPtr("testString")
 				listFloatingIpsOptionsModel.TargetCRN = core.StringPtr("crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727")
 				listFloatingIpsOptionsModel.TargetName = core.StringPtr("my-resource")
@@ -26500,6 +27057,7 @@ var _ = Describe(`VpcV1`, func() {
 					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
 					Expect(req.URL.Query()["resource_group.id"]).To(Equal([]string{"testString"}))
 					Expect(req.URL.Query()["sort"]).To(Equal([]string{"name"}))
+					Expect(req.URL.Query()["profile.name"]).To(Equal([]string{"floating-ip-user-ipv4"}))
 					Expect(req.URL.Query()["target.id"]).To(Equal([]string{"testString"}))
 					Expect(req.URL.Query()["target.crn"]).To(Equal([]string{"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727"}))
 					Expect(req.URL.Query()["target.name"]).To(Equal([]string{"my-resource"}))
@@ -26510,7 +27068,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "floating_ips": [{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "floating_ips": [{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
 				}))
 			})
 			It(`Invoke ListFloatingIps successfully with retries`, func() {
@@ -26529,6 +27087,7 @@ var _ = Describe(`VpcV1`, func() {
 				listFloatingIpsOptionsModel.Limit = core.Int64Ptr(int64(10))
 				listFloatingIpsOptionsModel.ResourceGroupID = core.StringPtr("testString")
 				listFloatingIpsOptionsModel.Sort = core.StringPtr("name")
+				listFloatingIpsOptionsModel.ProfileName = core.StringPtr("floating-ip-user-ipv4")
 				listFloatingIpsOptionsModel.TargetID = core.StringPtr("testString")
 				listFloatingIpsOptionsModel.TargetCRN = core.StringPtr("crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727")
 				listFloatingIpsOptionsModel.TargetName = core.StringPtr("my-resource")
@@ -26575,6 +27134,7 @@ var _ = Describe(`VpcV1`, func() {
 					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
 					Expect(req.URL.Query()["resource_group.id"]).To(Equal([]string{"testString"}))
 					Expect(req.URL.Query()["sort"]).To(Equal([]string{"name"}))
+					Expect(req.URL.Query()["profile.name"]).To(Equal([]string{"floating-ip-user-ipv4"}))
 					Expect(req.URL.Query()["target.id"]).To(Equal([]string{"testString"}))
 					Expect(req.URL.Query()["target.crn"]).To(Equal([]string{"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727"}))
 					Expect(req.URL.Query()["target.name"]).To(Equal([]string{"my-resource"}))
@@ -26582,7 +27142,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "floating_ips": [{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "floating_ips": [{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
 				}))
 			})
 			It(`Invoke ListFloatingIps successfully`, func() {
@@ -26606,6 +27166,7 @@ var _ = Describe(`VpcV1`, func() {
 				listFloatingIpsOptionsModel.Limit = core.Int64Ptr(int64(10))
 				listFloatingIpsOptionsModel.ResourceGroupID = core.StringPtr("testString")
 				listFloatingIpsOptionsModel.Sort = core.StringPtr("name")
+				listFloatingIpsOptionsModel.ProfileName = core.StringPtr("floating-ip-user-ipv4")
 				listFloatingIpsOptionsModel.TargetID = core.StringPtr("testString")
 				listFloatingIpsOptionsModel.TargetCRN = core.StringPtr("crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727")
 				listFloatingIpsOptionsModel.TargetName = core.StringPtr("my-resource")
@@ -26634,6 +27195,7 @@ var _ = Describe(`VpcV1`, func() {
 				listFloatingIpsOptionsModel.Limit = core.Int64Ptr(int64(10))
 				listFloatingIpsOptionsModel.ResourceGroupID = core.StringPtr("testString")
 				listFloatingIpsOptionsModel.Sort = core.StringPtr("name")
+				listFloatingIpsOptionsModel.ProfileName = core.StringPtr("floating-ip-user-ipv4")
 				listFloatingIpsOptionsModel.TargetID = core.StringPtr("testString")
 				listFloatingIpsOptionsModel.TargetCRN = core.StringPtr("crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727")
 				listFloatingIpsOptionsModel.TargetName = core.StringPtr("my-resource")
@@ -26676,6 +27238,7 @@ var _ = Describe(`VpcV1`, func() {
 				listFloatingIpsOptionsModel.Limit = core.Int64Ptr(int64(10))
 				listFloatingIpsOptionsModel.ResourceGroupID = core.StringPtr("testString")
 				listFloatingIpsOptionsModel.Sort = core.StringPtr("name")
+				listFloatingIpsOptionsModel.ProfileName = core.StringPtr("floating-ip-user-ipv4")
 				listFloatingIpsOptionsModel.TargetID = core.StringPtr("testString")
 				listFloatingIpsOptionsModel.TargetCRN = core.StringPtr("crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727")
 				listFloatingIpsOptionsModel.TargetName = core.StringPtr("my-resource")
@@ -26738,9 +27301,9 @@ var _ = Describe(`VpcV1`, func() {
 					res.WriteHeader(200)
 					requestNumber++
 					if requestNumber == 1 {
-						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"floating_ips":[{"address":"203.0.113.1","created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"status":"available","target":{"deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7","id":"0717-d54eb633-98ea-459d-aa00-6a8e780175a7","name":"my-instance-network-interface","primary_ip":{"address":"192.168.3.4","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","id":"0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","name":"my-reserved-ip","resource_type":"subnet_reserved_ip"},"resource_type":"network_interface"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}]}`)
+						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"floating_ips":[{"address":"203.0.113.1","authorized_cidr":{"cidr":"192.168.3.0/24","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","id":"r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","name":"ibm-house-effect-normal-round-yellow","resource_type":"public_address_range_authorized_cidr"},"created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","profile":{"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4","name":"floating-ip-user-ipv4","resource_type":"floating_ip_profile"},"resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"floating_ip","status":"available","target":{"deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7","id":"0717-d54eb633-98ea-459d-aa00-6a8e780175a7","name":"my-instance-network-interface","primary_ip":{"address":"192.168.3.4","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","id":"0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","name":"my-reserved-ip","resource_type":"subnet_reserved_ip"},"resource_type":"network_interface"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}]}`)
 					} else if requestNumber == 2 {
-						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"floating_ips":[{"address":"203.0.113.1","created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"status":"available","target":{"deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7","id":"0717-d54eb633-98ea-459d-aa00-6a8e780175a7","name":"my-instance-network-interface","primary_ip":{"address":"192.168.3.4","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","id":"0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","name":"my-reserved-ip","resource_type":"subnet_reserved_ip"},"resource_type":"network_interface"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}]}`)
+						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"floating_ips":[{"address":"203.0.113.1","authorized_cidr":{"cidr":"192.168.3.0/24","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","id":"r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","name":"ibm-house-effect-normal-round-yellow","resource_type":"public_address_range_authorized_cidr"},"created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","profile":{"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4","name":"floating-ip-user-ipv4","resource_type":"floating_ip_profile"},"resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"floating_ip","status":"available","target":{"deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7","id":"0717-d54eb633-98ea-459d-aa00-6a8e780175a7","name":"my-instance-network-interface","primary_ip":{"address":"192.168.3.4","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","id":"0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb","name":"my-reserved-ip","resource_type":"subnet_reserved_ip"},"resource_type":"network_interface"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}]}`)
 					} else {
 						res.WriteHeader(400)
 					}
@@ -26759,6 +27322,7 @@ var _ = Describe(`VpcV1`, func() {
 					Limit:              core.Int64Ptr(int64(10)),
 					ResourceGroupID:    core.StringPtr("testString"),
 					Sort:               core.StringPtr("name"),
+					ProfileName:        core.StringPtr("floating-ip-user-ipv4"),
 					TargetID:           core.StringPtr("testString"),
 					TargetCRN:          core.StringPtr("crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727"),
 					TargetName:         core.StringPtr("my-resource"),
@@ -26791,6 +27355,7 @@ var _ = Describe(`VpcV1`, func() {
 					Limit:              core.Int64Ptr(int64(10)),
 					ResourceGroupID:    core.StringPtr("testString"),
 					Sort:               core.StringPtr("name"),
+					ProfileName:        core.StringPtr("floating-ip-user-ipv4"),
 					TargetID:           core.StringPtr("testString"),
 					TargetCRN:          core.StringPtr("crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727"),
 					TargetName:         core.StringPtr("my-resource"),
@@ -26839,19 +27404,21 @@ var _ = Describe(`VpcV1`, func() {
 				resourceGroupIdentityModel := new(vpcv1.ResourceGroupIdentityByID)
 				resourceGroupIdentityModel.ID = core.StringPtr("fee82deba12e4c0fb69c3b09d1f12345")
 
+				// Construct an instance of the FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID model
+				floatingIPTargetPrototypeModel := new(vpcv1.FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID)
+				floatingIPTargetPrototypeModel.ID = core.StringPtr("0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6")
+
 				// Construct an instance of the ZoneIdentityByName model
 				zoneIdentityModel := new(vpcv1.ZoneIdentityByName)
 				zoneIdentityModel.Name = core.StringPtr("us-south-1")
 
-				// Construct an instance of the FloatingIPPrototypeFloatingIPByZone model
-				floatingIPPrototypeModel := new(vpcv1.FloatingIPPrototypeFloatingIPByZone)
-				floatingIPPrototypeModel.Name = core.StringPtr("my-floating-ip")
-				floatingIPPrototypeModel.ResourceGroup = resourceGroupIdentityModel
-				floatingIPPrototypeModel.Zone = zoneIdentityModel
-
 				// Construct an instance of the CreateFloatingIPOptions model
 				createFloatingIPOptionsModel := new(vpcv1.CreateFloatingIPOptions)
-				createFloatingIPOptionsModel.FloatingIPPrototype = floatingIPPrototypeModel
+				createFloatingIPOptionsModel.Address = core.StringPtr("192.168.3.4")
+				createFloatingIPOptionsModel.Name = core.StringPtr("my-floating-ip")
+				createFloatingIPOptionsModel.ResourceGroup = resourceGroupIdentityModel
+				createFloatingIPOptionsModel.Target = floatingIPTargetPrototypeModel
+				createFloatingIPOptionsModel.Zone = zoneIdentityModel
 				createFloatingIPOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 				// Expect response parsing to fail since we are receiving a text/plain response
 				result, response, operationErr := vpcService.CreateFloatingIP(createFloatingIPOptionsModel)
@@ -26907,7 +27474,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke CreateFloatingIP successfully with retries`, func() {
@@ -26924,19 +27491,21 @@ var _ = Describe(`VpcV1`, func() {
 				resourceGroupIdentityModel := new(vpcv1.ResourceGroupIdentityByID)
 				resourceGroupIdentityModel.ID = core.StringPtr("fee82deba12e4c0fb69c3b09d1f12345")
 
+				// Construct an instance of the FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID model
+				floatingIPTargetPrototypeModel := new(vpcv1.FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID)
+				floatingIPTargetPrototypeModel.ID = core.StringPtr("0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6")
+
 				// Construct an instance of the ZoneIdentityByName model
 				zoneIdentityModel := new(vpcv1.ZoneIdentityByName)
 				zoneIdentityModel.Name = core.StringPtr("us-south-1")
 
-				// Construct an instance of the FloatingIPPrototypeFloatingIPByZone model
-				floatingIPPrototypeModel := new(vpcv1.FloatingIPPrototypeFloatingIPByZone)
-				floatingIPPrototypeModel.Name = core.StringPtr("my-floating-ip")
-				floatingIPPrototypeModel.ResourceGroup = resourceGroupIdentityModel
-				floatingIPPrototypeModel.Zone = zoneIdentityModel
-
 				// Construct an instance of the CreateFloatingIPOptions model
 				createFloatingIPOptionsModel := new(vpcv1.CreateFloatingIPOptions)
-				createFloatingIPOptionsModel.FloatingIPPrototype = floatingIPPrototypeModel
+				createFloatingIPOptionsModel.Address = core.StringPtr("192.168.3.4")
+				createFloatingIPOptionsModel.Name = core.StringPtr("my-floating-ip")
+				createFloatingIPOptionsModel.ResourceGroup = resourceGroupIdentityModel
+				createFloatingIPOptionsModel.Target = floatingIPTargetPrototypeModel
+				createFloatingIPOptionsModel.Zone = zoneIdentityModel
 				createFloatingIPOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 
 				// Invoke operation with a Context to test a timeout error
@@ -26994,7 +27563,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke CreateFloatingIP successfully`, func() {
@@ -27016,19 +27585,21 @@ var _ = Describe(`VpcV1`, func() {
 				resourceGroupIdentityModel := new(vpcv1.ResourceGroupIdentityByID)
 				resourceGroupIdentityModel.ID = core.StringPtr("fee82deba12e4c0fb69c3b09d1f12345")
 
+				// Construct an instance of the FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID model
+				floatingIPTargetPrototypeModel := new(vpcv1.FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID)
+				floatingIPTargetPrototypeModel.ID = core.StringPtr("0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6")
+
 				// Construct an instance of the ZoneIdentityByName model
 				zoneIdentityModel := new(vpcv1.ZoneIdentityByName)
 				zoneIdentityModel.Name = core.StringPtr("us-south-1")
 
-				// Construct an instance of the FloatingIPPrototypeFloatingIPByZone model
-				floatingIPPrototypeModel := new(vpcv1.FloatingIPPrototypeFloatingIPByZone)
-				floatingIPPrototypeModel.Name = core.StringPtr("my-floating-ip")
-				floatingIPPrototypeModel.ResourceGroup = resourceGroupIdentityModel
-				floatingIPPrototypeModel.Zone = zoneIdentityModel
-
 				// Construct an instance of the CreateFloatingIPOptions model
 				createFloatingIPOptionsModel := new(vpcv1.CreateFloatingIPOptions)
-				createFloatingIPOptionsModel.FloatingIPPrototype = floatingIPPrototypeModel
+				createFloatingIPOptionsModel.Address = core.StringPtr("192.168.3.4")
+				createFloatingIPOptionsModel.Name = core.StringPtr("my-floating-ip")
+				createFloatingIPOptionsModel.ResourceGroup = resourceGroupIdentityModel
+				createFloatingIPOptionsModel.Target = floatingIPTargetPrototypeModel
+				createFloatingIPOptionsModel.Zone = zoneIdentityModel
 				createFloatingIPOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 
 				// Invoke operation with valid options model (positive test)
@@ -27038,7 +27609,7 @@ var _ = Describe(`VpcV1`, func() {
 				Expect(result).ToNot(BeNil())
 
 			})
-			It(`Invoke CreateFloatingIP with error: Operation validation and request error`, func() {
+			It(`Invoke CreateFloatingIP with error: Operation request error`, func() {
 				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
 					URL:           testServer.URL,
 					Authenticator: &core.NoAuthAuthenticator{},
@@ -27051,19 +27622,21 @@ var _ = Describe(`VpcV1`, func() {
 				resourceGroupIdentityModel := new(vpcv1.ResourceGroupIdentityByID)
 				resourceGroupIdentityModel.ID = core.StringPtr("fee82deba12e4c0fb69c3b09d1f12345")
 
+				// Construct an instance of the FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID model
+				floatingIPTargetPrototypeModel := new(vpcv1.FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID)
+				floatingIPTargetPrototypeModel.ID = core.StringPtr("0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6")
+
 				// Construct an instance of the ZoneIdentityByName model
 				zoneIdentityModel := new(vpcv1.ZoneIdentityByName)
 				zoneIdentityModel.Name = core.StringPtr("us-south-1")
 
-				// Construct an instance of the FloatingIPPrototypeFloatingIPByZone model
-				floatingIPPrototypeModel := new(vpcv1.FloatingIPPrototypeFloatingIPByZone)
-				floatingIPPrototypeModel.Name = core.StringPtr("my-floating-ip")
-				floatingIPPrototypeModel.ResourceGroup = resourceGroupIdentityModel
-				floatingIPPrototypeModel.Zone = zoneIdentityModel
-
 				// Construct an instance of the CreateFloatingIPOptions model
 				createFloatingIPOptionsModel := new(vpcv1.CreateFloatingIPOptions)
-				createFloatingIPOptionsModel.FloatingIPPrototype = floatingIPPrototypeModel
+				createFloatingIPOptionsModel.Address = core.StringPtr("192.168.3.4")
+				createFloatingIPOptionsModel.Name = core.StringPtr("my-floating-ip")
+				createFloatingIPOptionsModel.ResourceGroup = resourceGroupIdentityModel
+				createFloatingIPOptionsModel.Target = floatingIPTargetPrototypeModel
+				createFloatingIPOptionsModel.Zone = zoneIdentityModel
 				createFloatingIPOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 				// Invoke operation with empty URL (negative test)
 				err := vpcService.SetServiceURL("")
@@ -27071,13 +27644,6 @@ var _ = Describe(`VpcV1`, func() {
 				result, response, operationErr := vpcService.CreateFloatingIP(createFloatingIPOptionsModel)
 				Expect(operationErr).ToNot(BeNil())
 				Expect(operationErr.Error()).To(ContainSubstring(core.ERRORMSG_SERVICE_URL_MISSING))
-				Expect(response).To(BeNil())
-				Expect(result).To(BeNil())
-				// Construct a second instance of the CreateFloatingIPOptions model with no property values
-				createFloatingIPOptionsModelNew := new(vpcv1.CreateFloatingIPOptions)
-				// Invoke operation with invalid model (negative test)
-				result, response, operationErr = vpcService.CreateFloatingIP(createFloatingIPOptionsModelNew)
-				Expect(operationErr).ToNot(BeNil())
 				Expect(response).To(BeNil())
 				Expect(result).To(BeNil())
 			})
@@ -27107,19 +27673,21 @@ var _ = Describe(`VpcV1`, func() {
 				resourceGroupIdentityModel := new(vpcv1.ResourceGroupIdentityByID)
 				resourceGroupIdentityModel.ID = core.StringPtr("fee82deba12e4c0fb69c3b09d1f12345")
 
+				// Construct an instance of the FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID model
+				floatingIPTargetPrototypeModel := new(vpcv1.FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID)
+				floatingIPTargetPrototypeModel.ID = core.StringPtr("0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6")
+
 				// Construct an instance of the ZoneIdentityByName model
 				zoneIdentityModel := new(vpcv1.ZoneIdentityByName)
 				zoneIdentityModel.Name = core.StringPtr("us-south-1")
 
-				// Construct an instance of the FloatingIPPrototypeFloatingIPByZone model
-				floatingIPPrototypeModel := new(vpcv1.FloatingIPPrototypeFloatingIPByZone)
-				floatingIPPrototypeModel.Name = core.StringPtr("my-floating-ip")
-				floatingIPPrototypeModel.ResourceGroup = resourceGroupIdentityModel
-				floatingIPPrototypeModel.Zone = zoneIdentityModel
-
 				// Construct an instance of the CreateFloatingIPOptions model
 				createFloatingIPOptionsModel := new(vpcv1.CreateFloatingIPOptions)
-				createFloatingIPOptionsModel.FloatingIPPrototype = floatingIPPrototypeModel
+				createFloatingIPOptionsModel.Address = core.StringPtr("192.168.3.4")
+				createFloatingIPOptionsModel.Name = core.StringPtr("my-floating-ip")
+				createFloatingIPOptionsModel.ResourceGroup = resourceGroupIdentityModel
+				createFloatingIPOptionsModel.Target = floatingIPTargetPrototypeModel
+				createFloatingIPOptionsModel.Zone = zoneIdentityModel
 				createFloatingIPOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 
 				// Invoke operation
@@ -27277,7 +27845,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke GetFloatingIP successfully with retries`, func() {
@@ -27334,7 +27902,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke GetFloatingIP successfully`, func() {
@@ -27530,7 +28098,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke UpdateFloatingIP successfully with retries`, func() {
@@ -27615,7 +28183,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke UpdateFloatingIP successfully`, func() {
@@ -49812,7 +50380,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"network_interfaces": [{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}]}`)
+					fmt.Fprintf(res, "%s", `{"network_interfaces": [{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}]}`)
 				}))
 			})
 			It(`Invoke ListInstanceNetworkInterfaces successfully with retries`, func() {
@@ -49869,7 +50437,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"network_interfaces": [{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}]}`)
+					fmt.Fprintf(res, "%s", `{"network_interfaces": [{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}]}`)
 				}))
 			})
 			It(`Invoke ListInstanceNetworkInterfaces successfully`, func() {
@@ -50070,7 +50638,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
 				}))
 			})
 			It(`Invoke CreateInstanceNetworkInterface successfully with retries`, func() {
@@ -50160,7 +50728,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
 				}))
 			})
 			It(`Invoke CreateInstanceNetworkInterface successfully`, func() {
@@ -50455,7 +51023,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
 				}))
 			})
 			It(`Invoke GetInstanceNetworkInterface successfully with retries`, func() {
@@ -50513,7 +51081,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
 				}))
 			})
 			It(`Invoke GetInstanceNetworkInterface successfully`, func() {
@@ -50709,7 +51277,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
 				}))
 			})
 			It(`Invoke UpdateInstanceNetworkInterface successfully with retries`, func() {
@@ -50791,7 +51359,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
+					fmt.Fprintf(res, "%s", `{"allow_ip_spoofing": true, "created_at": "2026-01-02T03:04:05.006Z", "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "port_speed": 1000, "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface", "security_groups": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}], "status": "available", "subnet": {"crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::subnet:0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "id": "0717-7ec86020-1c6e-4889-b3f0-a15f2e50f87e", "name": "my-subnet", "resource_type": "subnet"}, "type": "primary"}`)
 				}))
 			})
 			It(`Invoke UpdateInstanceNetworkInterface successfully`, func() {
@@ -50987,7 +51555,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"floating_ips": [{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}]}`)
+					fmt.Fprintf(res, "%s", `{"floating_ips": [{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}]}`)
 				}))
 			})
 			It(`Invoke ListInstanceNetworkInterfaceFloatingIps successfully with retries`, func() {
@@ -51045,7 +51613,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"floating_ips": [{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}]}`)
+					fmt.Fprintf(res, "%s", `{"floating_ips": [{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}]}`)
 				}))
 			})
 			It(`Invoke ListInstanceNetworkInterfaceFloatingIps successfully`, func() {
@@ -51295,7 +51863,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke GetInstanceNetworkInterfaceFloatingIP successfully with retries`, func() {
@@ -51354,7 +51922,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke GetInstanceNetworkInterfaceFloatingIP successfully`, func() {
@@ -51530,7 +52098,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke AddInstanceNetworkInterfaceFloatingIP successfully with retries`, func() {
@@ -51589,7 +52157,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "authorized_cidr": {"cidr": "192.168.3.0/24", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ip/profiles/floating-ip-user-ipv4", "name": "floating-ip-user-ipv4", "resource_type": "floating_ip_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "floating_ip", "status": "available", "target": {"deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/instances/0717_e21b7391-2ca2-4ab5-84a8-b92157a633b0/network_interfaces/0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "id": "0717-d54eb633-98ea-459d-aa00-6a8e780175a7", "name": "my-instance-network-interface", "primary_ip": {"address": "192.168.3.4", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/subnets/0717-bea6a632-5e13-42a4-b4b8-31dc877abfe4/reserved_ips/0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "id": "0717-6d353a0f-aeb1-4ae1-832e-1110d10981bb", "name": "my-reserved-ip", "resource_type": "subnet_reserved_ip"}, "resource_type": "network_interface"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke AddInstanceNetworkInterfaceFloatingIP successfully`, func() {
@@ -71495,6 +72063,1720 @@ var _ = Describe(`VpcV1`, func() {
 			})
 		})
 	})
+	Describe(`ListPublicAddressRangeAuthorizedCIDRs(listPublicAddressRangeAuthorizedCIDRsOptions *ListPublicAddressRangeAuthorizedCIDRsOptions) - Operation response error`, func() {
+		version := "2024-06-23"
+		listPublicAddressRangeAuthorizedCIDRsPath := "/public_address_range/authorized_cidrs"
+		Context(`Using mock server endpoint with invalid JSON response`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeAuthorizedCIDRsPath))
+					Expect(req.Method).To(Equal("GET"))
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					Expect(req.URL.Query()["allocation.profile_family"]).To(Equal([]string{"user"}))
+					Expect(req.URL.Query()["availability_mode"]).To(Equal([]string{"regional"}))
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprint(res, `} this is not valid json {`)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeAuthorizedCIDRs with error: Operation response processing error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRsOptions model
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel := new(vpcv1.ListPublicAddressRangeAuthorizedCIDRsOptions)
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.AllocationProfileFamily = core.StringPtr("user")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.AvailabilityMode = core.StringPtr("regional")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Expect response parsing to fail since we are receiving a text/plain response
+				result, response, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRs(listPublicAddressRangeAuthorizedCIDRsOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+
+				// Enable retries and test again
+				vpcService.EnableRetries(0, 0)
+				result, response, operationErr = vpcService.ListPublicAddressRangeAuthorizedCIDRs(listPublicAddressRangeAuthorizedCIDRsOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
+	Describe(`ListPublicAddressRangeAuthorizedCIDRs(listPublicAddressRangeAuthorizedCIDRsOptions *ListPublicAddressRangeAuthorizedCIDRsOptions)`, func() {
+		version := "2024-06-23"
+		listPublicAddressRangeAuthorizedCIDRsPath := "/public_address_range/authorized_cidrs"
+		Context(`Using mock server endpoint with timeout`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeAuthorizedCIDRsPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					Expect(req.URL.Query()["allocation.profile_family"]).To(Equal([]string{"user"}))
+					Expect(req.URL.Query()["availability_mode"]).To(Equal([]string{"regional"}))
+					// Sleep a short time to support a timeout test
+					time.Sleep(100 * time.Millisecond)
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"authorized_cidrs": [{"allocation": {"count": 2, "profile_family": "user"}, "availability_mode": "regional", "cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "ip_version": "ipv4", "lifecycle_reasons": [{"code": "finalizing", "message": "The resource has been suspended. Contact IBM support with the CRN for next steps.", "more_info": "https://cloud.ibm.com/apidocs/vpc#resource-suspension"}], "lifecycle_state": "stable", "name": "ibm-house-effect-normal-round-yellow", "network_prefix_length": 24, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range_authorized_cidr", "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeAuthorizedCIDRs successfully with retries`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+				vpcService.EnableRetries(0, 0)
+
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRsOptions model
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel := new(vpcv1.ListPublicAddressRangeAuthorizedCIDRsOptions)
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.AllocationProfileFamily = core.StringPtr("user")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.AvailabilityMode = core.StringPtr("regional")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with a Context to test a timeout error
+				ctx, cancelFunc := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc()
+				_, _, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRsWithContext(ctx, listPublicAddressRangeAuthorizedCIDRsOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+
+				// Disable retries and test again
+				vpcService.DisableRetries()
+				result, response, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRs(listPublicAddressRangeAuthorizedCIDRsOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+				// Re-test the timeout error with retries disabled
+				ctx, cancelFunc2 := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc2()
+				_, _, operationErr = vpcService.ListPublicAddressRangeAuthorizedCIDRsWithContext(ctx, listPublicAddressRangeAuthorizedCIDRsOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeAuthorizedCIDRsPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					Expect(req.URL.Query()["allocation.profile_family"]).To(Equal([]string{"user"}))
+					Expect(req.URL.Query()["availability_mode"]).To(Equal([]string{"regional"}))
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"authorized_cidrs": [{"allocation": {"count": 2, "profile_family": "user"}, "availability_mode": "regional", "cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "ip_version": "ipv4", "lifecycle_reasons": [{"code": "finalizing", "message": "The resource has been suspended. Contact IBM support with the CRN for next steps.", "more_info": "https://cloud.ibm.com/apidocs/vpc#resource-suspension"}], "lifecycle_state": "stable", "name": "ibm-house-effect-normal-round-yellow", "network_prefix_length": 24, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range_authorized_cidr", "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeAuthorizedCIDRs successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Invoke operation with nil options model (negative test)
+				result, response, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRs(nil)
+				Expect(operationErr).NotTo(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRsOptions model
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel := new(vpcv1.ListPublicAddressRangeAuthorizedCIDRsOptions)
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.AllocationProfileFamily = core.StringPtr("user")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.AvailabilityMode = core.StringPtr("regional")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with valid options model (positive test)
+				result, response, operationErr = vpcService.ListPublicAddressRangeAuthorizedCIDRs(listPublicAddressRangeAuthorizedCIDRsOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+			})
+			It(`Invoke ListPublicAddressRangeAuthorizedCIDRs with error: Operation request error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRsOptions model
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel := new(vpcv1.ListPublicAddressRangeAuthorizedCIDRsOptions)
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.AllocationProfileFamily = core.StringPtr("user")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.AvailabilityMode = core.StringPtr("regional")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Invoke operation with empty URL (negative test)
+				err := vpcService.SetServiceURL("")
+				Expect(err).To(BeNil())
+				result, response, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRs(listPublicAddressRangeAuthorizedCIDRsOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring(core.ERRORMSG_SERVICE_URL_MISSING))
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint with missing response body`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Set success status code with no respoonse body
+					res.WriteHeader(200)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeAuthorizedCIDRs successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRsOptions model
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel := new(vpcv1.ListPublicAddressRangeAuthorizedCIDRsOptions)
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.AllocationProfileFamily = core.StringPtr("user")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.AvailabilityMode = core.StringPtr("regional")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation
+				result, response, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRs(listPublicAddressRangeAuthorizedCIDRsOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+
+				// Verify a nil result
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Test pagination helper method on response`, func() {
+			It(`Invoke GetNextStart successfully`, func() {
+				responseObject := new(vpcv1.PublicAddressRangeAuthorizedCIDRCollection)
+				nextObject := new(vpcv1.PageLink)
+				nextObject.Href = core.StringPtr("ibm.com?start=abc-123")
+				responseObject.Next = nextObject
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(Equal(core.StringPtr("abc-123")))
+			})
+			It(`Invoke GetNextStart without a "Next" property in the response`, func() {
+				responseObject := new(vpcv1.PublicAddressRangeAuthorizedCIDRCollection)
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(BeNil())
+			})
+			It(`Invoke GetNextStart without any query params in the "Next" URL`, func() {
+				responseObject := new(vpcv1.PublicAddressRangeAuthorizedCIDRCollection)
+				nextObject := new(vpcv1.PageLink)
+				nextObject.Href = core.StringPtr("ibm.com")
+				responseObject.Next = nextObject
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(BeNil())
+			})
+		})
+		Context(`Using mock server endpoint - paginated response`, func() {
+			BeforeEach(func() {
+				var requestNumber int = 0
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeAuthorizedCIDRsPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					requestNumber++
+					if requestNumber == 1 {
+						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"authorized_cidrs":[{"allocation":{"count":2,"profile_family":"user"},"availability_mode":"regional","cidr":"CIDR","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","id":"r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","ip_version":"ipv4","lifecycle_reasons":[{"code":"finalizing","message":"The resource has been suspended. Contact IBM support with the CRN for next steps.","more_info":"https://cloud.ibm.com/apidocs/vpc#resource-suspension"}],"lifecycle_state":"stable","name":"ibm-house-effect-normal-round-yellow","network_prefix_length":24,"resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"public_address_range_authorized_cidr","zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}]}`)
+					} else if requestNumber == 2 {
+						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"authorized_cidrs":[{"allocation":{"count":2,"profile_family":"user"},"availability_mode":"regional","cidr":"CIDR","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","id":"r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","ip_version":"ipv4","lifecycle_reasons":[{"code":"finalizing","message":"The resource has been suspended. Contact IBM support with the CRN for next steps.","more_info":"https://cloud.ibm.com/apidocs/vpc#resource-suspension"}],"lifecycle_state":"stable","name":"ibm-house-effect-normal-round-yellow","network_prefix_length":24,"resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"public_address_range_authorized_cidr","zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}]}`)
+					} else {
+						res.WriteHeader(400)
+					}
+				}))
+			})
+			It(`Use PublicAddressRangeAuthorizedCIDRsPager.GetNext successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel := &vpcv1.ListPublicAddressRangeAuthorizedCIDRsOptions{
+					Limit:                   core.Int64Ptr(int64(10)),
+					AllocationProfileFamily: core.StringPtr("user"),
+					AvailabilityMode:        core.StringPtr("regional"),
+				}
+
+				pager, err := vpcService.NewPublicAddressRangeAuthorizedCIDRsPager(listPublicAddressRangeAuthorizedCIDRsOptionsModel)
+				Expect(err).To(BeNil())
+				Expect(pager).ToNot(BeNil())
+
+				var allResults []vpcv1.PublicAddressRangeAuthorizedCIDR
+				for pager.HasNext() {
+					nextPage, err := pager.GetNext()
+					Expect(err).To(BeNil())
+					Expect(nextPage).ToNot(BeNil())
+					allResults = append(allResults, nextPage...)
+				}
+				Expect(len(allResults)).To(Equal(2))
+			})
+			It(`Use PublicAddressRangeAuthorizedCIDRsPager.GetAll successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel := &vpcv1.ListPublicAddressRangeAuthorizedCIDRsOptions{
+					Limit:                   core.Int64Ptr(int64(10)),
+					AllocationProfileFamily: core.StringPtr("user"),
+					AvailabilityMode:        core.StringPtr("regional"),
+				}
+
+				pager, err := vpcService.NewPublicAddressRangeAuthorizedCIDRsPager(listPublicAddressRangeAuthorizedCIDRsOptionsModel)
+				Expect(err).To(BeNil())
+				Expect(pager).ToNot(BeNil())
+
+				allResults, err := pager.GetAll()
+				Expect(err).To(BeNil())
+				Expect(allResults).ToNot(BeNil())
+				Expect(len(allResults)).To(Equal(2))
+			})
+		})
+	})
+	Describe(`ListPublicAddressRangeAuthorizedCIDRAllocations(listPublicAddressRangeAuthorizedCIDRAllocationsOptions *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions) - Operation response error`, func() {
+		version := "2024-06-23"
+		listPublicAddressRangeAuthorizedCIDRAllocationsPath := "/public_address_range/authorized_cidrs/testString/allocations"
+		Context(`Using mock server endpoint with invalid JSON response`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeAuthorizedCIDRAllocationsPath))
+					Expect(req.Method).To(Equal("GET"))
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					Expect(req.URL.Query()["allocations[].resource_type"]).To(Equal([]string{"floating_ip"}))
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprint(res, `} this is not valid json {`)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeAuthorizedCIDRAllocations with error: Operation response processing error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRAllocationsOptions model
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel := new(vpcv1.ListPublicAddressRangeAuthorizedCIDRAllocationsOptions)
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AuthorizedCIDRID = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AllocationsResourceType = core.StringPtr("floating_ip")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Expect response parsing to fail since we are receiving a text/plain response
+				result, response, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRAllocations(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+
+				// Enable retries and test again
+				vpcService.EnableRetries(0, 0)
+				result, response, operationErr = vpcService.ListPublicAddressRangeAuthorizedCIDRAllocations(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
+	Describe(`ListPublicAddressRangeAuthorizedCIDRAllocations(listPublicAddressRangeAuthorizedCIDRAllocationsOptions *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions)`, func() {
+		version := "2024-06-23"
+		listPublicAddressRangeAuthorizedCIDRAllocationsPath := "/public_address_range/authorized_cidrs/testString/allocations"
+		Context(`Using mock server endpoint with timeout`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeAuthorizedCIDRAllocationsPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					Expect(req.URL.Query()["allocations[].resource_type"]).To(Equal([]string{"floating_ip"}))
+					// Sleep a short time to support a timeout test
+					time.Sleep(100 * time.Millisecond)
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"allocations": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeAuthorizedCIDRAllocations successfully with retries`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+				vpcService.EnableRetries(0, 0)
+
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRAllocationsOptions model
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel := new(vpcv1.ListPublicAddressRangeAuthorizedCIDRAllocationsOptions)
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AuthorizedCIDRID = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AllocationsResourceType = core.StringPtr("floating_ip")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with a Context to test a timeout error
+				ctx, cancelFunc := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc()
+				_, _, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRAllocationsWithContext(ctx, listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+
+				// Disable retries and test again
+				vpcService.DisableRetries()
+				result, response, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRAllocations(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+				// Re-test the timeout error with retries disabled
+				ctx, cancelFunc2 := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc2()
+				_, _, operationErr = vpcService.ListPublicAddressRangeAuthorizedCIDRAllocationsWithContext(ctx, listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeAuthorizedCIDRAllocationsPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					Expect(req.URL.Query()["allocations[].resource_type"]).To(Equal([]string{"floating_ip"}))
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"allocations": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeAuthorizedCIDRAllocations successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Invoke operation with nil options model (negative test)
+				result, response, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRAllocations(nil)
+				Expect(operationErr).NotTo(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRAllocationsOptions model
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel := new(vpcv1.ListPublicAddressRangeAuthorizedCIDRAllocationsOptions)
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AuthorizedCIDRID = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AllocationsResourceType = core.StringPtr("floating_ip")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with valid options model (positive test)
+				result, response, operationErr = vpcService.ListPublicAddressRangeAuthorizedCIDRAllocations(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+			})
+			It(`Invoke ListPublicAddressRangeAuthorizedCIDRAllocations with error: Operation validation and request error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRAllocationsOptions model
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel := new(vpcv1.ListPublicAddressRangeAuthorizedCIDRAllocationsOptions)
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AuthorizedCIDRID = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AllocationsResourceType = core.StringPtr("floating_ip")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Invoke operation with empty URL (negative test)
+				err := vpcService.SetServiceURL("")
+				Expect(err).To(BeNil())
+				result, response, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRAllocations(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring(core.ERRORMSG_SERVICE_URL_MISSING))
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+				// Construct a second instance of the ListPublicAddressRangeAuthorizedCIDRAllocationsOptions model with no property values
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModelNew := new(vpcv1.ListPublicAddressRangeAuthorizedCIDRAllocationsOptions)
+				// Invoke operation with invalid model (negative test)
+				result, response, operationErr = vpcService.ListPublicAddressRangeAuthorizedCIDRAllocations(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModelNew)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint with missing response body`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Set success status code with no respoonse body
+					res.WriteHeader(200)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeAuthorizedCIDRAllocations successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRAllocationsOptions model
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel := new(vpcv1.ListPublicAddressRangeAuthorizedCIDRAllocationsOptions)
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AuthorizedCIDRID = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AllocationsResourceType = core.StringPtr("floating_ip")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation
+				result, response, operationErr := vpcService.ListPublicAddressRangeAuthorizedCIDRAllocations(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+
+				// Verify a nil result
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Test pagination helper method on response`, func() {
+			It(`Invoke GetNextStart successfully`, func() {
+				responseObject := new(vpcv1.PublicAddressRangeAuthorizedCIDRAllocationCollection)
+				nextObject := new(vpcv1.PageLink)
+				nextObject.Href = core.StringPtr("ibm.com?start=abc-123")
+				responseObject.Next = nextObject
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(Equal(core.StringPtr("abc-123")))
+			})
+			It(`Invoke GetNextStart without a "Next" property in the response`, func() {
+				responseObject := new(vpcv1.PublicAddressRangeAuthorizedCIDRAllocationCollection)
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(BeNil())
+			})
+			It(`Invoke GetNextStart without any query params in the "Next" URL`, func() {
+				responseObject := new(vpcv1.PublicAddressRangeAuthorizedCIDRAllocationCollection)
+				nextObject := new(vpcv1.PageLink)
+				nextObject.Href = core.StringPtr("ibm.com")
+				responseObject.Next = nextObject
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(BeNil())
+			})
+		})
+		Context(`Using mock server endpoint - paginated response`, func() {
+			BeforeEach(func() {
+				var requestNumber int = 0
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeAuthorizedCIDRAllocationsPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					requestNumber++
+					if requestNumber == 1 {
+						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"allocations":[{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","resource_type":"floating_ip"}],"total_count":2,"limit":1}`)
+					} else if requestNumber == 2 {
+						fmt.Fprintf(res, "%s", `{"allocations":[{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","resource_type":"floating_ip"}],"total_count":2,"limit":1}`)
+					} else {
+						res.WriteHeader(400)
+					}
+				}))
+			})
+			It(`Use PublicAddressRangeAuthorizedCIDRAllocationsPager.GetNext successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel := &vpcv1.ListPublicAddressRangeAuthorizedCIDRAllocationsOptions{
+					AuthorizedCIDRID:        core.StringPtr("testString"),
+					Limit:                   core.Int64Ptr(int64(10)),
+					AllocationsResourceType: core.StringPtr("floating_ip"),
+				}
+
+				pager, err := vpcService.NewPublicAddressRangeAuthorizedCIDRAllocationsPager(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel)
+				Expect(err).To(BeNil())
+				Expect(pager).ToNot(BeNil())
+
+				var allResults []vpcv1.PublicAddressRangeAuthorizedCIDRAllocationItemIntf
+				for pager.HasNext() {
+					nextPage, err := pager.GetNext()
+					Expect(err).To(BeNil())
+					Expect(nextPage).ToNot(BeNil())
+					allResults = append(allResults, nextPage...)
+				}
+				Expect(len(allResults)).To(Equal(2))
+			})
+			It(`Use PublicAddressRangeAuthorizedCIDRAllocationsPager.GetAll successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel := &vpcv1.ListPublicAddressRangeAuthorizedCIDRAllocationsOptions{
+					AuthorizedCIDRID:        core.StringPtr("testString"),
+					Limit:                   core.Int64Ptr(int64(10)),
+					AllocationsResourceType: core.StringPtr("floating_ip"),
+				}
+
+				pager, err := vpcService.NewPublicAddressRangeAuthorizedCIDRAllocationsPager(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel)
+				Expect(err).To(BeNil())
+				Expect(pager).ToNot(BeNil())
+
+				allResults, err := pager.GetAll()
+				Expect(err).To(BeNil())
+				Expect(allResults).ToNot(BeNil())
+				Expect(len(allResults)).To(Equal(2))
+			})
+		})
+	})
+	Describe(`GetPublicAddressRangeAuthorizedCIDRAllocation(getPublicAddressRangeAuthorizedCIDRAllocationOptions *GetPublicAddressRangeAuthorizedCIDRAllocationOptions) - Operation response error`, func() {
+		version := "2024-06-23"
+		getPublicAddressRangeAuthorizedCIDRAllocationPath := "/public_address_range/authorized_cidrs/testString/allocations/testString"
+		Context(`Using mock server endpoint with invalid JSON response`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getPublicAddressRangeAuthorizedCIDRAllocationPath))
+					Expect(req.Method).To(Equal("GET"))
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprint(res, `} this is not valid json {`)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeAuthorizedCIDRAllocation with error: Operation response processing error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDRAllocationOptions model
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel := new(vpcv1.GetPublicAddressRangeAuthorizedCIDRAllocationOptions)
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.AuthorizedCIDRID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.ID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Expect response parsing to fail since we are receiving a text/plain response
+				result, response, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDRAllocation(getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+
+				// Enable retries and test again
+				vpcService.EnableRetries(0, 0)
+				result, response, operationErr = vpcService.GetPublicAddressRangeAuthorizedCIDRAllocation(getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
+	Describe(`GetPublicAddressRangeAuthorizedCIDRAllocation(getPublicAddressRangeAuthorizedCIDRAllocationOptions *GetPublicAddressRangeAuthorizedCIDRAllocationOptions)`, func() {
+		version := "2024-06-23"
+		getPublicAddressRangeAuthorizedCIDRAllocationPath := "/public_address_range/authorized_cidrs/testString/allocations/testString"
+		Context(`Using mock server endpoint with timeout`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getPublicAddressRangeAuthorizedCIDRAllocationPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					// Sleep a short time to support a timeout test
+					time.Sleep(100 * time.Millisecond)
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}`)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeAuthorizedCIDRAllocation successfully with retries`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+				vpcService.EnableRetries(0, 0)
+
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDRAllocationOptions model
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel := new(vpcv1.GetPublicAddressRangeAuthorizedCIDRAllocationOptions)
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.AuthorizedCIDRID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.ID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with a Context to test a timeout error
+				ctx, cancelFunc := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc()
+				_, _, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDRAllocationWithContext(ctx, getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+
+				// Disable retries and test again
+				vpcService.DisableRetries()
+				result, response, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDRAllocation(getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+				// Re-test the timeout error with retries disabled
+				ctx, cancelFunc2 := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc2()
+				_, _, operationErr = vpcService.GetPublicAddressRangeAuthorizedCIDRAllocationWithContext(ctx, getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getPublicAddressRangeAuthorizedCIDRAllocationPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}`)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeAuthorizedCIDRAllocation successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Invoke operation with nil options model (negative test)
+				result, response, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDRAllocation(nil)
+				Expect(operationErr).NotTo(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDRAllocationOptions model
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel := new(vpcv1.GetPublicAddressRangeAuthorizedCIDRAllocationOptions)
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.AuthorizedCIDRID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.ID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with valid options model (positive test)
+				result, response, operationErr = vpcService.GetPublicAddressRangeAuthorizedCIDRAllocation(getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+			})
+			It(`Invoke GetPublicAddressRangeAuthorizedCIDRAllocation with error: Operation validation and request error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDRAllocationOptions model
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel := new(vpcv1.GetPublicAddressRangeAuthorizedCIDRAllocationOptions)
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.AuthorizedCIDRID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.ID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Invoke operation with empty URL (negative test)
+				err := vpcService.SetServiceURL("")
+				Expect(err).To(BeNil())
+				result, response, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDRAllocation(getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring(core.ERRORMSG_SERVICE_URL_MISSING))
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+				// Construct a second instance of the GetPublicAddressRangeAuthorizedCIDRAllocationOptions model with no property values
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModelNew := new(vpcv1.GetPublicAddressRangeAuthorizedCIDRAllocationOptions)
+				// Invoke operation with invalid model (negative test)
+				result, response, operationErr = vpcService.GetPublicAddressRangeAuthorizedCIDRAllocation(getPublicAddressRangeAuthorizedCIDRAllocationOptionsModelNew)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint with missing response body`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Set success status code with no respoonse body
+					res.WriteHeader(200)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeAuthorizedCIDRAllocation successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDRAllocationOptions model
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel := new(vpcv1.GetPublicAddressRangeAuthorizedCIDRAllocationOptions)
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.AuthorizedCIDRID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.ID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation
+				result, response, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDRAllocation(getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+
+				// Verify a nil result
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
+	Describe(`GetPublicAddressRangeAuthorizedCIDR(getPublicAddressRangeAuthorizedCIDROptions *GetPublicAddressRangeAuthorizedCIDROptions) - Operation response error`, func() {
+		version := "2024-06-23"
+		getPublicAddressRangeAuthorizedCIDRPath := "/public_address_range/authorized_cidrs/testString"
+		Context(`Using mock server endpoint with invalid JSON response`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getPublicAddressRangeAuthorizedCIDRPath))
+					Expect(req.Method).To(Equal("GET"))
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprint(res, `} this is not valid json {`)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeAuthorizedCIDR with error: Operation response processing error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDROptions model
+				getPublicAddressRangeAuthorizedCIDROptionsModel := new(vpcv1.GetPublicAddressRangeAuthorizedCIDROptions)
+				getPublicAddressRangeAuthorizedCIDROptionsModel.ID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDROptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Expect response parsing to fail since we are receiving a text/plain response
+				result, response, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDR(getPublicAddressRangeAuthorizedCIDROptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+
+				// Enable retries and test again
+				vpcService.EnableRetries(0, 0)
+				result, response, operationErr = vpcService.GetPublicAddressRangeAuthorizedCIDR(getPublicAddressRangeAuthorizedCIDROptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
+	Describe(`GetPublicAddressRangeAuthorizedCIDR(getPublicAddressRangeAuthorizedCIDROptions *GetPublicAddressRangeAuthorizedCIDROptions)`, func() {
+		version := "2024-06-23"
+		getPublicAddressRangeAuthorizedCIDRPath := "/public_address_range/authorized_cidrs/testString"
+		Context(`Using mock server endpoint with timeout`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getPublicAddressRangeAuthorizedCIDRPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					// Sleep a short time to support a timeout test
+					time.Sleep(100 * time.Millisecond)
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"allocation": {"count": 2, "profile_family": "user"}, "availability_mode": "regional", "cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "ip_version": "ipv4", "lifecycle_reasons": [{"code": "finalizing", "message": "The resource has been suspended. Contact IBM support with the CRN for next steps.", "more_info": "https://cloud.ibm.com/apidocs/vpc#resource-suspension"}], "lifecycle_state": "stable", "name": "ibm-house-effect-normal-round-yellow", "network_prefix_length": 24, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range_authorized_cidr", "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeAuthorizedCIDR successfully with retries`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+				vpcService.EnableRetries(0, 0)
+
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDROptions model
+				getPublicAddressRangeAuthorizedCIDROptionsModel := new(vpcv1.GetPublicAddressRangeAuthorizedCIDROptions)
+				getPublicAddressRangeAuthorizedCIDROptionsModel.ID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDROptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with a Context to test a timeout error
+				ctx, cancelFunc := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc()
+				_, _, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDRWithContext(ctx, getPublicAddressRangeAuthorizedCIDROptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+
+				// Disable retries and test again
+				vpcService.DisableRetries()
+				result, response, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDR(getPublicAddressRangeAuthorizedCIDROptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+				// Re-test the timeout error with retries disabled
+				ctx, cancelFunc2 := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc2()
+				_, _, operationErr = vpcService.GetPublicAddressRangeAuthorizedCIDRWithContext(ctx, getPublicAddressRangeAuthorizedCIDROptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getPublicAddressRangeAuthorizedCIDRPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"allocation": {"count": 2, "profile_family": "user"}, "availability_mode": "regional", "cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "ip_version": "ipv4", "lifecycle_reasons": [{"code": "finalizing", "message": "The resource has been suspended. Contact IBM support with the CRN for next steps.", "more_info": "https://cloud.ibm.com/apidocs/vpc#resource-suspension"}], "lifecycle_state": "stable", "name": "ibm-house-effect-normal-round-yellow", "network_prefix_length": 24, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range_authorized_cidr", "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeAuthorizedCIDR successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Invoke operation with nil options model (negative test)
+				result, response, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDR(nil)
+				Expect(operationErr).NotTo(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDROptions model
+				getPublicAddressRangeAuthorizedCIDROptionsModel := new(vpcv1.GetPublicAddressRangeAuthorizedCIDROptions)
+				getPublicAddressRangeAuthorizedCIDROptionsModel.ID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDROptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with valid options model (positive test)
+				result, response, operationErr = vpcService.GetPublicAddressRangeAuthorizedCIDR(getPublicAddressRangeAuthorizedCIDROptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+			})
+			It(`Invoke GetPublicAddressRangeAuthorizedCIDR with error: Operation validation and request error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDROptions model
+				getPublicAddressRangeAuthorizedCIDROptionsModel := new(vpcv1.GetPublicAddressRangeAuthorizedCIDROptions)
+				getPublicAddressRangeAuthorizedCIDROptionsModel.ID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDROptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Invoke operation with empty URL (negative test)
+				err := vpcService.SetServiceURL("")
+				Expect(err).To(BeNil())
+				result, response, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDR(getPublicAddressRangeAuthorizedCIDROptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring(core.ERRORMSG_SERVICE_URL_MISSING))
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+				// Construct a second instance of the GetPublicAddressRangeAuthorizedCIDROptions model with no property values
+				getPublicAddressRangeAuthorizedCIDROptionsModelNew := new(vpcv1.GetPublicAddressRangeAuthorizedCIDROptions)
+				// Invoke operation with invalid model (negative test)
+				result, response, operationErr = vpcService.GetPublicAddressRangeAuthorizedCIDR(getPublicAddressRangeAuthorizedCIDROptionsModelNew)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint with missing response body`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Set success status code with no respoonse body
+					res.WriteHeader(200)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeAuthorizedCIDR successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDROptions model
+				getPublicAddressRangeAuthorizedCIDROptionsModel := new(vpcv1.GetPublicAddressRangeAuthorizedCIDROptions)
+				getPublicAddressRangeAuthorizedCIDROptionsModel.ID = core.StringPtr("testString")
+				getPublicAddressRangeAuthorizedCIDROptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation
+				result, response, operationErr := vpcService.GetPublicAddressRangeAuthorizedCIDR(getPublicAddressRangeAuthorizedCIDROptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+
+				// Verify a nil result
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
+	Describe(`ListPublicAddressRangeProfiles(listPublicAddressRangeProfilesOptions *ListPublicAddressRangeProfilesOptions) - Operation response error`, func() {
+		version := "2024-06-23"
+		listPublicAddressRangeProfilesPath := "/public_address_range/profiles"
+		Context(`Using mock server endpoint with invalid JSON response`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeProfilesPath))
+					Expect(req.Method).To(Equal("GET"))
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprint(res, `} this is not valid json {`)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeProfiles with error: Operation response processing error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeProfilesOptions model
+				listPublicAddressRangeProfilesOptionsModel := new(vpcv1.ListPublicAddressRangeProfilesOptions)
+				listPublicAddressRangeProfilesOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeProfilesOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeProfilesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Expect response parsing to fail since we are receiving a text/plain response
+				result, response, operationErr := vpcService.ListPublicAddressRangeProfiles(listPublicAddressRangeProfilesOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+
+				// Enable retries and test again
+				vpcService.EnableRetries(0, 0)
+				result, response, operationErr = vpcService.ListPublicAddressRangeProfiles(listPublicAddressRangeProfilesOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
+	Describe(`ListPublicAddressRangeProfiles(listPublicAddressRangeProfilesOptions *ListPublicAddressRangeProfilesOptions)`, func() {
+		version := "2024-06-23"
+		listPublicAddressRangeProfilesPath := "/public_address_range/profiles"
+		Context(`Using mock server endpoint with timeout`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeProfilesPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					// Sleep a short time to support a timeout test
+					time.Sleep(100 * time.Millisecond)
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "profiles": [{"family": "user", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "ip_version": "ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}], "total_count": 132}`)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeProfiles successfully with retries`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+				vpcService.EnableRetries(0, 0)
+
+				// Construct an instance of the ListPublicAddressRangeProfilesOptions model
+				listPublicAddressRangeProfilesOptionsModel := new(vpcv1.ListPublicAddressRangeProfilesOptions)
+				listPublicAddressRangeProfilesOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeProfilesOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeProfilesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with a Context to test a timeout error
+				ctx, cancelFunc := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc()
+				_, _, operationErr := vpcService.ListPublicAddressRangeProfilesWithContext(ctx, listPublicAddressRangeProfilesOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+
+				// Disable retries and test again
+				vpcService.DisableRetries()
+				result, response, operationErr := vpcService.ListPublicAddressRangeProfiles(listPublicAddressRangeProfilesOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+				// Re-test the timeout error with retries disabled
+				ctx, cancelFunc2 := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc2()
+				_, _, operationErr = vpcService.ListPublicAddressRangeProfilesWithContext(ctx, listPublicAddressRangeProfilesOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeProfilesPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "profiles": [{"family": "user", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "ip_version": "ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}], "total_count": 132}`)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeProfiles successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Invoke operation with nil options model (negative test)
+				result, response, operationErr := vpcService.ListPublicAddressRangeProfiles(nil)
+				Expect(operationErr).NotTo(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeProfilesOptions model
+				listPublicAddressRangeProfilesOptionsModel := new(vpcv1.ListPublicAddressRangeProfilesOptions)
+				listPublicAddressRangeProfilesOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeProfilesOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeProfilesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with valid options model (positive test)
+				result, response, operationErr = vpcService.ListPublicAddressRangeProfiles(listPublicAddressRangeProfilesOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+			})
+			It(`Invoke ListPublicAddressRangeProfiles with error: Operation request error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeProfilesOptions model
+				listPublicAddressRangeProfilesOptionsModel := new(vpcv1.ListPublicAddressRangeProfilesOptions)
+				listPublicAddressRangeProfilesOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeProfilesOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeProfilesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Invoke operation with empty URL (negative test)
+				err := vpcService.SetServiceURL("")
+				Expect(err).To(BeNil())
+				result, response, operationErr := vpcService.ListPublicAddressRangeProfiles(listPublicAddressRangeProfilesOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring(core.ERRORMSG_SERVICE_URL_MISSING))
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint with missing response body`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Set success status code with no respoonse body
+					res.WriteHeader(200)
+				}))
+			})
+			It(`Invoke ListPublicAddressRangeProfiles successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the ListPublicAddressRangeProfilesOptions model
+				listPublicAddressRangeProfilesOptionsModel := new(vpcv1.ListPublicAddressRangeProfilesOptions)
+				listPublicAddressRangeProfilesOptionsModel.Start = core.StringPtr("testString")
+				listPublicAddressRangeProfilesOptionsModel.Limit = core.Int64Ptr(int64(10))
+				listPublicAddressRangeProfilesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation
+				result, response, operationErr := vpcService.ListPublicAddressRangeProfiles(listPublicAddressRangeProfilesOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+
+				// Verify a nil result
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Test pagination helper method on response`, func() {
+			It(`Invoke GetNextStart successfully`, func() {
+				responseObject := new(vpcv1.PublicAddressRangeProfileCollection)
+				nextObject := new(vpcv1.PageLink)
+				nextObject.Href = core.StringPtr("ibm.com?start=abc-123")
+				responseObject.Next = nextObject
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(Equal(core.StringPtr("abc-123")))
+			})
+			It(`Invoke GetNextStart without a "Next" property in the response`, func() {
+				responseObject := new(vpcv1.PublicAddressRangeProfileCollection)
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(BeNil())
+			})
+			It(`Invoke GetNextStart without any query params in the "Next" URL`, func() {
+				responseObject := new(vpcv1.PublicAddressRangeProfileCollection)
+				nextObject := new(vpcv1.PageLink)
+				nextObject.Href = core.StringPtr("ibm.com")
+				responseObject.Next = nextObject
+
+				value, err := responseObject.GetNextStart()
+				Expect(err).To(BeNil())
+				Expect(value).To(BeNil())
+			})
+		})
+		Context(`Using mock server endpoint - paginated response`, func() {
+			BeforeEach(func() {
+				var requestNumber int = 0
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(listPublicAddressRangeProfilesPath))
+					Expect(req.Method).To(Equal("GET"))
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					requestNumber++
+					if requestNumber == 1 {
+						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"profiles":[{"family":"user","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4","ip_version":"ipv4","name":"public-address-range-user-ipv4","resource_type":"public_address_range_profile"}]}`)
+					} else if requestNumber == 2 {
+						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"profiles":[{"family":"user","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4","ip_version":"ipv4","name":"public-address-range-user-ipv4","resource_type":"public_address_range_profile"}]}`)
+					} else {
+						res.WriteHeader(400)
+					}
+				}))
+			})
+			It(`Use PublicAddressRangeProfilesPager.GetNext successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				listPublicAddressRangeProfilesOptionsModel := &vpcv1.ListPublicAddressRangeProfilesOptions{
+					Limit: core.Int64Ptr(int64(10)),
+				}
+
+				pager, err := vpcService.NewPublicAddressRangeProfilesPager(listPublicAddressRangeProfilesOptionsModel)
+				Expect(err).To(BeNil())
+				Expect(pager).ToNot(BeNil())
+
+				var allResults []vpcv1.PublicAddressRangeProfile
+				for pager.HasNext() {
+					nextPage, err := pager.GetNext()
+					Expect(err).To(BeNil())
+					Expect(nextPage).ToNot(BeNil())
+					allResults = append(allResults, nextPage...)
+				}
+				Expect(len(allResults)).To(Equal(2))
+			})
+			It(`Use PublicAddressRangeProfilesPager.GetAll successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				listPublicAddressRangeProfilesOptionsModel := &vpcv1.ListPublicAddressRangeProfilesOptions{
+					Limit: core.Int64Ptr(int64(10)),
+				}
+
+				pager, err := vpcService.NewPublicAddressRangeProfilesPager(listPublicAddressRangeProfilesOptionsModel)
+				Expect(err).To(BeNil())
+				Expect(pager).ToNot(BeNil())
+
+				allResults, err := pager.GetAll()
+				Expect(err).To(BeNil())
+				Expect(allResults).ToNot(BeNil())
+				Expect(len(allResults)).To(Equal(2))
+			})
+		})
+	})
+	Describe(`GetPublicAddressRangeProfile(getPublicAddressRangeProfileOptions *GetPublicAddressRangeProfileOptions) - Operation response error`, func() {
+		version := "2024-06-23"
+		getPublicAddressRangeProfilePath := "/public_address_range/profiles/public-address-range-user-ipv4"
+		Context(`Using mock server endpoint with invalid JSON response`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getPublicAddressRangeProfilePath))
+					Expect(req.Method).To(Equal("GET"))
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprint(res, `} this is not valid json {`)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeProfile with error: Operation response processing error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeProfileOptions model
+				getPublicAddressRangeProfileOptionsModel := new(vpcv1.GetPublicAddressRangeProfileOptions)
+				getPublicAddressRangeProfileOptionsModel.Name = core.StringPtr("public-address-range-user-ipv4")
+				getPublicAddressRangeProfileOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Expect response parsing to fail since we are receiving a text/plain response
+				result, response, operationErr := vpcService.GetPublicAddressRangeProfile(getPublicAddressRangeProfileOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+
+				// Enable retries and test again
+				vpcService.EnableRetries(0, 0)
+				result, response, operationErr = vpcService.GetPublicAddressRangeProfile(getPublicAddressRangeProfileOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
+	Describe(`GetPublicAddressRangeProfile(getPublicAddressRangeProfileOptions *GetPublicAddressRangeProfileOptions)`, func() {
+		version := "2024-06-23"
+		getPublicAddressRangeProfilePath := "/public_address_range/profiles/public-address-range-user-ipv4"
+		Context(`Using mock server endpoint with timeout`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getPublicAddressRangeProfilePath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					// Sleep a short time to support a timeout test
+					time.Sleep(100 * time.Millisecond)
+
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"family": "user", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "ip_version": "ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}`)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeProfile successfully with retries`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+				vpcService.EnableRetries(0, 0)
+
+				// Construct an instance of the GetPublicAddressRangeProfileOptions model
+				getPublicAddressRangeProfileOptionsModel := new(vpcv1.GetPublicAddressRangeProfileOptions)
+				getPublicAddressRangeProfileOptionsModel.Name = core.StringPtr("public-address-range-user-ipv4")
+				getPublicAddressRangeProfileOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with a Context to test a timeout error
+				ctx, cancelFunc := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc()
+				_, _, operationErr := vpcService.GetPublicAddressRangeProfileWithContext(ctx, getPublicAddressRangeProfileOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+
+				// Disable retries and test again
+				vpcService.DisableRetries()
+				result, response, operationErr := vpcService.GetPublicAddressRangeProfile(getPublicAddressRangeProfileOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+				// Re-test the timeout error with retries disabled
+				ctx, cancelFunc2 := context.WithTimeout(context.Background(), 80*time.Millisecond)
+				defer cancelFunc2()
+				_, _, operationErr = vpcService.GetPublicAddressRangeProfileWithContext(ctx, getPublicAddressRangeProfileOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring("deadline exceeded"))
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Verify the contents of the request
+					Expect(req.URL.EscapedPath()).To(Equal(getPublicAddressRangeProfilePath))
+					Expect(req.Method).To(Equal("GET"))
+
+					Expect(req.URL.Query()["version"]).To(Equal([]string{"2024-06-23"}))
+					Expect(req.URL.Query()["generation"]).To(Equal([]string{fmt.Sprint(int64(2))}))
+					// Set mock response
+					res.Header().Set("Content-type", "application/json")
+					res.WriteHeader(200)
+					fmt.Fprintf(res, "%s", `{"family": "user", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "ip_version": "ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}`)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeProfile successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Invoke operation with nil options model (negative test)
+				result, response, operationErr := vpcService.GetPublicAddressRangeProfile(nil)
+				Expect(operationErr).NotTo(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeProfileOptions model
+				getPublicAddressRangeProfileOptionsModel := new(vpcv1.GetPublicAddressRangeProfileOptions)
+				getPublicAddressRangeProfileOptionsModel.Name = core.StringPtr("public-address-range-user-ipv4")
+				getPublicAddressRangeProfileOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation with valid options model (positive test)
+				result, response, operationErr = vpcService.GetPublicAddressRangeProfile(getPublicAddressRangeProfileOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+				Expect(result).ToNot(BeNil())
+
+			})
+			It(`Invoke GetPublicAddressRangeProfile with error: Operation validation and request error`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeProfileOptions model
+				getPublicAddressRangeProfileOptionsModel := new(vpcv1.GetPublicAddressRangeProfileOptions)
+				getPublicAddressRangeProfileOptionsModel.Name = core.StringPtr("public-address-range-user-ipv4")
+				getPublicAddressRangeProfileOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+				// Invoke operation with empty URL (negative test)
+				err := vpcService.SetServiceURL("")
+				Expect(err).To(BeNil())
+				result, response, operationErr := vpcService.GetPublicAddressRangeProfile(getPublicAddressRangeProfileOptionsModel)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(operationErr.Error()).To(ContainSubstring(core.ERRORMSG_SERVICE_URL_MISSING))
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+				// Construct a second instance of the GetPublicAddressRangeProfileOptions model with no property values
+				getPublicAddressRangeProfileOptionsModelNew := new(vpcv1.GetPublicAddressRangeProfileOptions)
+				// Invoke operation with invalid model (negative test)
+				result, response, operationErr = vpcService.GetPublicAddressRangeProfile(getPublicAddressRangeProfileOptionsModelNew)
+				Expect(operationErr).ToNot(BeNil())
+				Expect(response).To(BeNil())
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+		Context(`Using mock server endpoint with missing response body`, func() {
+			BeforeEach(func() {
+				testServer = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+					defer GinkgoRecover()
+
+					// Set success status code with no respoonse body
+					res.WriteHeader(200)
+				}))
+			})
+			It(`Invoke GetPublicAddressRangeProfile successfully`, func() {
+				vpcService, serviceErr := vpcv1.NewVpcV1(&vpcv1.VpcV1Options{
+					URL:           testServer.URL,
+					Authenticator: &core.NoAuthAuthenticator{},
+					Version:       core.StringPtr(version),
+				})
+				Expect(serviceErr).To(BeNil())
+				Expect(vpcService).ToNot(BeNil())
+
+				// Construct an instance of the GetPublicAddressRangeProfileOptions model
+				getPublicAddressRangeProfileOptionsModel := new(vpcv1.GetPublicAddressRangeProfileOptions)
+				getPublicAddressRangeProfileOptionsModel.Name = core.StringPtr("public-address-range-user-ipv4")
+				getPublicAddressRangeProfileOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
+
+				// Invoke operation
+				result, response, operationErr := vpcService.GetPublicAddressRangeProfile(getPublicAddressRangeProfileOptionsModel)
+				Expect(operationErr).To(BeNil())
+				Expect(response).ToNot(BeNil())
+
+				// Verify a nil result
+				Expect(result).To(BeNil())
+			})
+			AfterEach(func() {
+				testServer.Close()
+			})
+		})
+	})
 	Describe(`ListPublicAddressRanges(listPublicAddressRangesOptions *ListPublicAddressRangesOptions) - Operation response error`, func() {
 		version := "2024-06-23"
 		listPublicAddressRangesPath := "/public_address_ranges"
@@ -71511,6 +73793,7 @@ var _ = Describe(`VpcV1`, func() {
 					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
 					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
 					Expect(req.URL.Query()["resource_group.id"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["profile.name"]).To(Equal([]string{"public-address-range-user-ipv4"}))
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
 					fmt.Fprint(res, `} this is not valid json {`)
@@ -71530,6 +73813,7 @@ var _ = Describe(`VpcV1`, func() {
 				listPublicAddressRangesOptionsModel.Start = core.StringPtr("testString")
 				listPublicAddressRangesOptionsModel.Limit = core.Int64Ptr(int64(10))
 				listPublicAddressRangesOptionsModel.ResourceGroupID = core.StringPtr("testString")
+				listPublicAddressRangesOptionsModel.ProfileName = core.StringPtr("public-address-range-user-ipv4")
 				listPublicAddressRangesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 				// Expect response parsing to fail since we are receiving a text/plain response
 				result, response, operationErr := vpcService.ListPublicAddressRanges(listPublicAddressRangesOptionsModel)
@@ -71566,13 +73850,14 @@ var _ = Describe(`VpcV1`, func() {
 					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
 					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
 					Expect(req.URL.Query()["resource_group.id"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["profile.name"]).To(Equal([]string{"public-address-range-user-ipv4"}))
 					// Sleep a short time to support a timeout test
 					time.Sleep(100 * time.Millisecond)
 
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "public_address_ranges": [{"cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}], "total_count": 132}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "public_address_ranges": [{"authorized_cidr": {"cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ip_version": "ipv4", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "network_prefix_length": 24, "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}], "total_count": 132}`)
 				}))
 			})
 			It(`Invoke ListPublicAddressRanges successfully with retries`, func() {
@@ -71590,6 +73875,7 @@ var _ = Describe(`VpcV1`, func() {
 				listPublicAddressRangesOptionsModel.Start = core.StringPtr("testString")
 				listPublicAddressRangesOptionsModel.Limit = core.Int64Ptr(int64(10))
 				listPublicAddressRangesOptionsModel.ResourceGroupID = core.StringPtr("testString")
+				listPublicAddressRangesOptionsModel.ProfileName = core.StringPtr("public-address-range-user-ipv4")
 				listPublicAddressRangesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 
 				// Invoke operation with a Context to test a timeout error
@@ -71631,10 +73917,11 @@ var _ = Describe(`VpcV1`, func() {
 					Expect(req.URL.Query()["start"]).To(Equal([]string{"testString"}))
 					Expect(req.URL.Query()["limit"]).To(Equal([]string{fmt.Sprint(int64(10))}))
 					Expect(req.URL.Query()["resource_group.id"]).To(Equal([]string{"testString"}))
+					Expect(req.URL.Query()["profile.name"]).To(Equal([]string{"public-address-range-user-ipv4"}))
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "public_address_ranges": [{"cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}], "total_count": 132}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "public_address_ranges": [{"authorized_cidr": {"cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ip_version": "ipv4", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "network_prefix_length": 24, "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}], "total_count": 132}`)
 				}))
 			})
 			It(`Invoke ListPublicAddressRanges successfully`, func() {
@@ -71657,6 +73944,7 @@ var _ = Describe(`VpcV1`, func() {
 				listPublicAddressRangesOptionsModel.Start = core.StringPtr("testString")
 				listPublicAddressRangesOptionsModel.Limit = core.Int64Ptr(int64(10))
 				listPublicAddressRangesOptionsModel.ResourceGroupID = core.StringPtr("testString")
+				listPublicAddressRangesOptionsModel.ProfileName = core.StringPtr("public-address-range-user-ipv4")
 				listPublicAddressRangesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 
 				// Invoke operation with valid options model (positive test)
@@ -71680,6 +73968,7 @@ var _ = Describe(`VpcV1`, func() {
 				listPublicAddressRangesOptionsModel.Start = core.StringPtr("testString")
 				listPublicAddressRangesOptionsModel.Limit = core.Int64Ptr(int64(10))
 				listPublicAddressRangesOptionsModel.ResourceGroupID = core.StringPtr("testString")
+				listPublicAddressRangesOptionsModel.ProfileName = core.StringPtr("public-address-range-user-ipv4")
 				listPublicAddressRangesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 				// Invoke operation with empty URL (negative test)
 				err := vpcService.SetServiceURL("")
@@ -71717,6 +74006,7 @@ var _ = Describe(`VpcV1`, func() {
 				listPublicAddressRangesOptionsModel.Start = core.StringPtr("testString")
 				listPublicAddressRangesOptionsModel.Limit = core.Int64Ptr(int64(10))
 				listPublicAddressRangesOptionsModel.ResourceGroupID = core.StringPtr("testString")
+				listPublicAddressRangesOptionsModel.ProfileName = core.StringPtr("public-address-range-user-ipv4")
 				listPublicAddressRangesOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 
 				// Invoke operation
@@ -71775,9 +74065,9 @@ var _ = Describe(`VpcV1`, func() {
 					res.WriteHeader(200)
 					requestNumber++
 					if requestNumber == 1 {
-						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"public_address_ranges":[{"cidr":"CIDR","created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a","id":"r006-a4841334-b584-4293-938e-3bc63b4a5b6a","ipv4_address_count":8,"lifecycle_state":"stable","name":"my-public-address-range","resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"public_address_range","target":{"vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","resource_type":"vpc"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}}]}`)
+						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"public_address_ranges":[{"authorized_cidr":{"cidr":"CIDR","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","id":"r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","name":"ibm-house-effect-normal-round-yellow","resource_type":"public_address_range_authorized_cidr"},"cidr":"CIDR","created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a","id":"r006-a4841334-b584-4293-938e-3bc63b4a5b6a","ip_version":"ipv4","ipv4_address_count":8,"lifecycle_state":"stable","name":"my-public-address-range","network_prefix_length":24,"profile":{"href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4","name":"public-address-range-user-ipv4","resource_type":"public_address_range_profile"},"resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"public_address_range","target":{"vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","resource_type":"vpc"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}}]}`)
 					} else if requestNumber == 2 {
-						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"public_address_ranges":[{"cidr":"CIDR","created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a","id":"r006-a4841334-b584-4293-938e-3bc63b4a5b6a","ipv4_address_count":8,"lifecycle_state":"stable","name":"my-public-address-range","resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"public_address_range","target":{"vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","resource_type":"vpc"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}}]}`)
+						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"public_address_ranges":[{"authorized_cidr":{"cidr":"CIDR","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","id":"r006-ce2c481c-58cb-473d-b92d-92a79469eb0c","name":"ibm-house-effect-normal-round-yellow","resource_type":"public_address_range_authorized_cidr"},"cidr":"CIDR","created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a","href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a","id":"r006-a4841334-b584-4293-938e-3bc63b4a5b6a","ip_version":"ipv4","ipv4_address_count":8,"lifecycle_state":"stable","name":"my-public-address-range","network_prefix_length":24,"profile":{"href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4","name":"public-address-range-user-ipv4","resource_type":"public_address_range_profile"},"resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"public_address_range","target":{"vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","resource_type":"vpc"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}}]}`)
 					} else {
 						res.WriteHeader(400)
 					}
@@ -71795,6 +74085,7 @@ var _ = Describe(`VpcV1`, func() {
 				listPublicAddressRangesOptionsModel := &vpcv1.ListPublicAddressRangesOptions{
 					Limit:           core.Int64Ptr(int64(10)),
 					ResourceGroupID: core.StringPtr("testString"),
+					ProfileName:     core.StringPtr("public-address-range-user-ipv4"),
 				}
 
 				pager, err := vpcService.NewPublicAddressRangesPager(listPublicAddressRangesOptionsModel)
@@ -71822,6 +74113,7 @@ var _ = Describe(`VpcV1`, func() {
 				listPublicAddressRangesOptionsModel := &vpcv1.ListPublicAddressRangesOptions{
 					Limit:           core.Int64Ptr(int64(10)),
 					ResourceGroupID: core.StringPtr("testString"),
+					ProfileName:     core.StringPtr("public-address-range-user-ipv4"),
 				}
 
 				pager, err := vpcService.NewPublicAddressRangesPager(listPublicAddressRangesOptionsModel)
@@ -71879,12 +74171,16 @@ var _ = Describe(`VpcV1`, func() {
 				publicAddressRangeTargetPrototypeModel.VPC = vpcIdentityModel
 				publicAddressRangeTargetPrototypeModel.Zone = zoneIdentityModel
 
+				// Construct an instance of the PublicAddressRangePrototypePublicAddressRangeByCIDR model
+				publicAddressRangePrototypeModel := new(vpcv1.PublicAddressRangePrototypePublicAddressRangeByCIDR)
+				publicAddressRangePrototypeModel.Name = core.StringPtr("my-public-address-range")
+				publicAddressRangePrototypeModel.ResourceGroup = resourceGroupIdentityModel
+				publicAddressRangePrototypeModel.Target = publicAddressRangeTargetPrototypeModel
+				publicAddressRangePrototypeModel.CIDR = core.StringPtr("192.168.3.0/24")
+
 				// Construct an instance of the CreatePublicAddressRangeOptions model
 				createPublicAddressRangeOptionsModel := new(vpcv1.CreatePublicAddressRangeOptions)
-				createPublicAddressRangeOptionsModel.Ipv4AddressCount = core.Int64Ptr(int64(8))
-				createPublicAddressRangeOptionsModel.Name = core.StringPtr("my-public-address-range")
-				createPublicAddressRangeOptionsModel.ResourceGroup = resourceGroupIdentityModel
-				createPublicAddressRangeOptionsModel.Target = publicAddressRangeTargetPrototypeModel
+				createPublicAddressRangeOptionsModel.PublicAddressRangePrototype = publicAddressRangePrototypeModel
 				createPublicAddressRangeOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 				// Expect response parsing to fail since we are receiving a text/plain response
 				result, response, operationErr := vpcService.CreatePublicAddressRange(createPublicAddressRangeOptionsModel)
@@ -71940,7 +74236,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
+					fmt.Fprintf(res, "%s", `{"authorized_cidr": {"cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ip_version": "ipv4", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "network_prefix_length": 24, "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
 				}))
 			})
 			It(`Invoke CreatePublicAddressRange successfully with retries`, func() {
@@ -71970,12 +74266,16 @@ var _ = Describe(`VpcV1`, func() {
 				publicAddressRangeTargetPrototypeModel.VPC = vpcIdentityModel
 				publicAddressRangeTargetPrototypeModel.Zone = zoneIdentityModel
 
+				// Construct an instance of the PublicAddressRangePrototypePublicAddressRangeByCIDR model
+				publicAddressRangePrototypeModel := new(vpcv1.PublicAddressRangePrototypePublicAddressRangeByCIDR)
+				publicAddressRangePrototypeModel.Name = core.StringPtr("my-public-address-range")
+				publicAddressRangePrototypeModel.ResourceGroup = resourceGroupIdentityModel
+				publicAddressRangePrototypeModel.Target = publicAddressRangeTargetPrototypeModel
+				publicAddressRangePrototypeModel.CIDR = core.StringPtr("192.168.3.0/24")
+
 				// Construct an instance of the CreatePublicAddressRangeOptions model
 				createPublicAddressRangeOptionsModel := new(vpcv1.CreatePublicAddressRangeOptions)
-				createPublicAddressRangeOptionsModel.Ipv4AddressCount = core.Int64Ptr(int64(8))
-				createPublicAddressRangeOptionsModel.Name = core.StringPtr("my-public-address-range")
-				createPublicAddressRangeOptionsModel.ResourceGroup = resourceGroupIdentityModel
-				createPublicAddressRangeOptionsModel.Target = publicAddressRangeTargetPrototypeModel
+				createPublicAddressRangeOptionsModel.PublicAddressRangePrototype = publicAddressRangePrototypeModel
 				createPublicAddressRangeOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 
 				// Invoke operation with a Context to test a timeout error
@@ -72033,7 +74333,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
+					fmt.Fprintf(res, "%s", `{"authorized_cidr": {"cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ip_version": "ipv4", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "network_prefix_length": 24, "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
 				}))
 			})
 			It(`Invoke CreatePublicAddressRange successfully`, func() {
@@ -72068,12 +74368,16 @@ var _ = Describe(`VpcV1`, func() {
 				publicAddressRangeTargetPrototypeModel.VPC = vpcIdentityModel
 				publicAddressRangeTargetPrototypeModel.Zone = zoneIdentityModel
 
+				// Construct an instance of the PublicAddressRangePrototypePublicAddressRangeByCIDR model
+				publicAddressRangePrototypeModel := new(vpcv1.PublicAddressRangePrototypePublicAddressRangeByCIDR)
+				publicAddressRangePrototypeModel.Name = core.StringPtr("my-public-address-range")
+				publicAddressRangePrototypeModel.ResourceGroup = resourceGroupIdentityModel
+				publicAddressRangePrototypeModel.Target = publicAddressRangeTargetPrototypeModel
+				publicAddressRangePrototypeModel.CIDR = core.StringPtr("192.168.3.0/24")
+
 				// Construct an instance of the CreatePublicAddressRangeOptions model
 				createPublicAddressRangeOptionsModel := new(vpcv1.CreatePublicAddressRangeOptions)
-				createPublicAddressRangeOptionsModel.Ipv4AddressCount = core.Int64Ptr(int64(8))
-				createPublicAddressRangeOptionsModel.Name = core.StringPtr("my-public-address-range")
-				createPublicAddressRangeOptionsModel.ResourceGroup = resourceGroupIdentityModel
-				createPublicAddressRangeOptionsModel.Target = publicAddressRangeTargetPrototypeModel
+				createPublicAddressRangeOptionsModel.PublicAddressRangePrototype = publicAddressRangePrototypeModel
 				createPublicAddressRangeOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 
 				// Invoke operation with valid options model (positive test)
@@ -72109,12 +74413,16 @@ var _ = Describe(`VpcV1`, func() {
 				publicAddressRangeTargetPrototypeModel.VPC = vpcIdentityModel
 				publicAddressRangeTargetPrototypeModel.Zone = zoneIdentityModel
 
+				// Construct an instance of the PublicAddressRangePrototypePublicAddressRangeByCIDR model
+				publicAddressRangePrototypeModel := new(vpcv1.PublicAddressRangePrototypePublicAddressRangeByCIDR)
+				publicAddressRangePrototypeModel.Name = core.StringPtr("my-public-address-range")
+				publicAddressRangePrototypeModel.ResourceGroup = resourceGroupIdentityModel
+				publicAddressRangePrototypeModel.Target = publicAddressRangeTargetPrototypeModel
+				publicAddressRangePrototypeModel.CIDR = core.StringPtr("192.168.3.0/24")
+
 				// Construct an instance of the CreatePublicAddressRangeOptions model
 				createPublicAddressRangeOptionsModel := new(vpcv1.CreatePublicAddressRangeOptions)
-				createPublicAddressRangeOptionsModel.Ipv4AddressCount = core.Int64Ptr(int64(8))
-				createPublicAddressRangeOptionsModel.Name = core.StringPtr("my-public-address-range")
-				createPublicAddressRangeOptionsModel.ResourceGroup = resourceGroupIdentityModel
-				createPublicAddressRangeOptionsModel.Target = publicAddressRangeTargetPrototypeModel
+				createPublicAddressRangeOptionsModel.PublicAddressRangePrototype = publicAddressRangePrototypeModel
 				createPublicAddressRangeOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 				// Invoke operation with empty URL (negative test)
 				err := vpcService.SetServiceURL("")
@@ -72171,12 +74479,16 @@ var _ = Describe(`VpcV1`, func() {
 				publicAddressRangeTargetPrototypeModel.VPC = vpcIdentityModel
 				publicAddressRangeTargetPrototypeModel.Zone = zoneIdentityModel
 
+				// Construct an instance of the PublicAddressRangePrototypePublicAddressRangeByCIDR model
+				publicAddressRangePrototypeModel := new(vpcv1.PublicAddressRangePrototypePublicAddressRangeByCIDR)
+				publicAddressRangePrototypeModel.Name = core.StringPtr("my-public-address-range")
+				publicAddressRangePrototypeModel.ResourceGroup = resourceGroupIdentityModel
+				publicAddressRangePrototypeModel.Target = publicAddressRangeTargetPrototypeModel
+				publicAddressRangePrototypeModel.CIDR = core.StringPtr("192.168.3.0/24")
+
 				// Construct an instance of the CreatePublicAddressRangeOptions model
 				createPublicAddressRangeOptionsModel := new(vpcv1.CreatePublicAddressRangeOptions)
-				createPublicAddressRangeOptionsModel.Ipv4AddressCount = core.Int64Ptr(int64(8))
-				createPublicAddressRangeOptionsModel.Name = core.StringPtr("my-public-address-range")
-				createPublicAddressRangeOptionsModel.ResourceGroup = resourceGroupIdentityModel
-				createPublicAddressRangeOptionsModel.Target = publicAddressRangeTargetPrototypeModel
+				createPublicAddressRangeOptionsModel.PublicAddressRangePrototype = publicAddressRangePrototypeModel
 				createPublicAddressRangeOptionsModel.Headers = map[string]string{"x-custom-header": "x-custom-value"}
 
 				// Invoke operation
@@ -72261,7 +74573,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(202)
-					fmt.Fprintf(res, "%s", `{"cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
+					fmt.Fprintf(res, "%s", `{"authorized_cidr": {"cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ip_version": "ipv4", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "network_prefix_length": 24, "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
 				}))
 			})
 			It(`Invoke DeletePublicAddressRange successfully with retries`, func() {
@@ -72318,7 +74630,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(202)
-					fmt.Fprintf(res, "%s", `{"cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
+					fmt.Fprintf(res, "%s", `{"authorized_cidr": {"cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ip_version": "ipv4", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "network_prefix_length": 24, "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
 				}))
 			})
 			It(`Invoke DeletePublicAddressRange successfully`, func() {
@@ -72486,7 +74798,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
+					fmt.Fprintf(res, "%s", `{"authorized_cidr": {"cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ip_version": "ipv4", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "network_prefix_length": 24, "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
 				}))
 			})
 			It(`Invoke GetPublicAddressRange successfully with retries`, func() {
@@ -72543,7 +74855,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
+					fmt.Fprintf(res, "%s", `{"authorized_cidr": {"cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ip_version": "ipv4", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "network_prefix_length": 24, "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
 				}))
 			})
 			It(`Invoke GetPublicAddressRange successfully`, func() {
@@ -72748,7 +75060,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
+					fmt.Fprintf(res, "%s", `{"authorized_cidr": {"cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ip_version": "ipv4", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "network_prefix_length": 24, "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
 				}))
 			})
 			It(`Invoke UpdatePublicAddressRange successfully with retries`, func() {
@@ -72842,7 +75154,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
+					fmt.Fprintf(res, "%s", `{"authorized_cidr": {"cidr": "CIDR", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/authorized_cidrs/r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "id": "r006-ce2c481c-58cb-473d-b92d-92a79469eb0c", "name": "ibm-house-effect-normal-round-yellow", "resource_type": "public_address_range_authorized_cidr"}, "cidr": "CIDR", "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "ip_version": "ipv4", "ipv4_address_count": 8, "lifecycle_state": "stable", "name": "my-public-address-range", "network_prefix_length": 24, "profile": {"href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_range/profiles/public-address-range-user-ipv4", "name": "public-address-range-user-ipv4", "resource_type": "public_address_range_profile"}, "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_address_range", "target": {"vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}}`)
 				}))
 			})
 			It(`Invoke UpdatePublicAddressRange successfully`, func() {
@@ -73081,7 +75393,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "public_gateways": [{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "total_count": 132}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "public_gateways": [{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "total_count": 132}`)
 				}))
 			})
 			It(`Invoke ListPublicGateways successfully with retries`, func() {
@@ -73143,7 +75455,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "public_gateways": [{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "total_count": 132}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "public_gateways": [{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "total_count": 132}`)
 				}))
 			})
 			It(`Invoke ListPublicGateways successfully`, func() {
@@ -73284,9 +75596,9 @@ var _ = Describe(`VpcV1`, func() {
 					res.WriteHeader(200)
 					requestNumber++
 					if requestNumber == 1 {
-						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"public_gateways":[{"created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","floating_ip":{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip"},"href":"https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","id":"r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","name":"my-public-gateway","resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"public_gateway","status":"available","vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","resource_type":"vpc"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}]}`)
+						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"public_gateways":[{"created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","floating_ip":{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","resource_type":"floating_ip"},"href":"https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","id":"r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","name":"my-public-gateway","resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"public_gateway","status":"available","vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","resource_type":"vpc"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}]}`)
 					} else if requestNumber == 2 {
-						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"public_gateways":[{"created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","floating_ip":{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip"},"href":"https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","id":"r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","name":"my-public-gateway","resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"public_gateway","status":"available","vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","resource_type":"vpc"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}]}`)
+						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"public_gateways":[{"created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","floating_ip":{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","resource_type":"floating_ip"},"href":"https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","id":"r006-dc5431ef-1fc6-4861-adc9-a59d077d1241","name":"my-public-gateway","resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"public_gateway","status":"available","vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","resource_type":"vpc"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}]}`)
 					} else {
 						res.WriteHeader(400)
 					}
@@ -73449,7 +75761,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke CreatePublicGateway successfully with retries`, func() {
@@ -73542,7 +75854,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke CreatePublicGateway successfully`, func() {
@@ -73843,7 +76155,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke GetPublicGateway successfully with retries`, func() {
@@ -73900,7 +76212,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke GetPublicGateway successfully`, func() {
@@ -74091,7 +76403,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke UpdatePublicGateway successfully with retries`, func() {
@@ -74171,7 +76483,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke UpdatePublicGateway successfully`, func() {
@@ -92362,7 +94674,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke GetSubnetPublicGateway successfully with retries`, func() {
@@ -92419,7 +94731,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke GetSubnetPublicGateway successfully`, func() {
@@ -92608,7 +94920,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke SetSubnetPublicGateway successfully with retries`, func() {
@@ -92686,7 +94998,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
+					fmt.Fprintf(res, "%s", `{"created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::public-gateway:r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "floating_ip": {"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_gateways/r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "id": "r006-dc5431ef-1fc6-4861-adc9-a59d077d1241", "name": "my-public-gateway", "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "public_gateway", "status": "available", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "resource_type": "vpc"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}`)
 				}))
 			})
 			It(`Invoke SetSubnetPublicGateway successfully`, func() {
@@ -96202,7 +98514,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
 				}))
 			})
 			It(`Invoke ListNetworkInterfaceFloatingIps successfully with retries`, func() {
@@ -96265,7 +98577,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}], "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "floating_ips": [{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}], "limit": 20, "next": {"href": "Href"}, "total_count": 132}`)
 				}))
 			})
 			It(`Invoke ListNetworkInterfaceFloatingIps successfully`, func() {
@@ -96416,9 +98728,9 @@ var _ = Describe(`VpcV1`, func() {
 					res.WriteHeader(200)
 					requestNumber++
 					if requestNumber == 1 {
-						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"floating_ips":[{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip"}]}`)
+						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"floating_ips":[{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","resource_type":"floating_ip"}]}`)
 					} else if requestNumber == 2 {
-						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"floating_ips":[{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip"}]}`)
+						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"floating_ips":[{"address":"203.0.113.1","crn":"crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","id":"r006-f45e0d90-12a8-4460-8210-290ff2ab75cd","name":"my-floating-ip","resource_type":"floating_ip"}]}`)
 					} else {
 						res.WriteHeader(400)
 					}
@@ -96623,7 +98935,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}`)
 				}))
 			})
 			It(`Invoke GetNetworkInterfaceFloatingIP successfully with retries`, func() {
@@ -96681,7 +98993,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}`)
 				}))
 			})
 			It(`Invoke GetNetworkInterfaceFloatingIP successfully`, func() {
@@ -96853,7 +99165,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}`)
 				}))
 			})
 			It(`Invoke AddNetworkInterfaceFloatingIP successfully with retries`, func() {
@@ -96911,7 +99223,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip"}`)
+					fmt.Fprintf(res, "%s", `{"address": "203.0.113.1", "crn": "crn:v1:bluemix:public:is:us-south-1:a/aa2432b1fa4d4ace891e9b80fc104e34::floating-ip:r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/floating_ips/r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "id": "r006-f45e0d90-12a8-4460-8210-290ff2ab75cd", "name": "my-floating-ip", "resource_type": "floating_ip"}`)
 				}))
 			})
 			It(`Invoke AddNetworkInterfaceFloatingIP successfully`, func() {
@@ -101907,7 +104219,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "total_count": 132, "vpcs": [{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}]}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "total_count": 132, "vpcs": [{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"cidr": "CIDR", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}]}`)
 				}))
 			})
 			It(`Invoke ListVpcs successfully with retries`, func() {
@@ -101971,7 +104283,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "total_count": 132, "vpcs": [{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}]}`)
+					fmt.Fprintf(res, "%s", `{"first": {"href": "Href"}, "limit": 20, "next": {"href": "Href"}, "total_count": 132, "vpcs": [{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"cidr": "CIDR", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}]}`)
 				}))
 			})
 			It(`Invoke ListVpcs successfully`, func() {
@@ -102115,9 +104427,9 @@ var _ = Describe(`VpcV1`, func() {
 					res.WriteHeader(200)
 					requestNumber++
 					if requestNumber == 1 {
-						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"vpcs":[{"classic_access":false,"created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","cse_source_ips":[{"ip":{"address":"192.168.3.4"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}],"default_network_acl":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","id":"r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","name":"my-network-acl"},"default_routing_table":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840","id":"r006-6885e83f-03b2-4603-8a86-db2a0f55c840","name":"my-routing-table-1","resource_type":"routing_table"},"default_security_group":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","id":"r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","name":"my-security-group"},"dns":{"enable_hub":false,"resolution_binding_count":0,"resolver":{"servers":[{"address":"192.168.3.4","zone_affinity":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}],"type":"delegated","vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","remote":{"account":{"id":"bb1b52262f7441a586f49068482f1e60","resource_type":"account"},"region":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south","name":"us-south"}},"resource_type":"vpc"}}},"health_reasons":[{"code":"dns_resolution_binding_failed","message":"The VPC specified in the DNS resolution binding has been disconnected.","more_info":"https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}],"health_state":"ok","href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","public_address_ranges":[{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a","id":"r006-a4841334-b584-4293-938e-3bc63b4a5b6a","name":"my-public-address-range","resource_type":"public_address_range"}],"resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"vpc","status":"available"}]}`)
+						fmt.Fprintf(res, "%s", `{"next":{"href":"https://myhost.com/somePath?start=1"},"total_count":2,"limit":1,"vpcs":[{"classic_access":false,"created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","cse_source_ips":[{"ip":{"address":"192.168.3.4"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}],"default_network_acl":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","id":"r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","name":"my-network-acl"},"default_routing_table":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840","id":"r006-6885e83f-03b2-4603-8a86-db2a0f55c840","name":"my-routing-table-1","resource_type":"routing_table"},"default_security_group":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","id":"r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","name":"my-security-group"},"dns":{"enable_hub":false,"resolution_binding_count":0,"resolver":{"servers":[{"address":"192.168.3.4","zone_affinity":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}],"type":"delegated","vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","remote":{"account":{"id":"bb1b52262f7441a586f49068482f1e60","resource_type":"account"},"region":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south","name":"us-south"}},"resource_type":"vpc"}}},"health_reasons":[{"code":"dns_resolution_binding_failed","message":"The VPC specified in the DNS resolution binding has been disconnected.","more_info":"https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}],"health_state":"ok","href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","public_address_ranges":[{"cidr":"CIDR","crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a","id":"r006-a4841334-b584-4293-938e-3bc63b4a5b6a","name":"my-public-address-range","resource_type":"public_address_range"}],"resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"vpc","status":"available"}]}`)
 					} else if requestNumber == 2 {
-						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"vpcs":[{"classic_access":false,"created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","cse_source_ips":[{"ip":{"address":"192.168.3.4"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}],"default_network_acl":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","id":"r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","name":"my-network-acl"},"default_routing_table":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840","id":"r006-6885e83f-03b2-4603-8a86-db2a0f55c840","name":"my-routing-table-1","resource_type":"routing_table"},"default_security_group":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","id":"r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","name":"my-security-group"},"dns":{"enable_hub":false,"resolution_binding_count":0,"resolver":{"servers":[{"address":"192.168.3.4","zone_affinity":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}],"type":"delegated","vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","remote":{"account":{"id":"bb1b52262f7441a586f49068482f1e60","resource_type":"account"},"region":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south","name":"us-south"}},"resource_type":"vpc"}}},"health_reasons":[{"code":"dns_resolution_binding_failed","message":"The VPC specified in the DNS resolution binding has been disconnected.","more_info":"https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}],"health_state":"ok","href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","public_address_ranges":[{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a","id":"r006-a4841334-b584-4293-938e-3bc63b4a5b6a","name":"my-public-address-range","resource_type":"public_address_range"}],"resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"vpc","status":"available"}]}`)
+						fmt.Fprintf(res, "%s", `{"total_count":2,"limit":1,"vpcs":[{"classic_access":false,"created_at":"2026-01-02T03:04:05.006Z","crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","cse_source_ips":[{"ip":{"address":"192.168.3.4"},"zone":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}],"default_network_acl":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","id":"r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf","name":"my-network-acl"},"default_routing_table":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840","id":"r006-6885e83f-03b2-4603-8a86-db2a0f55c840","name":"my-routing-table-1","resource_type":"routing_table"},"default_security_group":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","id":"r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271","name":"my-security-group"},"dns":{"enable_hub":false,"resolution_binding_count":0,"resolver":{"servers":[{"address":"192.168.3.4","zone_affinity":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1","name":"us-south-1"}}],"type":"delegated","vpc":{"crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","remote":{"account":{"id":"bb1b52262f7441a586f49068482f1e60","resource_type":"account"},"region":{"href":"https://us-south.iaas.cloud.ibm.com/v1/regions/us-south","name":"us-south"}},"resource_type":"vpc"}}},"health_reasons":[{"code":"dns_resolution_binding_failed","message":"The VPC specified in the DNS resolution binding has been disconnected.","more_info":"https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}],"health_state":"ok","href":"https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","id":"r006-4727d842-f94f-4a2d-824a-9bc9b02c523b","name":"my-vpc","public_address_ranges":[{"cidr":"CIDR","crn":"crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a","deleted":{"more_info":"https://cloud.ibm.com/apidocs/vpc#deleted-resources"},"href":"https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a","id":"r006-a4841334-b584-4293-938e-3bc63b4a5b6a","name":"my-public-address-range","resource_type":"public_address_range"}],"resource_group":{"href":"https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345","id":"fee82deba12e4c0fb69c3b09d1f12345","name":"my-resource-group"},"resource_type":"vpc","status":"available"}]}`)
 					} else {
 						res.WriteHeader(400)
 					}
@@ -102289,7 +104601,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
+					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"cidr": "CIDR", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
 				}))
 			})
 			It(`Invoke CreateVPC successfully with retries`, func() {
@@ -102389,7 +104701,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(201)
-					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
+					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"cidr": "CIDR", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
 				}))
 			})
 			It(`Invoke CreateVPC successfully`, func() {
@@ -102708,7 +105020,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
+					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"cidr": "CIDR", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
 				}))
 			})
 			It(`Invoke GetVPC successfully with retries`, func() {
@@ -102765,7 +105077,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
+					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"cidr": "CIDR", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
 				}))
 			})
 			It(`Invoke GetVPC successfully`, func() {
@@ -102986,7 +105298,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
+					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"cidr": "CIDR", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
 				}))
 			})
 			It(`Invoke UpdateVPC successfully with retries`, func() {
@@ -103094,7 +105406,7 @@ var _ = Describe(`VpcV1`, func() {
 					// Set mock response
 					res.Header().Set("Content-type", "application/json")
 					res.WriteHeader(200)
-					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
+					fmt.Fprintf(res, "%s", `{"classic_access": false, "created_at": "2026-01-02T03:04:05.006Z", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "cse_source_ips": [{"ip": {"address": "192.168.3.4"}, "zone": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "default_network_acl": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::network-acl:r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/network_acls/r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "id": "r006-a4e28308-8ee7-46ab-8108-9f881f22bdbf", "name": "my-network-acl"}, "default_routing_table": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc-routing-table:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b/routing_tables/r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "id": "r006-6885e83f-03b2-4603-8a86-db2a0f55c840", "name": "my-routing-table-1", "resource_type": "routing_table"}, "default_security_group": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::security-group:r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/security_groups/r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "id": "r006-be5df5ca-12a0-494b-907e-aa6ec2bfa271", "name": "my-security-group"}, "dns": {"enable_hub": false, "resolution_binding_count": 0, "resolver": {"servers": [{"address": "192.168.3.4", "zone_affinity": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south/zones/us-south-1", "name": "us-south-1"}}], "type": "delegated", "vpc": {"crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::vpc:r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "remote": {"account": {"id": "bb1b52262f7441a586f49068482f1e60", "resource_type": "account"}, "region": {"href": "https://us-south.iaas.cloud.ibm.com/v1/regions/us-south", "name": "us-south"}}, "resource_type": "vpc"}}}, "health_reasons": [{"code": "dns_resolution_binding_failed", "message": "The VPC specified in the DNS resolution binding has been disconnected.", "more_info": "https://cloud.ibm.com/docs/vpc?topic=vpc-troubleshoot-hub-1"}], "health_state": "ok", "href": "https://us-south.iaas.cloud.ibm.com/v1/vpcs/r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "id": "r006-4727d842-f94f-4a2d-824a-9bc9b02c523b", "name": "my-vpc", "public_address_ranges": [{"cidr": "CIDR", "crn": "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::public-address-range:r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "deleted": {"more_info": "https://cloud.ibm.com/apidocs/vpc#deleted-resources"}, "href": "https://us-south.iaas.cloud.ibm.com/v1/public_address_ranges/r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "id": "r006-a4841334-b584-4293-938e-3bc63b4a5b6a", "name": "my-public-address-range", "resource_type": "public_address_range"}], "resource_group": {"href": "https://resource-controller.cloud.ibm.com/v2/resource_groups/fee82deba12e4c0fb69c3b09d1f12345", "id": "fee82deba12e4c0fb69c3b09d1f12345", "name": "my-resource-group"}, "resource_type": "vpc", "status": "available"}`)
 				}))
 			})
 			It(`Invoke UpdateVPC successfully`, func() {
@@ -123624,29 +125936,32 @@ var _ = Describe(`VpcV1`, func() {
 				resourceGroupIdentityModel.ID = core.StringPtr("fee82deba12e4c0fb69c3b09d1f12345")
 				Expect(resourceGroupIdentityModel.ID).To(Equal(core.StringPtr("fee82deba12e4c0fb69c3b09d1f12345")))
 
+				// Construct an instance of the FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID model
+				floatingIPTargetPrototypeModel := new(vpcv1.FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID)
+				Expect(floatingIPTargetPrototypeModel).ToNot(BeNil())
+				floatingIPTargetPrototypeModel.ID = core.StringPtr("0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6")
+				Expect(floatingIPTargetPrototypeModel.ID).To(Equal(core.StringPtr("0717-da8c43ec-b6ca-4bd2-871e-72e288c66ee6")))
+
 				// Construct an instance of the ZoneIdentityByName model
 				zoneIdentityModel := new(vpcv1.ZoneIdentityByName)
 				Expect(zoneIdentityModel).ToNot(BeNil())
 				zoneIdentityModel.Name = core.StringPtr("us-south-1")
 				Expect(zoneIdentityModel.Name).To(Equal(core.StringPtr("us-south-1")))
 
-				// Construct an instance of the FloatingIPPrototypeFloatingIPByZone model
-				floatingIPPrototypeModel := new(vpcv1.FloatingIPPrototypeFloatingIPByZone)
-				Expect(floatingIPPrototypeModel).ToNot(BeNil())
-				floatingIPPrototypeModel.Name = core.StringPtr("my-floating-ip")
-				floatingIPPrototypeModel.ResourceGroup = resourceGroupIdentityModel
-				floatingIPPrototypeModel.Zone = zoneIdentityModel
-				Expect(floatingIPPrototypeModel.Name).To(Equal(core.StringPtr("my-floating-ip")))
-				Expect(floatingIPPrototypeModel.ResourceGroup).To(Equal(resourceGroupIdentityModel))
-				Expect(floatingIPPrototypeModel.Zone).To(Equal(zoneIdentityModel))
-
 				// Construct an instance of the CreateFloatingIPOptions model
-				var floatingIPPrototype vpcv1.FloatingIPPrototypeIntf = nil
-				createFloatingIPOptionsModel := vpcService.NewCreateFloatingIPOptions(floatingIPPrototype)
-				createFloatingIPOptionsModel.SetFloatingIPPrototype(floatingIPPrototypeModel)
+				createFloatingIPOptionsModel := vpcService.NewCreateFloatingIPOptions()
+				createFloatingIPOptionsModel.SetAddress("192.168.3.4")
+				createFloatingIPOptionsModel.SetName("my-floating-ip")
+				createFloatingIPOptionsModel.SetResourceGroup(resourceGroupIdentityModel)
+				createFloatingIPOptionsModel.SetTarget(floatingIPTargetPrototypeModel)
+				createFloatingIPOptionsModel.SetZone(zoneIdentityModel)
 				createFloatingIPOptionsModel.SetHeaders(map[string]string{"foo": "bar"})
 				Expect(createFloatingIPOptionsModel).ToNot(BeNil())
-				Expect(createFloatingIPOptionsModel.FloatingIPPrototype).To(Equal(floatingIPPrototypeModel))
+				Expect(createFloatingIPOptionsModel.Address).To(Equal(core.StringPtr("192.168.3.4")))
+				Expect(createFloatingIPOptionsModel.Name).To(Equal(core.StringPtr("my-floating-ip")))
+				Expect(createFloatingIPOptionsModel.ResourceGroup).To(Equal(resourceGroupIdentityModel))
+				Expect(createFloatingIPOptionsModel.Target).To(Equal(floatingIPTargetPrototypeModel))
+				Expect(createFloatingIPOptionsModel.Zone).To(Equal(zoneIdentityModel))
 				Expect(createFloatingIPOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
 			})
 			It(`Invoke NewCreateFlowLogCollectorOptions successfully`, func() {
@@ -125470,19 +127785,25 @@ var _ = Describe(`VpcV1`, func() {
 				Expect(publicAddressRangeTargetPrototypeModel.VPC).To(Equal(vpcIdentityModel))
 				Expect(publicAddressRangeTargetPrototypeModel.Zone).To(Equal(zoneIdentityModel))
 
+				// Construct an instance of the PublicAddressRangePrototypePublicAddressRangeByCIDR model
+				publicAddressRangePrototypeModel := new(vpcv1.PublicAddressRangePrototypePublicAddressRangeByCIDR)
+				Expect(publicAddressRangePrototypeModel).ToNot(BeNil())
+				publicAddressRangePrototypeModel.Name = core.StringPtr("my-public-address-range")
+				publicAddressRangePrototypeModel.ResourceGroup = resourceGroupIdentityModel
+				publicAddressRangePrototypeModel.Target = publicAddressRangeTargetPrototypeModel
+				publicAddressRangePrototypeModel.CIDR = core.StringPtr("testString")
+				Expect(publicAddressRangePrototypeModel.Name).To(Equal(core.StringPtr("my-public-address-range")))
+				Expect(publicAddressRangePrototypeModel.ResourceGroup).To(Equal(resourceGroupIdentityModel))
+				Expect(publicAddressRangePrototypeModel.Target).To(Equal(publicAddressRangeTargetPrototypeModel))
+				Expect(publicAddressRangePrototypeModel.CIDR).To(Equal(core.StringPtr("testString")))
+
 				// Construct an instance of the CreatePublicAddressRangeOptions model
-				createPublicAddressRangeOptionsIpv4AddressCount := int64(8)
-				createPublicAddressRangeOptionsModel := vpcService.NewCreatePublicAddressRangeOptions(createPublicAddressRangeOptionsIpv4AddressCount)
-				createPublicAddressRangeOptionsModel.SetIpv4AddressCount(int64(8))
-				createPublicAddressRangeOptionsModel.SetName("my-public-address-range")
-				createPublicAddressRangeOptionsModel.SetResourceGroup(resourceGroupIdentityModel)
-				createPublicAddressRangeOptionsModel.SetTarget(publicAddressRangeTargetPrototypeModel)
+				var publicAddressRangePrototype vpcv1.PublicAddressRangePrototypeIntf = nil
+				createPublicAddressRangeOptionsModel := vpcService.NewCreatePublicAddressRangeOptions(publicAddressRangePrototype)
+				createPublicAddressRangeOptionsModel.SetPublicAddressRangePrototype(publicAddressRangePrototypeModel)
 				createPublicAddressRangeOptionsModel.SetHeaders(map[string]string{"foo": "bar"})
 				Expect(createPublicAddressRangeOptionsModel).ToNot(BeNil())
-				Expect(createPublicAddressRangeOptionsModel.Ipv4AddressCount).To(Equal(core.Int64Ptr(int64(8))))
-				Expect(createPublicAddressRangeOptionsModel.Name).To(Equal(core.StringPtr("my-public-address-range")))
-				Expect(createPublicAddressRangeOptionsModel.ResourceGroup).To(Equal(resourceGroupIdentityModel))
-				Expect(createPublicAddressRangeOptionsModel.Target).To(Equal(publicAddressRangeTargetPrototypeModel))
+				Expect(createPublicAddressRangeOptionsModel.PublicAddressRangePrototype).To(Equal(publicAddressRangePrototypeModel))
 				Expect(createPublicAddressRangeOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
 			})
 			It(`Invoke NewCreatePublicGatewayOptions successfully`, func() {
@@ -128034,6 +130355,16 @@ var _ = Describe(`VpcV1`, func() {
 				Expect(getFloatingIPOptionsModel.ID).To(Equal(core.StringPtr("testString")))
 				Expect(getFloatingIPOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
 			})
+			It(`Invoke NewGetFloatingIPProfileOptions successfully`, func() {
+				// Construct an instance of the GetFloatingIPProfileOptions model
+				name := "floating-ip-user-ipv4"
+				getFloatingIPProfileOptionsModel := vpcService.NewGetFloatingIPProfileOptions(name)
+				getFloatingIPProfileOptionsModel.SetName("floating-ip-user-ipv4")
+				getFloatingIPProfileOptionsModel.SetHeaders(map[string]string{"foo": "bar"})
+				Expect(getFloatingIPProfileOptionsModel).ToNot(BeNil())
+				Expect(getFloatingIPProfileOptionsModel.Name).To(Equal(core.StringPtr("floating-ip-user-ipv4")))
+				Expect(getFloatingIPProfileOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
+			})
 			It(`Invoke NewGetFlowLogCollectorOptions successfully`, func() {
 				// Construct an instance of the GetFlowLogCollectorOptions model
 				id := "testString"
@@ -128501,6 +130832,29 @@ var _ = Describe(`VpcV1`, func() {
 				Expect(getPrivatePathServiceGatewayOptionsModel.ID).To(Equal(core.StringPtr("testString")))
 				Expect(getPrivatePathServiceGatewayOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
 			})
+			It(`Invoke NewGetPublicAddressRangeAuthorizedCIDRAllocationOptions successfully`, func() {
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDRAllocationOptions model
+				authorizedCidrid := "testString"
+				id := "testString"
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel := vpcService.NewGetPublicAddressRangeAuthorizedCIDRAllocationOptions(authorizedCidrid, id)
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.SetAuthorizedCIDRID("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.SetID("testString")
+				getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.SetHeaders(map[string]string{"foo": "bar"})
+				Expect(getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel).ToNot(BeNil())
+				Expect(getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.AuthorizedCIDRID).To(Equal(core.StringPtr("testString")))
+				Expect(getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.ID).To(Equal(core.StringPtr("testString")))
+				Expect(getPublicAddressRangeAuthorizedCIDRAllocationOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
+			})
+			It(`Invoke NewGetPublicAddressRangeAuthorizedCIDROptions successfully`, func() {
+				// Construct an instance of the GetPublicAddressRangeAuthorizedCIDROptions model
+				id := "testString"
+				getPublicAddressRangeAuthorizedCIDROptionsModel := vpcService.NewGetPublicAddressRangeAuthorizedCIDROptions(id)
+				getPublicAddressRangeAuthorizedCIDROptionsModel.SetID("testString")
+				getPublicAddressRangeAuthorizedCIDROptionsModel.SetHeaders(map[string]string{"foo": "bar"})
+				Expect(getPublicAddressRangeAuthorizedCIDROptionsModel).ToNot(BeNil())
+				Expect(getPublicAddressRangeAuthorizedCIDROptionsModel.ID).To(Equal(core.StringPtr("testString")))
+				Expect(getPublicAddressRangeAuthorizedCIDROptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
+			})
 			It(`Invoke NewGetPublicAddressRangeOptions successfully`, func() {
 				// Construct an instance of the GetPublicAddressRangeOptions model
 				id := "testString"
@@ -128510,6 +130864,16 @@ var _ = Describe(`VpcV1`, func() {
 				Expect(getPublicAddressRangeOptionsModel).ToNot(BeNil())
 				Expect(getPublicAddressRangeOptionsModel.ID).To(Equal(core.StringPtr("testString")))
 				Expect(getPublicAddressRangeOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
+			})
+			It(`Invoke NewGetPublicAddressRangeProfileOptions successfully`, func() {
+				// Construct an instance of the GetPublicAddressRangeProfileOptions model
+				name := "public-address-range-user-ipv4"
+				getPublicAddressRangeProfileOptionsModel := vpcService.NewGetPublicAddressRangeProfileOptions(name)
+				getPublicAddressRangeProfileOptionsModel.SetName("public-address-range-user-ipv4")
+				getPublicAddressRangeProfileOptionsModel.SetHeaders(map[string]string{"foo": "bar"})
+				Expect(getPublicAddressRangeProfileOptionsModel).ToNot(BeNil())
+				Expect(getPublicAddressRangeProfileOptionsModel.Name).To(Equal(core.StringPtr("public-address-range-user-ipv4")))
+				Expect(getPublicAddressRangeProfileOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
 			})
 			It(`Invoke NewGetPublicGatewayOptions successfully`, func() {
 				// Construct an instance of the GetPublicGatewayOptions model
@@ -129390,6 +131754,17 @@ var _ = Describe(`VpcV1`, func() {
 				Expect(listEndpointGatewaysOptionsModel.DnsResolutionBindingMode).To(Equal([]string{"disabled"}))
 				Expect(listEndpointGatewaysOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
 			})
+			It(`Invoke NewListFloatingIPProfilesOptions successfully`, func() {
+				// Construct an instance of the ListFloatingIPProfilesOptions model
+				listFloatingIPProfilesOptionsModel := vpcService.NewListFloatingIPProfilesOptions()
+				listFloatingIPProfilesOptionsModel.SetStart("testString")
+				listFloatingIPProfilesOptionsModel.SetLimit(int64(10))
+				listFloatingIPProfilesOptionsModel.SetHeaders(map[string]string{"foo": "bar"})
+				Expect(listFloatingIPProfilesOptionsModel).ToNot(BeNil())
+				Expect(listFloatingIPProfilesOptionsModel.Start).To(Equal(core.StringPtr("testString")))
+				Expect(listFloatingIPProfilesOptionsModel.Limit).To(Equal(core.Int64Ptr(int64(10))))
+				Expect(listFloatingIPProfilesOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
+			})
 			It(`Invoke NewListFloatingIpsOptions successfully`, func() {
 				// Construct an instance of the ListFloatingIpsOptions model
 				listFloatingIpsOptionsModel := vpcService.NewListFloatingIpsOptions()
@@ -129397,6 +131772,7 @@ var _ = Describe(`VpcV1`, func() {
 				listFloatingIpsOptionsModel.SetLimit(int64(10))
 				listFloatingIpsOptionsModel.SetResourceGroupID("testString")
 				listFloatingIpsOptionsModel.SetSort("name")
+				listFloatingIpsOptionsModel.SetProfileName("floating-ip-user-ipv4")
 				listFloatingIpsOptionsModel.SetTargetID("testString")
 				listFloatingIpsOptionsModel.SetTargetCRN("crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727")
 				listFloatingIpsOptionsModel.SetTargetName("my-resource")
@@ -129407,6 +131783,7 @@ var _ = Describe(`VpcV1`, func() {
 				Expect(listFloatingIpsOptionsModel.Limit).To(Equal(core.Int64Ptr(int64(10))))
 				Expect(listFloatingIpsOptionsModel.ResourceGroupID).To(Equal(core.StringPtr("testString")))
 				Expect(listFloatingIpsOptionsModel.Sort).To(Equal(core.StringPtr("name")))
+				Expect(listFloatingIpsOptionsModel.ProfileName).To(Equal(core.StringPtr("floating-ip-user-ipv4")))
 				Expect(listFloatingIpsOptionsModel.TargetID).To(Equal(core.StringPtr("testString")))
 				Expect(listFloatingIpsOptionsModel.TargetCRN).To(Equal(core.StringPtr("crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::load-balancer:r006-dd754295-e9e0-4c9d-bf6c-58fbc59e5727")))
 				Expect(listFloatingIpsOptionsModel.TargetName).To(Equal(core.StringPtr("my-resource")))
@@ -129990,17 +132367,61 @@ var _ = Describe(`VpcV1`, func() {
 				Expect(listPrivatePathServiceGatewaysOptionsModel.ResourceGroupID).To(Equal(core.StringPtr("testString")))
 				Expect(listPrivatePathServiceGatewaysOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
 			})
+			It(`Invoke NewListPublicAddressRangeAuthorizedCIDRAllocationsOptions successfully`, func() {
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRAllocationsOptions model
+				authorizedCidrid := "testString"
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel := vpcService.NewListPublicAddressRangeAuthorizedCIDRAllocationsOptions(authorizedCidrid)
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.SetAuthorizedCIDRID("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.SetStart("testString")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.SetLimit(int64(10))
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.SetAllocationsResourceType("floating_ip")
+				listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.SetHeaders(map[string]string{"foo": "bar"})
+				Expect(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel).ToNot(BeNil())
+				Expect(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AuthorizedCIDRID).To(Equal(core.StringPtr("testString")))
+				Expect(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Start).To(Equal(core.StringPtr("testString")))
+				Expect(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Limit).To(Equal(core.Int64Ptr(int64(10))))
+				Expect(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.AllocationsResourceType).To(Equal(core.StringPtr("floating_ip")))
+				Expect(listPublicAddressRangeAuthorizedCIDRAllocationsOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
+			})
+			It(`Invoke NewListPublicAddressRangeAuthorizedCIDRsOptions successfully`, func() {
+				// Construct an instance of the ListPublicAddressRangeAuthorizedCIDRsOptions model
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel := vpcService.NewListPublicAddressRangeAuthorizedCIDRsOptions()
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.SetStart("testString")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.SetLimit(int64(10))
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.SetAllocationProfileFamily("user")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.SetAvailabilityMode("regional")
+				listPublicAddressRangeAuthorizedCIDRsOptionsModel.SetHeaders(map[string]string{"foo": "bar"})
+				Expect(listPublicAddressRangeAuthorizedCIDRsOptionsModel).ToNot(BeNil())
+				Expect(listPublicAddressRangeAuthorizedCIDRsOptionsModel.Start).To(Equal(core.StringPtr("testString")))
+				Expect(listPublicAddressRangeAuthorizedCIDRsOptionsModel.Limit).To(Equal(core.Int64Ptr(int64(10))))
+				Expect(listPublicAddressRangeAuthorizedCIDRsOptionsModel.AllocationProfileFamily).To(Equal(core.StringPtr("user")))
+				Expect(listPublicAddressRangeAuthorizedCIDRsOptionsModel.AvailabilityMode).To(Equal(core.StringPtr("regional")))
+				Expect(listPublicAddressRangeAuthorizedCIDRsOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
+			})
+			It(`Invoke NewListPublicAddressRangeProfilesOptions successfully`, func() {
+				// Construct an instance of the ListPublicAddressRangeProfilesOptions model
+				listPublicAddressRangeProfilesOptionsModel := vpcService.NewListPublicAddressRangeProfilesOptions()
+				listPublicAddressRangeProfilesOptionsModel.SetStart("testString")
+				listPublicAddressRangeProfilesOptionsModel.SetLimit(int64(10))
+				listPublicAddressRangeProfilesOptionsModel.SetHeaders(map[string]string{"foo": "bar"})
+				Expect(listPublicAddressRangeProfilesOptionsModel).ToNot(BeNil())
+				Expect(listPublicAddressRangeProfilesOptionsModel.Start).To(Equal(core.StringPtr("testString")))
+				Expect(listPublicAddressRangeProfilesOptionsModel.Limit).To(Equal(core.Int64Ptr(int64(10))))
+				Expect(listPublicAddressRangeProfilesOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
+			})
 			It(`Invoke NewListPublicAddressRangesOptions successfully`, func() {
 				// Construct an instance of the ListPublicAddressRangesOptions model
 				listPublicAddressRangesOptionsModel := vpcService.NewListPublicAddressRangesOptions()
 				listPublicAddressRangesOptionsModel.SetStart("testString")
 				listPublicAddressRangesOptionsModel.SetLimit(int64(10))
 				listPublicAddressRangesOptionsModel.SetResourceGroupID("testString")
+				listPublicAddressRangesOptionsModel.SetProfileName("public-address-range-user-ipv4")
 				listPublicAddressRangesOptionsModel.SetHeaders(map[string]string{"foo": "bar"})
 				Expect(listPublicAddressRangesOptionsModel).ToNot(BeNil())
 				Expect(listPublicAddressRangesOptionsModel.Start).To(Equal(core.StringPtr("testString")))
 				Expect(listPublicAddressRangesOptionsModel.Limit).To(Equal(core.Int64Ptr(int64(10))))
 				Expect(listPublicAddressRangesOptionsModel.ResourceGroupID).To(Equal(core.StringPtr("testString")))
+				Expect(listPublicAddressRangesOptionsModel.ProfileName).To(Equal(core.StringPtr("public-address-range-user-ipv4")))
 				Expect(listPublicAddressRangesOptionsModel.Headers).To(Equal(map[string]string{"foo": "bar"}))
 			})
 			It(`Invoke NewListPublicGatewaysOptions successfully`, func() {
@@ -132530,16 +134951,6 @@ var _ = Describe(`VpcV1`, func() {
 				Expect(_model).ToNot(BeNil())
 				Expect(err).To(BeNil())
 			})
-			It(`Invoke NewFloatingIPPrototypeFloatingIPByTarget successfully`, func() {
-				var target vpcv1.FloatingIPTargetPrototypeIntf = nil
-				_, err := vpcService.NewFloatingIPPrototypeFloatingIPByTarget(target)
-				Expect(err).ToNot(BeNil())
-			})
-			It(`Invoke NewFloatingIPPrototypeFloatingIPByZone successfully`, func() {
-				var zone vpcv1.ZoneIdentityIntf = nil
-				_, err := vpcService.NewFloatingIPPrototypeFloatingIPByZone(zone)
-				Expect(err).ToNot(BeNil())
-			})
 			It(`Invoke NewImageIdentityByCRN successfully`, func() {
 				crn := "crn:v1:bluemix:public:is:us-south:a/aa2432b1fa4d4ace891e9b80fc104e34::image:r006-72b27b5c-f4b0-48bb-b954-5becc7c1dcb8"
 				_model, err := vpcService.NewImageIdentityByCRN(crn)
@@ -132971,6 +135382,18 @@ var _ = Describe(`VpcV1`, func() {
 			It(`Invoke NewOperatingSystemIdentityByName successfully`, func() {
 				name := "ubuntu-24-04-amd64"
 				_model, err := vpcService.NewOperatingSystemIdentityByName(name)
+				Expect(_model).ToNot(BeNil())
+				Expect(err).To(BeNil())
+			})
+			It(`Invoke NewPublicAddressRangePrototypePublicAddressRangeByCIDR successfully`, func() {
+				cidr := "testString"
+				_model, err := vpcService.NewPublicAddressRangePrototypePublicAddressRangeByCIDR(cidr)
+				Expect(_model).ToNot(BeNil())
+				Expect(err).To(BeNil())
+			})
+			It(`Invoke NewPublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount successfully`, func() {
+				ipv4AddressCount := int64(8)
+				_model, err := vpcService.NewPublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount(ipv4AddressCount)
 				Expect(_model).ToNot(BeNil())
 				Expect(err).To(BeNil())
 			})
@@ -135676,27 +138099,6 @@ var _ = Describe(`VpcV1`, func() {
 			Expect(result).ToNot(BeNil())
 			Expect(result).To(Equal(model))
 		})
-		It(`Invoke UnmarshalFloatingIPPrototype successfully`, func() {
-			// Construct an instance of the model.
-			model := new(vpcv1.FloatingIPPrototype)
-			model.Name = core.StringPtr("my-floating-ip")
-			model.ResourceGroup = nil
-			model.Zone = nil
-			model.Target = nil
-
-			b, err := json.Marshal(model)
-			Expect(err).To(BeNil())
-
-			var raw map[string]json.RawMessage
-			err = json.Unmarshal(b, &raw)
-			Expect(err).To(BeNil())
-
-			var result *vpcv1.FloatingIPPrototype
-			err = vpcv1.UnmarshalFloatingIPPrototype(raw, &result)
-			Expect(err).To(BeNil())
-			Expect(result).ToNot(BeNil())
-			Expect(result).To(Equal(model))
-		})
 		It(`Invoke UnmarshalFloatingIPTargetPatch successfully`, func() {
 			// Construct an instance of the model.
 			model := new(vpcv1.FloatingIPTargetPatch)
@@ -137986,6 +140388,28 @@ var _ = Describe(`VpcV1`, func() {
 
 			var result *vpcv1.PublicAddressRangePatch
 			err = vpcv1.UnmarshalPublicAddressRangePatch(raw, &result)
+			Expect(err).To(BeNil())
+			Expect(result).ToNot(BeNil())
+			Expect(result).To(Equal(model))
+		})
+		It(`Invoke UnmarshalPublicAddressRangePrototype successfully`, func() {
+			// Construct an instance of the model.
+			model := new(vpcv1.PublicAddressRangePrototype)
+			model.Name = core.StringPtr("my-public-address-range")
+			model.ResourceGroup = nil
+			model.Target = nil
+			model.CIDR = core.StringPtr("testString")
+			model.Ipv4AddressCount = core.Int64Ptr(int64(8))
+
+			b, err := json.Marshal(model)
+			Expect(err).To(BeNil())
+
+			var raw map[string]json.RawMessage
+			err = json.Unmarshal(b, &raw)
+			Expect(err).To(BeNil())
+
+			var result *vpcv1.PublicAddressRangePrototype
+			err = vpcv1.UnmarshalPublicAddressRangePrototype(raw, &result)
 			Expect(err).To(BeNil())
 			Expect(result).ToNot(BeNil())
 			Expect(result).To(Equal(model))
@@ -141238,46 +143662,6 @@ var _ = Describe(`VpcV1`, func() {
 			Expect(result).ToNot(BeNil())
 			Expect(result).To(Equal(model))
 		})
-		It(`Invoke UnmarshalFloatingIPPrototypeFloatingIPByTarget successfully`, func() {
-			// Construct an instance of the model.
-			model := new(vpcv1.FloatingIPPrototypeFloatingIPByTarget)
-			model.Name = core.StringPtr("my-floating-ip")
-			model.ResourceGroup = nil
-			model.Target = nil
-
-			b, err := json.Marshal(model)
-			Expect(err).To(BeNil())
-
-			var raw map[string]json.RawMessage
-			err = json.Unmarshal(b, &raw)
-			Expect(err).To(BeNil())
-
-			var result *vpcv1.FloatingIPPrototypeFloatingIPByTarget
-			err = vpcv1.UnmarshalFloatingIPPrototypeFloatingIPByTarget(raw, &result)
-			Expect(err).To(BeNil())
-			Expect(result).ToNot(BeNil())
-			Expect(result).To(Equal(model))
-		})
-		It(`Invoke UnmarshalFloatingIPPrototypeFloatingIPByZone successfully`, func() {
-			// Construct an instance of the model.
-			model := new(vpcv1.FloatingIPPrototypeFloatingIPByZone)
-			model.Name = core.StringPtr("my-floating-ip")
-			model.ResourceGroup = nil
-			model.Zone = nil
-
-			b, err := json.Marshal(model)
-			Expect(err).To(BeNil())
-
-			var raw map[string]json.RawMessage
-			err = json.Unmarshal(b, &raw)
-			Expect(err).To(BeNil())
-
-			var result *vpcv1.FloatingIPPrototypeFloatingIPByZone
-			err = vpcv1.UnmarshalFloatingIPPrototypeFloatingIPByZone(raw, &result)
-			Expect(err).To(BeNil())
-			Expect(result).ToNot(BeNil())
-			Expect(result).To(Equal(model))
-		})
 		It(`Invoke UnmarshalFloatingIPTargetPatchBareMetalServerNetworkInterfaceIdentity successfully`, func() {
 			// Construct an instance of the model.
 			model := new(vpcv1.FloatingIPTargetPatchBareMetalServerNetworkInterfaceIdentity)
@@ -143595,6 +145979,48 @@ var _ = Describe(`VpcV1`, func() {
 
 			var result *vpcv1.OperatingSystemIdentityByName
 			err = vpcv1.UnmarshalOperatingSystemIdentityByName(raw, &result)
+			Expect(err).To(BeNil())
+			Expect(result).ToNot(BeNil())
+			Expect(result).To(Equal(model))
+		})
+		It(`Invoke UnmarshalPublicAddressRangePrototypePublicAddressRangeByCIDR successfully`, func() {
+			// Construct an instance of the model.
+			model := new(vpcv1.PublicAddressRangePrototypePublicAddressRangeByCIDR)
+			model.Name = core.StringPtr("my-public-address-range")
+			model.ResourceGroup = nil
+			model.Target = nil
+			model.CIDR = core.StringPtr("testString")
+
+			b, err := json.Marshal(model)
+			Expect(err).To(BeNil())
+
+			var raw map[string]json.RawMessage
+			err = json.Unmarshal(b, &raw)
+			Expect(err).To(BeNil())
+
+			var result *vpcv1.PublicAddressRangePrototypePublicAddressRangeByCIDR
+			err = vpcv1.UnmarshalPublicAddressRangePrototypePublicAddressRangeByCIDR(raw, &result)
+			Expect(err).To(BeNil())
+			Expect(result).ToNot(BeNil())
+			Expect(result).To(Equal(model))
+		})
+		It(`Invoke UnmarshalPublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount successfully`, func() {
+			// Construct an instance of the model.
+			model := new(vpcv1.PublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount)
+			model.Name = core.StringPtr("my-public-address-range")
+			model.ResourceGroup = nil
+			model.Target = nil
+			model.Ipv4AddressCount = core.Int64Ptr(int64(8))
+
+			b, err := json.Marshal(model)
+			Expect(err).To(BeNil())
+
+			var raw map[string]json.RawMessage
+			err = json.Unmarshal(b, &raw)
+			Expect(err).To(BeNil())
+
+			var result *vpcv1.PublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount
+			err = vpcv1.UnmarshalPublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount(raw, &result)
 			Expect(err).To(BeNil())
 			Expect(result).ToNot(BeNil())
 			Expect(result).To(Equal(model))

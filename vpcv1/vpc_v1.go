@@ -38,7 +38,7 @@ import (
 // VpcV1 : The IBM Cloud Virtual Private Cloud (VPC) API can be used to programmatically provision and manage virtual
 // server instances, along with subnets, volumes, load balancers, and more.
 //
-// API Version: 2026-06-09
+// API Version: 2025-09-16
 type VpcV1 struct {
 	Service *core.BaseService
 
@@ -46,9 +46,11 @@ type VpcV1 struct {
 	// `2`.
 	Generation *int64
 
-	// The API version, in format `YYYY-MM-DD`. For the API behavior documented here, specify any date between `2026-04-07`
-	// and `2026-06-10`.
-	Version *string
+	// The API version, in format `YYYY-MM-DD`. For the API behavior documented here, specify any date between `2025-09-16`
+	// and `2025-11-17`.
+	Version       *string
+	Maturity      *string
+	FutureVersion *string
 }
 
 // DefaultServiceURL is the default URL to make service requests to.
@@ -67,9 +69,12 @@ type VpcV1Options struct {
 	// `2`.
 	Generation *int64
 
-	// The API version, in format `YYYY-MM-DD`. For the API behavior documented here, specify any date between `2026-04-07`
-	// and `2026-06-10`.
+	// The API version, in format `YYYY-MM-DD`. For the API behavior documented here, specify any date between `2025-09-16`
+	// and `2025-11-17`.
 	Version *string
+
+	Maturity      *string
+	FutureVersion *string
 }
 
 // NewVpcV1UsingExternalConfig : constructs an instance of VpcV1 with passed in options and external configuration.
@@ -144,6 +149,13 @@ func NewVpcV1(options *VpcV1Options) (service *VpcV1, err error) {
 
 	if service.Generation == nil {
 		service.Generation = core.Int64Ptr(2)
+	}
+
+	if options.Maturity != nil {
+		service.Maturity = core.StringPtr(*options.Maturity)
+	}
+	if options.FutureVersion != nil {
+		service.FutureVersion = core.StringPtr(*options.FutureVersion)
 	}
 
 	return
@@ -2273,7 +2285,17 @@ func (vpc *VpcV1) ListBareMetalServerNetworkInterfacesWithContext(ctx context.Co
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 	if listBareMetalServerNetworkInterfacesOptions.Start != nil {
 		builder.AddQuery("start", fmt.Sprint(*listBareMetalServerNetworkInterfacesOptions.Start))
@@ -2360,7 +2382,17 @@ func (vpc *VpcV1) CreateBareMetalServerNetworkInterfaceWithContext(ctx context.C
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	_, err = builder.SetBodyContentJSON(createBareMetalServerNetworkInterfaceOptions.BareMetalServerNetworkInterfacePrototype)
@@ -2444,7 +2476,17 @@ func (vpc *VpcV1) DeleteBareMetalServerNetworkInterfaceWithContext(ctx context.C
 		builder.AddHeader(headerName, headerValue)
 	}
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -2512,7 +2554,17 @@ func (vpc *VpcV1) GetBareMetalServerNetworkInterfaceWithContext(ctx context.Cont
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -2592,7 +2644,17 @@ func (vpc *VpcV1) UpdateBareMetalServerNetworkInterfaceWithContext(ctx context.C
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/merge-patch+json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	_, err = builder.SetBodyContentJSON(updateBareMetalServerNetworkInterfaceOptions.BareMetalServerNetworkInterfacePatch)
@@ -2671,7 +2733,17 @@ func (vpc *VpcV1) ListBareMetalServerNetworkInterfaceFloatingIpsWithContext(ctx 
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -2744,7 +2816,17 @@ func (vpc *VpcV1) RemoveBareMetalServerNetworkInterfaceFloatingIPWithContext(ctx
 		builder.AddHeader(headerName, headerValue)
 	}
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -2810,7 +2892,17 @@ func (vpc *VpcV1) GetBareMetalServerNetworkInterfaceFloatingIPWithContext(ctx co
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -2844,8 +2936,9 @@ func (vpc *VpcV1) GetBareMetalServerNetworkInterfaceFloatingIPWithContext(ctx co
 // is `true`, this replaces any existing association.
 //
 // The existing floating IP must:
-// - not be required by another resource, such as a public gateway
 // - be in the same `zone` as the bare metal server
+// - not be allocated from an `authorized_cidr`
+// - not be required by another resource, such as a public gateway
 //
 // A request body is not required, and if provided, is ignored.
 func (vpc *VpcV1) AddBareMetalServerNetworkInterfaceFloatingIP(addBareMetalServerNetworkInterfaceFloatingIPOptions *AddBareMetalServerNetworkInterfaceFloatingIPOptions) (result *FloatingIP, response *core.DetailedResponse, err error) {
@@ -2892,7 +2985,17 @@ func (vpc *VpcV1) AddBareMetalServerNetworkInterfaceFloatingIPWithContext(ctx co
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -2968,7 +3071,17 @@ func (vpc *VpcV1) ListBareMetalServerNetworkInterfaceIpsWithContext(ctx context.
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -3045,7 +3158,17 @@ func (vpc *VpcV1) GetBareMetalServerNetworkInterfaceIPWithContext(ctx context.Co
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -7757,6 +7880,169 @@ func (vpc *VpcV1) UpdateEndpointGatewayWithContext(ctx context.Context, updateEn
 	return
 }
 
+// ListFloatingIPProfiles : List floating IP profiles
+// This request lists floating IP profiles available in the region. A floating IP profile specifies the characteristics
+// and capabilities for a floating IP.
+func (vpc *VpcV1) ListFloatingIPProfiles(listFloatingIPProfilesOptions *ListFloatingIPProfilesOptions) (result *FloatingIPProfileCollection, response *core.DetailedResponse, err error) {
+	result, response, err = vpc.ListFloatingIPProfilesWithContext(context.Background(), listFloatingIPProfilesOptions)
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// ListFloatingIPProfilesWithContext is an alternate form of the ListFloatingIPProfiles method which supports a Context parameter
+func (vpc *VpcV1) ListFloatingIPProfilesWithContext(ctx context.Context, listFloatingIPProfilesOptions *ListFloatingIPProfilesOptions) (result *FloatingIPProfileCollection, response *core.DetailedResponse, err error) {
+	err = core.ValidateStruct(listFloatingIPProfilesOptions, "listFloatingIPProfilesOptions")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "struct-validation-error", common.GetComponentInfo())
+		return
+	}
+
+	builder := core.NewRequestBuilder(core.GET)
+	builder = builder.WithContext(ctx)
+	builder.EnableGzipCompression = vpc.GetEnableGzipCompression()
+	_, err = builder.ResolveRequestURL(vpc.Service.Options.URL, `/floating_ip/profiles`, nil)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "url-resolve-error", common.GetComponentInfo())
+		return
+	}
+
+	sdkHeaders := common.GetSdkHeaders("vpc", "V1", "ListFloatingIPProfiles")
+	for headerName, headerValue := range sdkHeaders {
+		builder.AddHeader(headerName, headerValue)
+	}
+
+	for headerName, headerValue := range listFloatingIPProfilesOptions.Headers {
+		builder.AddHeader(headerName, headerValue)
+	}
+	builder.AddHeader("Accept", "application/json")
+
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
+
+	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
+	if listFloatingIPProfilesOptions.Start != nil {
+		builder.AddQuery("start", fmt.Sprint(*listFloatingIPProfilesOptions.Start))
+	}
+	if listFloatingIPProfilesOptions.Limit != nil {
+		builder.AddQuery("limit", fmt.Sprint(*listFloatingIPProfilesOptions.Limit))
+	}
+
+	request, err := builder.Build()
+	if err != nil {
+		err = core.SDKErrorf(err, "", "build-error", common.GetComponentInfo())
+		return
+	}
+
+	var rawResponse map[string]json.RawMessage
+	response, err = vpc.Service.Request(request, &rawResponse)
+	if err != nil {
+		core.EnrichHTTPProblem(err, "list_floating_ip_profiles", getServiceComponentInfo())
+		err = core.SDKErrorf(err, "", "http-request-err", common.GetComponentInfo())
+		return
+	}
+	if rawResponse != nil {
+		err = core.UnmarshalModel(rawResponse, "", &result, UnmarshalFloatingIPProfileCollection)
+		if err != nil {
+			err = core.SDKErrorf(err, "", "unmarshal-resp-error", common.GetComponentInfo())
+			return
+		}
+		response.Result = result
+	}
+
+	return
+}
+
+// GetFloatingIPProfile : Retrieve a floating IP profile
+// This request retrieves a single floating IP profile specified by the name in the URL.
+func (vpc *VpcV1) GetFloatingIPProfile(getFloatingIPProfileOptions *GetFloatingIPProfileOptions) (result *FloatingIPProfile, response *core.DetailedResponse, err error) {
+	result, response, err = vpc.GetFloatingIPProfileWithContext(context.Background(), getFloatingIPProfileOptions)
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// GetFloatingIPProfileWithContext is an alternate form of the GetFloatingIPProfile method which supports a Context parameter
+func (vpc *VpcV1) GetFloatingIPProfileWithContext(ctx context.Context, getFloatingIPProfileOptions *GetFloatingIPProfileOptions) (result *FloatingIPProfile, response *core.DetailedResponse, err error) {
+	err = core.ValidateNotNil(getFloatingIPProfileOptions, "getFloatingIPProfileOptions cannot be nil")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "unexpected-nil-param", common.GetComponentInfo())
+		return
+	}
+	err = core.ValidateStruct(getFloatingIPProfileOptions, "getFloatingIPProfileOptions")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "struct-validation-error", common.GetComponentInfo())
+		return
+	}
+
+	pathParamsMap := map[string]string{
+		"name": *getFloatingIPProfileOptions.Name,
+	}
+
+	builder := core.NewRequestBuilder(core.GET)
+	builder = builder.WithContext(ctx)
+	builder.EnableGzipCompression = vpc.GetEnableGzipCompression()
+	_, err = builder.ResolveRequestURL(vpc.Service.Options.URL, `/floating_ip/profiles/{name}`, pathParamsMap)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "url-resolve-error", common.GetComponentInfo())
+		return
+	}
+
+	sdkHeaders := common.GetSdkHeaders("vpc", "V1", "GetFloatingIPProfile")
+	for headerName, headerValue := range sdkHeaders {
+		builder.AddHeader(headerName, headerValue)
+	}
+
+	for headerName, headerValue := range getFloatingIPProfileOptions.Headers {
+		builder.AddHeader(headerName, headerValue)
+	}
+	builder.AddHeader("Accept", "application/json")
+
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
+	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
+
+	request, err := builder.Build()
+	if err != nil {
+		err = core.SDKErrorf(err, "", "build-error", common.GetComponentInfo())
+		return
+	}
+
+	var rawResponse map[string]json.RawMessage
+	response, err = vpc.Service.Request(request, &rawResponse)
+	if err != nil {
+		core.EnrichHTTPProblem(err, "get_floating_ip_profile", getServiceComponentInfo())
+		err = core.SDKErrorf(err, "", "http-request-err", common.GetComponentInfo())
+		return
+	}
+	if rawResponse != nil {
+		err = core.UnmarshalModel(rawResponse, "", &result, UnmarshalFloatingIPProfile)
+		if err != nil {
+			err = core.SDKErrorf(err, "", "unmarshal-resp-error", common.GetComponentInfo())
+			return
+		}
+		response.Result = result
+	}
+
+	return
+}
+
 // ListFloatingIps : List floating IPs
 // This request lists floating IPs in the region. Floating IPs allow inbound and outbound traffic from the Internet to
 // an instance.
@@ -7793,7 +8079,17 @@ func (vpc *VpcV1) ListFloatingIpsWithContext(ctx context.Context, listFloatingIp
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 	if listFloatingIpsOptions.Start != nil {
 		builder.AddQuery("start", fmt.Sprint(*listFloatingIpsOptions.Start))
@@ -7806,6 +8102,9 @@ func (vpc *VpcV1) ListFloatingIpsWithContext(ctx context.Context, listFloatingIp
 	}
 	if listFloatingIpsOptions.Sort != nil {
 		builder.AddQuery("sort", fmt.Sprint(*listFloatingIpsOptions.Sort))
+	}
+	if listFloatingIpsOptions.ProfileName != nil {
+		builder.AddQuery("profile.name", fmt.Sprint(*listFloatingIpsOptions.ProfileName))
 	}
 	if listFloatingIpsOptions.TargetID != nil {
 		builder.AddQuery("target.id", fmt.Sprint(*listFloatingIpsOptions.TargetID))
@@ -7886,10 +8185,36 @@ func (vpc *VpcV1) CreateFloatingIPWithContext(ctx context.Context, createFloatin
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
-	_, err = builder.SetBodyContentJSON(createFloatingIPOptions.FloatingIPPrototype)
+	body := make(map[string]interface{})
+	if createFloatingIPOptions.Address != nil {
+		body["address"] = createFloatingIPOptions.Address
+	}
+	if createFloatingIPOptions.Name != nil {
+		body["name"] = createFloatingIPOptions.Name
+	}
+	if createFloatingIPOptions.ResourceGroup != nil {
+		body["resource_group"] = createFloatingIPOptions.ResourceGroup
+	}
+	if createFloatingIPOptions.Target != nil {
+		body["target"] = createFloatingIPOptions.Target
+	}
+	if createFloatingIPOptions.Zone != nil {
+		body["zone"] = createFloatingIPOptions.Zone
+	}
+	_, err = builder.SetBodyContentJSON(body)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "set-json-body-error", common.GetComponentInfo())
 		return
@@ -7964,7 +8289,17 @@ func (vpc *VpcV1) DeleteFloatingIPWithContext(ctx context.Context, deleteFloatin
 		builder.AddHeader(headerName, headerValue)
 	}
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -8027,7 +8362,17 @@ func (vpc *VpcV1) GetFloatingIPWithContext(ctx context.Context, getFloatingIPOpt
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -8100,7 +8445,17 @@ func (vpc *VpcV1) UpdateFloatingIPWithContext(ctx context.Context, updateFloatin
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/merge-patch+json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	_, err = builder.SetBodyContentJSON(updateFloatingIPOptions.FloatingIPPatch)
@@ -14228,7 +14583,17 @@ func (vpc *VpcV1) ListInstanceNetworkInterfacesWithContext(ctx context.Context, 
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -14308,7 +14673,17 @@ func (vpc *VpcV1) CreateInstanceNetworkInterfaceWithContext(ctx context.Context,
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	body := make(map[string]interface{})
@@ -14409,7 +14784,17 @@ func (vpc *VpcV1) DeleteInstanceNetworkInterfaceWithContext(ctx context.Context,
 		builder.AddHeader(headerName, headerValue)
 	}
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -14477,7 +14862,17 @@ func (vpc *VpcV1) GetInstanceNetworkInterfaceWithContext(ctx context.Context, ge
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -14557,7 +14952,17 @@ func (vpc *VpcV1) UpdateInstanceNetworkInterfaceWithContext(ctx context.Context,
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/merge-patch+json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	_, err = builder.SetBodyContentJSON(updateInstanceNetworkInterfaceOptions.NetworkInterfacePatch)
@@ -14636,7 +15041,17 @@ func (vpc *VpcV1) ListInstanceNetworkInterfaceFloatingIpsWithContext(ctx context
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -14709,7 +15124,17 @@ func (vpc *VpcV1) RemoveInstanceNetworkInterfaceFloatingIPWithContext(ctx contex
 		builder.AddHeader(headerName, headerValue)
 	}
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -14775,7 +15200,17 @@ func (vpc *VpcV1) GetInstanceNetworkInterfaceFloatingIPWithContext(ctx context.C
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -14808,8 +15243,9 @@ func (vpc *VpcV1) GetInstanceNetworkInterfaceFloatingIPWithContext(ctx context.C
 // existing association.
 //
 // The existing floating IP must:
-// - not be required by another resource, such as a public gateway
 // - be in the same `zone` as the instance
+// - not be allocated from an `authorized_cidr`
+// - not be required by another resource, such as a public gateway
 //
 // A request body is not required, and if provided, is ignored.
 func (vpc *VpcV1) AddInstanceNetworkInterfaceFloatingIP(addInstanceNetworkInterfaceFloatingIPOptions *AddInstanceNetworkInterfaceFloatingIPOptions) (result *FloatingIP, response *core.DetailedResponse, err error) {
@@ -14856,7 +15292,17 @@ func (vpc *VpcV1) AddInstanceNetworkInterfaceFloatingIPWithContext(ctx context.C
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -14932,7 +15378,17 @@ func (vpc *VpcV1) ListInstanceNetworkInterfaceIpsWithContext(ctx context.Context
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 	if listInstanceNetworkInterfaceIpsOptions.Start != nil {
 		builder.AddQuery("start", fmt.Sprint(*listInstanceNetworkInterfaceIpsOptions.Start))
@@ -15015,7 +15471,17 @@ func (vpc *VpcV1) GetInstanceNetworkInterfaceIPWithContext(ctx context.Context, 
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -20881,6 +21347,515 @@ func (vpc *VpcV1) UnpublishPrivatePathServiceGatewayWithContext(ctx context.Cont
 	return
 }
 
+// ListPublicAddressRangeAuthorizedCIDRs : List public address range authorized CIDRs
+// This request lists public address range authorized CIDRs available in the region. An authorized CIDR specifies a
+// contiguous block of public IP addresses authorized for allocating public address ranges from.
+//
+// The authorized CIDRs will be sorted by ascending `cidr` property values.
+func (vpc *VpcV1) ListPublicAddressRangeAuthorizedCIDRs(listPublicAddressRangeAuthorizedCIDRsOptions *ListPublicAddressRangeAuthorizedCIDRsOptions) (result *PublicAddressRangeAuthorizedCIDRCollection, response *core.DetailedResponse, err error) {
+	result, response, err = vpc.ListPublicAddressRangeAuthorizedCIDRsWithContext(context.Background(), listPublicAddressRangeAuthorizedCIDRsOptions)
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// ListPublicAddressRangeAuthorizedCIDRsWithContext is an alternate form of the ListPublicAddressRangeAuthorizedCIDRs method which supports a Context parameter
+func (vpc *VpcV1) ListPublicAddressRangeAuthorizedCIDRsWithContext(ctx context.Context, listPublicAddressRangeAuthorizedCIDRsOptions *ListPublicAddressRangeAuthorizedCIDRsOptions) (result *PublicAddressRangeAuthorizedCIDRCollection, response *core.DetailedResponse, err error) {
+	err = core.ValidateStruct(listPublicAddressRangeAuthorizedCIDRsOptions, "listPublicAddressRangeAuthorizedCIDRsOptions")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "struct-validation-error", common.GetComponentInfo())
+		return
+	}
+
+	builder := core.NewRequestBuilder(core.GET)
+	builder = builder.WithContext(ctx)
+	builder.EnableGzipCompression = vpc.GetEnableGzipCompression()
+	_, err = builder.ResolveRequestURL(vpc.Service.Options.URL, `/public_address_range/authorized_cidrs`, nil)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "url-resolve-error", common.GetComponentInfo())
+		return
+	}
+
+	sdkHeaders := common.GetSdkHeaders("vpc", "V1", "ListPublicAddressRangeAuthorizedCIDRs")
+	for headerName, headerValue := range sdkHeaders {
+		builder.AddHeader(headerName, headerValue)
+	}
+
+	for headerName, headerValue := range listPublicAddressRangeAuthorizedCIDRsOptions.Headers {
+		builder.AddHeader(headerName, headerValue)
+	}
+	builder.AddHeader("Accept", "application/json")
+
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
+	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
+	if listPublicAddressRangeAuthorizedCIDRsOptions.Start != nil {
+		builder.AddQuery("start", fmt.Sprint(*listPublicAddressRangeAuthorizedCIDRsOptions.Start))
+	}
+	if listPublicAddressRangeAuthorizedCIDRsOptions.Limit != nil {
+		builder.AddQuery("limit", fmt.Sprint(*listPublicAddressRangeAuthorizedCIDRsOptions.Limit))
+	}
+	if listPublicAddressRangeAuthorizedCIDRsOptions.AllocationProfileFamily != nil {
+		builder.AddQuery("allocation.profile_family", fmt.Sprint(*listPublicAddressRangeAuthorizedCIDRsOptions.AllocationProfileFamily))
+	}
+	if listPublicAddressRangeAuthorizedCIDRsOptions.AvailabilityMode != nil {
+		builder.AddQuery("availability_mode", fmt.Sprint(*listPublicAddressRangeAuthorizedCIDRsOptions.AvailabilityMode))
+	}
+
+	request, err := builder.Build()
+	if err != nil {
+		err = core.SDKErrorf(err, "", "build-error", common.GetComponentInfo())
+		return
+	}
+
+	var rawResponse map[string]json.RawMessage
+	response, err = vpc.Service.Request(request, &rawResponse)
+	if err != nil {
+		core.EnrichHTTPProblem(err, "list_public_address_range_authorized_cidrs", getServiceComponentInfo())
+		err = core.SDKErrorf(err, "", "http-request-err", common.GetComponentInfo())
+		return
+	}
+	if rawResponse != nil {
+		err = core.UnmarshalModel(rawResponse, "", &result, UnmarshalPublicAddressRangeAuthorizedCIDRCollection)
+		if err != nil {
+			err = core.SDKErrorf(err, "", "unmarshal-resp-error", common.GetComponentInfo())
+			return
+		}
+		response.Result = result
+	}
+
+	return
+}
+
+// ListPublicAddressRangeAuthorizedCIDRAllocations : List public address range authorized CIDR allocations
+// This request lists allocations for a public address range authorized CIDR. An allocation specifies a contiguous block
+// of public IP addresses allocated from the public address range authorized CIDR. The allocations do not overlap.
+//
+// The allocations will be sorted by their address offset in the authorized CIDR.
+func (vpc *VpcV1) ListPublicAddressRangeAuthorizedCIDRAllocations(listPublicAddressRangeAuthorizedCIDRAllocationsOptions *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions) (result *PublicAddressRangeAuthorizedCIDRAllocationCollection, response *core.DetailedResponse, err error) {
+	result, response, err = vpc.ListPublicAddressRangeAuthorizedCIDRAllocationsWithContext(context.Background(), listPublicAddressRangeAuthorizedCIDRAllocationsOptions)
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// ListPublicAddressRangeAuthorizedCIDRAllocationsWithContext is an alternate form of the ListPublicAddressRangeAuthorizedCIDRAllocations method which supports a Context parameter
+func (vpc *VpcV1) ListPublicAddressRangeAuthorizedCIDRAllocationsWithContext(ctx context.Context, listPublicAddressRangeAuthorizedCIDRAllocationsOptions *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions) (result *PublicAddressRangeAuthorizedCIDRAllocationCollection, response *core.DetailedResponse, err error) {
+	err = core.ValidateNotNil(listPublicAddressRangeAuthorizedCIDRAllocationsOptions, "listPublicAddressRangeAuthorizedCIDRAllocationsOptions cannot be nil")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "unexpected-nil-param", common.GetComponentInfo())
+		return
+	}
+	err = core.ValidateStruct(listPublicAddressRangeAuthorizedCIDRAllocationsOptions, "listPublicAddressRangeAuthorizedCIDRAllocationsOptions")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "struct-validation-error", common.GetComponentInfo())
+		return
+	}
+
+	pathParamsMap := map[string]string{
+		"authorized_cidr_id": *listPublicAddressRangeAuthorizedCIDRAllocationsOptions.AuthorizedCIDRID,
+	}
+
+	builder := core.NewRequestBuilder(core.GET)
+	builder = builder.WithContext(ctx)
+	builder.EnableGzipCompression = vpc.GetEnableGzipCompression()
+	_, err = builder.ResolveRequestURL(vpc.Service.Options.URL, `/public_address_range/authorized_cidrs/{authorized_cidr_id}/allocations`, pathParamsMap)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "url-resolve-error", common.GetComponentInfo())
+		return
+	}
+
+	sdkHeaders := common.GetSdkHeaders("vpc", "V1", "ListPublicAddressRangeAuthorizedCIDRAllocations")
+	for headerName, headerValue := range sdkHeaders {
+		builder.AddHeader(headerName, headerValue)
+	}
+
+	for headerName, headerValue := range listPublicAddressRangeAuthorizedCIDRAllocationsOptions.Headers {
+		builder.AddHeader(headerName, headerValue)
+	}
+	builder.AddHeader("Accept", "application/json")
+
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
+	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
+	if listPublicAddressRangeAuthorizedCIDRAllocationsOptions.Start != nil {
+		builder.AddQuery("start", fmt.Sprint(*listPublicAddressRangeAuthorizedCIDRAllocationsOptions.Start))
+	}
+	if listPublicAddressRangeAuthorizedCIDRAllocationsOptions.Limit != nil {
+		builder.AddQuery("limit", fmt.Sprint(*listPublicAddressRangeAuthorizedCIDRAllocationsOptions.Limit))
+	}
+	if listPublicAddressRangeAuthorizedCIDRAllocationsOptions.AllocationsResourceType != nil {
+		builder.AddQuery("allocations[].resource_type", fmt.Sprint(*listPublicAddressRangeAuthorizedCIDRAllocationsOptions.AllocationsResourceType))
+	}
+
+	request, err := builder.Build()
+	if err != nil {
+		err = core.SDKErrorf(err, "", "build-error", common.GetComponentInfo())
+		return
+	}
+
+	var rawResponse map[string]json.RawMessage
+	response, err = vpc.Service.Request(request, &rawResponse)
+	if err != nil {
+		core.EnrichHTTPProblem(err, "list_public_address_range_authorized_cidr_allocations", getServiceComponentInfo())
+		err = core.SDKErrorf(err, "", "http-request-err", common.GetComponentInfo())
+		return
+	}
+	if rawResponse != nil {
+		err = core.UnmarshalModel(rawResponse, "", &result, UnmarshalPublicAddressRangeAuthorizedCIDRAllocationCollection)
+		if err != nil {
+			err = core.SDKErrorf(err, "", "unmarshal-resp-error", common.GetComponentInfo())
+			return
+		}
+		response.Result = result
+	}
+
+	return
+}
+
+// GetPublicAddressRangeAuthorizedCIDRAllocation : Retrieve a public address range authorized CIDR
+// This request retrieves a single public address range authorized CIDR specified by the name in the URL.
+func (vpc *VpcV1) GetPublicAddressRangeAuthorizedCIDRAllocation(getPublicAddressRangeAuthorizedCIDRAllocationOptions *GetPublicAddressRangeAuthorizedCIDRAllocationOptions) (result PublicAddressRangeAuthorizedCIDRAllocationItemIntf, response *core.DetailedResponse, err error) {
+	result, response, err = vpc.GetPublicAddressRangeAuthorizedCIDRAllocationWithContext(context.Background(), getPublicAddressRangeAuthorizedCIDRAllocationOptions)
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// GetPublicAddressRangeAuthorizedCIDRAllocationWithContext is an alternate form of the GetPublicAddressRangeAuthorizedCIDRAllocation method which supports a Context parameter
+func (vpc *VpcV1) GetPublicAddressRangeAuthorizedCIDRAllocationWithContext(ctx context.Context, getPublicAddressRangeAuthorizedCIDRAllocationOptions *GetPublicAddressRangeAuthorizedCIDRAllocationOptions) (result PublicAddressRangeAuthorizedCIDRAllocationItemIntf, response *core.DetailedResponse, err error) {
+	err = core.ValidateNotNil(getPublicAddressRangeAuthorizedCIDRAllocationOptions, "getPublicAddressRangeAuthorizedCIDRAllocationOptions cannot be nil")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "unexpected-nil-param", common.GetComponentInfo())
+		return
+	}
+	err = core.ValidateStruct(getPublicAddressRangeAuthorizedCIDRAllocationOptions, "getPublicAddressRangeAuthorizedCIDRAllocationOptions")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "struct-validation-error", common.GetComponentInfo())
+		return
+	}
+
+	pathParamsMap := map[string]string{
+		"authorized_cidr_id": *getPublicAddressRangeAuthorizedCIDRAllocationOptions.AuthorizedCIDRID,
+		"id":                 *getPublicAddressRangeAuthorizedCIDRAllocationOptions.ID,
+	}
+
+	builder := core.NewRequestBuilder(core.GET)
+	builder = builder.WithContext(ctx)
+	builder.EnableGzipCompression = vpc.GetEnableGzipCompression()
+	_, err = builder.ResolveRequestURL(vpc.Service.Options.URL, `/public_address_range/authorized_cidrs/{authorized_cidr_id}/allocations/{id}`, pathParamsMap)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "url-resolve-error", common.GetComponentInfo())
+		return
+	}
+
+	sdkHeaders := common.GetSdkHeaders("vpc", "V1", "GetPublicAddressRangeAuthorizedCIDRAllocation")
+	for headerName, headerValue := range sdkHeaders {
+		builder.AddHeader(headerName, headerValue)
+	}
+
+	for headerName, headerValue := range getPublicAddressRangeAuthorizedCIDRAllocationOptions.Headers {
+		builder.AddHeader(headerName, headerValue)
+	}
+	builder.AddHeader("Accept", "application/json")
+
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
+	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
+
+	request, err := builder.Build()
+	if err != nil {
+		err = core.SDKErrorf(err, "", "build-error", common.GetComponentInfo())
+		return
+	}
+
+	var rawResponse map[string]json.RawMessage
+	response, err = vpc.Service.Request(request, &rawResponse)
+	if err != nil {
+		core.EnrichHTTPProblem(err, "get_public_address_range_authorized_cidr_allocation", getServiceComponentInfo())
+		err = core.SDKErrorf(err, "", "http-request-err", common.GetComponentInfo())
+		return
+	}
+	if rawResponse != nil {
+		err = core.UnmarshalModel(rawResponse, "", &result, UnmarshalPublicAddressRangeAuthorizedCIDRAllocationItem)
+		if err != nil {
+			err = core.SDKErrorf(err, "", "unmarshal-resp-error", common.GetComponentInfo())
+			return
+		}
+		response.Result = result
+	}
+
+	return
+}
+
+// GetPublicAddressRangeAuthorizedCIDR : Retrieve a public address range authorized CIDR
+// This request retrieves a single public address range authorized CIDR specified by the name in the URL.
+func (vpc *VpcV1) GetPublicAddressRangeAuthorizedCIDR(getPublicAddressRangeAuthorizedCIDROptions *GetPublicAddressRangeAuthorizedCIDROptions) (result *PublicAddressRangeAuthorizedCIDR, response *core.DetailedResponse, err error) {
+	result, response, err = vpc.GetPublicAddressRangeAuthorizedCIDRWithContext(context.Background(), getPublicAddressRangeAuthorizedCIDROptions)
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// GetPublicAddressRangeAuthorizedCIDRWithContext is an alternate form of the GetPublicAddressRangeAuthorizedCIDR method which supports a Context parameter
+func (vpc *VpcV1) GetPublicAddressRangeAuthorizedCIDRWithContext(ctx context.Context, getPublicAddressRangeAuthorizedCIDROptions *GetPublicAddressRangeAuthorizedCIDROptions) (result *PublicAddressRangeAuthorizedCIDR, response *core.DetailedResponse, err error) {
+	err = core.ValidateNotNil(getPublicAddressRangeAuthorizedCIDROptions, "getPublicAddressRangeAuthorizedCIDROptions cannot be nil")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "unexpected-nil-param", common.GetComponentInfo())
+		return
+	}
+	err = core.ValidateStruct(getPublicAddressRangeAuthorizedCIDROptions, "getPublicAddressRangeAuthorizedCIDROptions")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "struct-validation-error", common.GetComponentInfo())
+		return
+	}
+
+	pathParamsMap := map[string]string{
+		"id": *getPublicAddressRangeAuthorizedCIDROptions.ID,
+	}
+
+	builder := core.NewRequestBuilder(core.GET)
+	builder = builder.WithContext(ctx)
+	builder.EnableGzipCompression = vpc.GetEnableGzipCompression()
+	_, err = builder.ResolveRequestURL(vpc.Service.Options.URL, `/public_address_range/authorized_cidrs/{id}`, pathParamsMap)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "url-resolve-error", common.GetComponentInfo())
+		return
+	}
+
+	sdkHeaders := common.GetSdkHeaders("vpc", "V1", "GetPublicAddressRangeAuthorizedCIDR")
+	for headerName, headerValue := range sdkHeaders {
+		builder.AddHeader(headerName, headerValue)
+	}
+
+	for headerName, headerValue := range getPublicAddressRangeAuthorizedCIDROptions.Headers {
+		builder.AddHeader(headerName, headerValue)
+	}
+	builder.AddHeader("Accept", "application/json")
+
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
+	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
+
+	request, err := builder.Build()
+	if err != nil {
+		err = core.SDKErrorf(err, "", "build-error", common.GetComponentInfo())
+		return
+	}
+
+	var rawResponse map[string]json.RawMessage
+	response, err = vpc.Service.Request(request, &rawResponse)
+	if err != nil {
+		core.EnrichHTTPProblem(err, "get_public_address_range_authorized_cidr", getServiceComponentInfo())
+		err = core.SDKErrorf(err, "", "http-request-err", common.GetComponentInfo())
+		return
+	}
+	if rawResponse != nil {
+		err = core.UnmarshalModel(rawResponse, "", &result, UnmarshalPublicAddressRangeAuthorizedCIDR)
+		if err != nil {
+			err = core.SDKErrorf(err, "", "unmarshal-resp-error", common.GetComponentInfo())
+			return
+		}
+		response.Result = result
+	}
+
+	return
+}
+
+// ListPublicAddressRangeProfiles : List public address range profiles
+// This request lists public address range profiles available in the region. A public address range profile specifies
+// the characteristics and capabilities for a public address range.
+func (vpc *VpcV1) ListPublicAddressRangeProfiles(listPublicAddressRangeProfilesOptions *ListPublicAddressRangeProfilesOptions) (result *PublicAddressRangeProfileCollection, response *core.DetailedResponse, err error) {
+	result, response, err = vpc.ListPublicAddressRangeProfilesWithContext(context.Background(), listPublicAddressRangeProfilesOptions)
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// ListPublicAddressRangeProfilesWithContext is an alternate form of the ListPublicAddressRangeProfiles method which supports a Context parameter
+func (vpc *VpcV1) ListPublicAddressRangeProfilesWithContext(ctx context.Context, listPublicAddressRangeProfilesOptions *ListPublicAddressRangeProfilesOptions) (result *PublicAddressRangeProfileCollection, response *core.DetailedResponse, err error) {
+	err = core.ValidateStruct(listPublicAddressRangeProfilesOptions, "listPublicAddressRangeProfilesOptions")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "struct-validation-error", common.GetComponentInfo())
+		return
+	}
+
+	builder := core.NewRequestBuilder(core.GET)
+	builder = builder.WithContext(ctx)
+	builder.EnableGzipCompression = vpc.GetEnableGzipCompression()
+	_, err = builder.ResolveRequestURL(vpc.Service.Options.URL, `/public_address_range/profiles`, nil)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "url-resolve-error", common.GetComponentInfo())
+		return
+	}
+
+	sdkHeaders := common.GetSdkHeaders("vpc", "V1", "ListPublicAddressRangeProfiles")
+	for headerName, headerValue := range sdkHeaders {
+		builder.AddHeader(headerName, headerValue)
+	}
+
+	for headerName, headerValue := range listPublicAddressRangeProfilesOptions.Headers {
+		builder.AddHeader(headerName, headerValue)
+	}
+	builder.AddHeader("Accept", "application/json")
+
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
+	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
+	if listPublicAddressRangeProfilesOptions.Start != nil {
+		builder.AddQuery("start", fmt.Sprint(*listPublicAddressRangeProfilesOptions.Start))
+	}
+	if listPublicAddressRangeProfilesOptions.Limit != nil {
+		builder.AddQuery("limit", fmt.Sprint(*listPublicAddressRangeProfilesOptions.Limit))
+	}
+
+	request, err := builder.Build()
+	if err != nil {
+		err = core.SDKErrorf(err, "", "build-error", common.GetComponentInfo())
+		return
+	}
+
+	var rawResponse map[string]json.RawMessage
+	response, err = vpc.Service.Request(request, &rawResponse)
+	if err != nil {
+		core.EnrichHTTPProblem(err, "list_public_address_range_profiles", getServiceComponentInfo())
+		err = core.SDKErrorf(err, "", "http-request-err", common.GetComponentInfo())
+		return
+	}
+	if rawResponse != nil {
+		err = core.UnmarshalModel(rawResponse, "", &result, UnmarshalPublicAddressRangeProfileCollection)
+		if err != nil {
+			err = core.SDKErrorf(err, "", "unmarshal-resp-error", common.GetComponentInfo())
+			return
+		}
+		response.Result = result
+	}
+
+	return
+}
+
+// GetPublicAddressRangeProfile : Retrieve a public address range profile
+// This request retrieves a single public address range profile specified by the name in the URL.
+func (vpc *VpcV1) GetPublicAddressRangeProfile(getPublicAddressRangeProfileOptions *GetPublicAddressRangeProfileOptions) (result *PublicAddressRangeProfile, response *core.DetailedResponse, err error) {
+	result, response, err = vpc.GetPublicAddressRangeProfileWithContext(context.Background(), getPublicAddressRangeProfileOptions)
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// GetPublicAddressRangeProfileWithContext is an alternate form of the GetPublicAddressRangeProfile method which supports a Context parameter
+func (vpc *VpcV1) GetPublicAddressRangeProfileWithContext(ctx context.Context, getPublicAddressRangeProfileOptions *GetPublicAddressRangeProfileOptions) (result *PublicAddressRangeProfile, response *core.DetailedResponse, err error) {
+	err = core.ValidateNotNil(getPublicAddressRangeProfileOptions, "getPublicAddressRangeProfileOptions cannot be nil")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "unexpected-nil-param", common.GetComponentInfo())
+		return
+	}
+	err = core.ValidateStruct(getPublicAddressRangeProfileOptions, "getPublicAddressRangeProfileOptions")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "struct-validation-error", common.GetComponentInfo())
+		return
+	}
+
+	pathParamsMap := map[string]string{
+		"name": *getPublicAddressRangeProfileOptions.Name,
+	}
+
+	builder := core.NewRequestBuilder(core.GET)
+	builder = builder.WithContext(ctx)
+	builder.EnableGzipCompression = vpc.GetEnableGzipCompression()
+	_, err = builder.ResolveRequestURL(vpc.Service.Options.URL, `/public_address_range/profiles/{name}`, pathParamsMap)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "url-resolve-error", common.GetComponentInfo())
+		return
+	}
+
+	sdkHeaders := common.GetSdkHeaders("vpc", "V1", "GetPublicAddressRangeProfile")
+	for headerName, headerValue := range sdkHeaders {
+		builder.AddHeader(headerName, headerValue)
+	}
+
+	for headerName, headerValue := range getPublicAddressRangeProfileOptions.Headers {
+		builder.AddHeader(headerName, headerValue)
+	}
+	builder.AddHeader("Accept", "application/json")
+
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
+	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
+
+	request, err := builder.Build()
+	if err != nil {
+		err = core.SDKErrorf(err, "", "build-error", common.GetComponentInfo())
+		return
+	}
+
+	var rawResponse map[string]json.RawMessage
+	response, err = vpc.Service.Request(request, &rawResponse)
+	if err != nil {
+		core.EnrichHTTPProblem(err, "get_public_address_range_profile", getServiceComponentInfo())
+		err = core.SDKErrorf(err, "", "http-request-err", common.GetComponentInfo())
+		return
+	}
+	if rawResponse != nil {
+		err = core.UnmarshalModel(rawResponse, "", &result, UnmarshalPublicAddressRangeProfile)
+		if err != nil {
+			err = core.SDKErrorf(err, "", "unmarshal-resp-error", common.GetComponentInfo())
+			return
+		}
+		response.Result = result
+	}
+
+	return
+}
+
 // ListPublicAddressRanges : List public address ranges
 // This request lists [public address ranges](https://cloud.ibm.com/docs/vpc?topic=vpc-about-par) in the region. A
 // public address range is a contiguous block of public IP addresses that can be bound to a `target` that specifies a
@@ -20923,7 +21898,17 @@ func (vpc *VpcV1) ListPublicAddressRangesWithContext(ctx context.Context, listPu
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 	if listPublicAddressRangesOptions.Start != nil {
 		builder.AddQuery("start", fmt.Sprint(*listPublicAddressRangesOptions.Start))
@@ -20933,6 +21918,9 @@ func (vpc *VpcV1) ListPublicAddressRangesWithContext(ctx context.Context, listPu
 	}
 	if listPublicAddressRangesOptions.ResourceGroupID != nil {
 		builder.AddQuery("resource_group.id", fmt.Sprint(*listPublicAddressRangesOptions.ResourceGroupID))
+	}
+	if listPublicAddressRangesOptions.ProfileName != nil {
+		builder.AddQuery("profile.name", fmt.Sprint(*listPublicAddressRangesOptions.ProfileName))
 	}
 
 	request, err := builder.Build()
@@ -21003,23 +21991,20 @@ func (vpc *VpcV1) CreatePublicAddressRangeWithContext(ctx context.Context, creat
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
-	body := make(map[string]interface{})
-	if createPublicAddressRangeOptions.Ipv4AddressCount != nil {
-		body["ipv4_address_count"] = createPublicAddressRangeOptions.Ipv4AddressCount
-	}
-	if createPublicAddressRangeOptions.Name != nil {
-		body["name"] = createPublicAddressRangeOptions.Name
-	}
-	if createPublicAddressRangeOptions.ResourceGroup != nil {
-		body["resource_group"] = createPublicAddressRangeOptions.ResourceGroup
-	}
-	if createPublicAddressRangeOptions.Target != nil {
-		body["target"] = createPublicAddressRangeOptions.Target
-	}
-	_, err = builder.SetBodyContentJSON(body)
+	_, err = builder.SetBodyContentJSON(createPublicAddressRangeOptions.PublicAddressRangePrototype)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "set-json-body-error", common.GetComponentInfo())
 		return
@@ -21095,7 +22080,17 @@ func (vpc *VpcV1) DeletePublicAddressRangeWithContext(ctx context.Context, delet
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -21167,7 +22162,17 @@ func (vpc *VpcV1) GetPublicAddressRangeWithContext(ctx context.Context, getPubli
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -21242,7 +22247,17 @@ func (vpc *VpcV1) UpdatePublicAddressRangeWithContext(ctx context.Context, updat
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/merge-patch+json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	_, err = builder.SetBodyContentJSON(updatePublicAddressRangeOptions.PublicAddressRangePatch)
@@ -21313,7 +22328,17 @@ func (vpc *VpcV1) ListPublicGatewaysWithContext(ctx context.Context, listPublicG
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 	if listPublicGatewaysOptions.Start != nil {
 		builder.AddQuery("start", fmt.Sprint(*listPublicGatewaysOptions.Start))
@@ -21396,7 +22421,17 @@ func (vpc *VpcV1) CreatePublicGatewayWithContext(ctx context.Context, createPubl
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	body := make(map[string]interface{})
@@ -21491,7 +22526,17 @@ func (vpc *VpcV1) DeletePublicGatewayWithContext(ctx context.Context, deletePubl
 		builder.AddHeader(headerName, headerValue)
 	}
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -21554,7 +22599,17 @@ func (vpc *VpcV1) GetPublicGatewayWithContext(ctx context.Context, getPublicGate
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -21627,7 +22682,17 @@ func (vpc *VpcV1) UpdatePublicGatewayWithContext(ctx context.Context, updatePubl
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/merge-patch+json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	_, err = builder.SetBodyContentJSON(updatePublicGatewayOptions.PublicGatewayPatch)
@@ -26834,7 +27899,17 @@ func (vpc *VpcV1) UnsetSubnetPublicGatewayWithContext(ctx context.Context, unset
 		builder.AddHeader(headerName, headerValue)
 	}
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -26897,7 +27972,17 @@ func (vpc *VpcV1) GetSubnetPublicGatewayWithContext(ctx context.Context, getSubn
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -26971,7 +28056,17 @@ func (vpc *VpcV1) SetSubnetPublicGatewayWithContext(ctx context.Context, setSubn
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	_, err = builder.SetBodyContentJSON(setSubnetPublicGatewayOptions.PublicGatewayIdentity)
@@ -28031,7 +29126,17 @@ func (vpc *VpcV1) ListNetworkInterfaceFloatingIpsWithContext(ctx context.Context
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 	if listNetworkInterfaceFloatingIpsOptions.Start != nil {
 		builder.AddQuery("start", fmt.Sprint(*listNetworkInterfaceFloatingIpsOptions.Start))
@@ -28112,7 +29217,17 @@ func (vpc *VpcV1) RemoveNetworkInterfaceFloatingIPWithContext(ctx context.Contex
 		builder.AddHeader(headerName, headerValue)
 	}
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -28177,7 +29292,17 @@ func (vpc *VpcV1) GetNetworkInterfaceFloatingIPWithContext(ctx context.Context, 
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -28265,7 +29390,17 @@ func (vpc *VpcV1) AddNetworkInterfaceFloatingIPWithContext(ctx context.Context, 
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -29703,7 +30838,17 @@ func (vpc *VpcV1) ListVpcsWithContext(ctx context.Context, listVpcsOptions *List
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 	if listVpcsOptions.Start != nil {
 		builder.AddQuery("start", fmt.Sprint(*listVpcsOptions.Start))
@@ -29790,7 +30935,17 @@ func (vpc *VpcV1) CreateVPCWithContext(ctx context.Context, createVPCOptions *Cr
 	builder.AddHeader("Accept", "application/json")
 	builder.AddHeader("Content-Type", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	body := make(map[string]interface{})
@@ -29896,7 +31051,17 @@ func (vpc *VpcV1) DeleteVPCWithContext(ctx context.Context, deleteVPCOptions *De
 		builder.AddHeader("If-Match", fmt.Sprint(*deleteVPCOptions.IfMatch))
 	}
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -29959,7 +31124,17 @@ func (vpc *VpcV1) GetVPCWithContext(ctx context.Context, getVPCOptions *GetVPCOp
 	}
 	builder.AddHeader("Accept", "application/json")
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	request, err := builder.Build()
@@ -30036,7 +31211,17 @@ func (vpc *VpcV1) UpdateVPCWithContext(ctx context.Context, updateVPCOptions *Up
 		builder.AddHeader("If-Match", fmt.Sprint(*updateVPCOptions.IfMatch))
 	}
 
-	builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" && *vpc.FutureVersion != "true" {
+		builder.AddQuery("version", time.Now().AddDate(0, 0, 1).Format("2006-01-02"))
+	} else {
+		builder.AddQuery("version", fmt.Sprint(*vpc.Version))
+	}
+	if vpc.Maturity != nil && *vpc.Maturity != "" {
+		builder.AddQuery("maturity", fmt.Sprint(*vpc.Maturity))
+	}
+	if vpc.FutureVersion != nil && *vpc.FutureVersion != "" {
+		builder.AddQuery("future_version", fmt.Sprint(*vpc.FutureVersion))
+	}
 	builder.AddQuery("generation", fmt.Sprint(*vpc.Generation))
 
 	_, err = builder.SetBodyContentJSON(updateVPCOptions.VPCPatch)
@@ -36170,7 +37355,7 @@ func (vpc *VpcV1) UpdateVPNServerRouteWithContext(ctx context.Context, updateVPN
 	return
 }
 func getServiceComponentInfo() *core.ProblemComponent {
-	return core.NewProblemComponent(DefaultServiceName, "2026-06-09")
+	return core.NewProblemComponent(DefaultServiceName, "2025-09-16")
 }
 
 // AccountIdentity : Identifies an account by a unique property.
@@ -46724,23 +47909,96 @@ func (options *CreateEndpointGatewayResourceBindingOptions) SetHeaders(param map
 
 // CreateFloatingIPOptions : The CreateFloatingIP options.
 type CreateFloatingIPOptions struct {
-	// The floating IP prototype object.
-	FloatingIPPrototype FloatingIPPrototypeIntf `json:"FloatingIPPrototype" validate:"required"`
+	// The address for this floating IP. Required if neither `target` nor `zone` is specified.
+	//
+	// The address must be an unallocated address in a public address range authorized CIDR.
+	//
+	// If the authorized CIDR's `availability_mode` is `regional`, then `target` or `zone` is required.
+	//
+	// If the authorized CIDR's `availability_mode` is `zonal`, then the floating IP and its
+	// `target` (if any) must reside in the same zone as the authorized CIDR.
+	//
+	// If unspecified, a random address will be selected from IBM's public IP address pool for the zone.
+	Address *string `json:"address,omitempty"`
+
+	// The name for this floating IP. The name must not be used by another floating IP in the region. If unspecified, the
+	// name will be a hyphenated list of randomly-selected words.
+	Name *string `json:"name,omitempty"`
+
+	// The resource group to use. If unspecified, the account's [default resource
+	// group](https://cloud.ibm.com/apidocs/resource-manager#introduction) will be used.
+	ResourceGroup ResourceGroupIdentityIntf `json:"resource_group,omitempty"`
+
+	// The target resource to bind this floating IP to. Required if neither `address` nor `zone`
+	// is specified.
+	//
+	// The target resource must not already have a floating IP bound to it if the target
+	// resource is:
+	//
+	// - an instance network interface
+	// - a bare metal server network interface with `enable_infrastructure_nat` set to `true`
+	// - a virtual network interface with `enable_infrastructure_nat` set to `true`
+	//
+	// If `address` is specified and the floating IP will be allocated from a public address
+	// range authorized CIDR, the target cannot be:
+	// - an instance network interface
+	// - a bare metal server network interface
+	//
+	// If `address` is specified and the floating IP will be allocated from a public address
+	// range authorized CIDR with an `availability_mode` value of `zonal`, the target must reside
+	// in the same `zone` as the authorized CIDR.
+	Target FloatingIPTargetPrototypeIntf `json:"target,omitempty"`
+
+	// The zone this floating IP will reside in.
+	//
+	// Required if:
+	// - neither `address` nor `target` is specified
+	// - `address` is specified and the floating IP will be allocated from a public address
+	//   range authorized CIDR with an `availability_mode` value of `regional`.
+	//
+	// If `address` is specified and the floating IP will be allocated from a public address
+	// range authorized CIDR with an `availability_mode` value of `zonal`:
+	// - the floating IP will reside in the same `zone` as the authorized CIDR
+	// - if `target` is specified, the target resource must reside in the same `zone` as the
+	//   authorized CIDR.
+	Zone ZoneIdentityIntf `json:"zone,omitempty"`
 
 	// Allows users to set headers on API requests.
 	Headers map[string]string
 }
 
 // NewCreateFloatingIPOptions : Instantiate CreateFloatingIPOptions
-func (*VpcV1) NewCreateFloatingIPOptions(floatingIPPrototype FloatingIPPrototypeIntf) *CreateFloatingIPOptions {
-	return &CreateFloatingIPOptions{
-		FloatingIPPrototype: floatingIPPrototype,
-	}
+func (*VpcV1) NewCreateFloatingIPOptions() *CreateFloatingIPOptions {
+	return &CreateFloatingIPOptions{}
 }
 
-// SetFloatingIPPrototype : Allow user to set FloatingIPPrototype
-func (_options *CreateFloatingIPOptions) SetFloatingIPPrototype(floatingIPPrototype FloatingIPPrototypeIntf) *CreateFloatingIPOptions {
-	_options.FloatingIPPrototype = floatingIPPrototype
+// SetAddress : Allow user to set Address
+func (_options *CreateFloatingIPOptions) SetAddress(address string) *CreateFloatingIPOptions {
+	_options.Address = core.StringPtr(address)
+	return _options
+}
+
+// SetName : Allow user to set Name
+func (_options *CreateFloatingIPOptions) SetName(name string) *CreateFloatingIPOptions {
+	_options.Name = core.StringPtr(name)
+	return _options
+}
+
+// SetResourceGroup : Allow user to set ResourceGroup
+func (_options *CreateFloatingIPOptions) SetResourceGroup(resourceGroup ResourceGroupIdentityIntf) *CreateFloatingIPOptions {
+	_options.ResourceGroup = resourceGroup
+	return _options
+}
+
+// SetTarget : Allow user to set Target
+func (_options *CreateFloatingIPOptions) SetTarget(target FloatingIPTargetPrototypeIntf) *CreateFloatingIPOptions {
+	_options.Target = target
+	return _options
+}
+
+// SetZone : Allow user to set Zone
+func (_options *CreateFloatingIPOptions) SetZone(zone ZoneIdentityIntf) *CreateFloatingIPOptions {
+	_options.Zone = zone
 	return _options
 }
 
@@ -49234,54 +50492,23 @@ func (options *CreatePrivatePathServiceGatewayOptions) SetHeaders(param map[stri
 
 // CreatePublicAddressRangeOptions : The CreatePublicAddressRange options.
 type CreatePublicAddressRangeOptions struct {
-	// The total number of public IPv4 addresses required. Must be a power of 2.
-	Ipv4AddressCount *int64 `json:"ipv4_address_count" validate:"required"`
-
-	// The name for this public address range. The name must not be used by another public address range in the region.
-	// Names starting with `ibm-` are reserved for provider-managed resources, and are not allowed. If unspecified, the
-	// name will be a hyphenated list of randomly-selected words.
-	Name *string `json:"name,omitempty"`
-
-	// The resource group to use. If unspecified, the account's [default resource
-	// group](https://cloud.ibm.com/apidocs/resource-manager#introduction) will be used.
-	ResourceGroup ResourceGroupIdentityIntf `json:"resource_group,omitempty"`
-
-	// The target to bind this public address range to. If unspecified, the public address
-	// range will not be bound to a target at creation.
-	Target *PublicAddressRangeTargetPrototype `json:"target,omitempty"`
+	// The public address range prototype.
+	PublicAddressRangePrototype PublicAddressRangePrototypeIntf `json:"PublicAddressRangePrototype" validate:"required"`
 
 	// Allows users to set headers on API requests.
 	Headers map[string]string
 }
 
 // NewCreatePublicAddressRangeOptions : Instantiate CreatePublicAddressRangeOptions
-func (*VpcV1) NewCreatePublicAddressRangeOptions(ipv4AddressCount int64) *CreatePublicAddressRangeOptions {
+func (*VpcV1) NewCreatePublicAddressRangeOptions(publicAddressRangePrototype PublicAddressRangePrototypeIntf) *CreatePublicAddressRangeOptions {
 	return &CreatePublicAddressRangeOptions{
-		Ipv4AddressCount: core.Int64Ptr(ipv4AddressCount),
+		PublicAddressRangePrototype: publicAddressRangePrototype,
 	}
 }
 
-// SetIpv4AddressCount : Allow user to set Ipv4AddressCount
-func (_options *CreatePublicAddressRangeOptions) SetIpv4AddressCount(ipv4AddressCount int64) *CreatePublicAddressRangeOptions {
-	_options.Ipv4AddressCount = core.Int64Ptr(ipv4AddressCount)
-	return _options
-}
-
-// SetName : Allow user to set Name
-func (_options *CreatePublicAddressRangeOptions) SetName(name string) *CreatePublicAddressRangeOptions {
-	_options.Name = core.StringPtr(name)
-	return _options
-}
-
-// SetResourceGroup : Allow user to set ResourceGroup
-func (_options *CreatePublicAddressRangeOptions) SetResourceGroup(resourceGroup ResourceGroupIdentityIntf) *CreatePublicAddressRangeOptions {
-	_options.ResourceGroup = resourceGroup
-	return _options
-}
-
-// SetTarget : Allow user to set Target
-func (_options *CreatePublicAddressRangeOptions) SetTarget(target *PublicAddressRangeTargetPrototype) *CreatePublicAddressRangeOptions {
-	_options.Target = target
+// SetPublicAddressRangePrototype : Allow user to set PublicAddressRangePrototype
+func (_options *CreatePublicAddressRangeOptions) SetPublicAddressRangePrototype(publicAddressRangePrototype PublicAddressRangePrototypeIntf) *CreatePublicAddressRangeOptions {
+	_options.PublicAddressRangePrototype = publicAddressRangePrototype
 	return _options
 }
 
@@ -57611,6 +58838,9 @@ type FloatingIP struct {
 	// The globally unique IP address.
 	Address *string `json:"address" validate:"required"`
 
+	// The public address range authorized CIDR this floating IP is allocated from.
+	AuthorizedCIDR *PublicAddressRangeAuthorizedCIDRReferenceFloatingIPContext `json:"authorized_cidr,omitempty"`
+
 	// The date and time that the floating IP was created.
 	CreatedAt *strfmt.DateTime `json:"created_at" validate:"required"`
 
@@ -57626,8 +58856,14 @@ type FloatingIP struct {
 	// The name for this floating IP. The name is unique across all floating IPs in the region.
 	Name *string `json:"name" validate:"required"`
 
+	// The profile for this floating IP.
+	Profile *FloatingIPProfileReference `json:"profile" validate:"required"`
+
 	// The resource group for this floating IP.
 	ResourceGroup *ResourceGroupReference `json:"resource_group" validate:"required"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
 
 	// The status of the floating IP.
 	//
@@ -57641,6 +58877,12 @@ type FloatingIP struct {
 	// The zone this floating IP resides in.
 	Zone *ZoneReference `json:"zone" validate:"required"`
 }
+
+// Constants associated with the FloatingIP.ResourceType property.
+// The resource type.
+const (
+	FloatingIPResourceTypeFloatingIPConst = "floating_ip"
+)
 
 // Constants associated with the FloatingIP.Status property.
 // The status of the floating IP.
@@ -57660,6 +58902,11 @@ func UnmarshalFloatingIP(m map[string]json.RawMessage, result interface{}) (err 
 	err = core.UnmarshalPrimitive(m, "address", &obj.Address)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "address-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "authorized_cidr", &obj.AuthorizedCIDR, UnmarshalPublicAddressRangeAuthorizedCIDRReferenceFloatingIPContext)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "authorized_cidr-error", common.GetComponentInfo())
 		return
 	}
 	err = core.UnmarshalPrimitive(m, "created_at", &obj.CreatedAt)
@@ -57687,9 +58934,19 @@ func UnmarshalFloatingIP(m map[string]json.RawMessage, result interface{}) (err 
 		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
 		return
 	}
+	err = core.UnmarshalModel(m, "profile", &obj.Profile, UnmarshalFloatingIPProfileReference)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "profile-error", common.GetComponentInfo())
+		return
+	}
 	err = core.UnmarshalModel(m, "resource_group", &obj.ResourceGroup, UnmarshalResourceGroupReference)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "resource_group-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
 		return
 	}
 	err = core.UnmarshalPrimitive(m, "status", &obj.Status)
@@ -57853,10 +59110,13 @@ type FloatingIPPatch struct {
 	//
 	// The target resource must not already have a floating IP bound to it if the target
 	// resource is:
-	//
 	// - an instance network interface
 	// - a bare metal server network interface with `enable_infrastructure_nat` set to `true`
 	// - a virtual network interface with `enable_infrastructure_nat` set to `true`
+	//
+	// If the floating IP is allocated from an `authorized_cidr`, the target resource cannot be:
+	// - an instance network interface
+	// - a bare metal server network interface
 	//
 	// Specify `null` to remove an existing binding.
 	Target FloatingIPTargetPatchIntf `json:"target,omitempty"`
@@ -57892,62 +59152,193 @@ func (floatingIPPatch *FloatingIPPatch) AsPatch() (_patch map[string]interface{}
 	return
 }
 
-// FloatingIPPrototype : FloatingIPPrototype struct
-// Models which "extend" this model:
-// - FloatingIPPrototypeFloatingIPByZone
-// - FloatingIPPrototypeFloatingIPByTarget
-type FloatingIPPrototype struct {
-	// The name for this floating IP. The name must not be used by another floating IP in the region. If unspecified, the
-	// name will be a hyphenated list of randomly-selected words.
-	Name *string `json:"name,omitempty"`
-
-	// The resource group to use. If unspecified, the account's [default resource
-	// group](https://cloud.ibm.com/apidocs/resource-manager#introduction) will be used.
-	ResourceGroup ResourceGroupIdentityIntf `json:"resource_group,omitempty"`
-
-	// The zone this floating IP will reside in.
-	Zone ZoneIdentityIntf `json:"zone,omitempty"`
-
-	// The target resource to bind this floating IP to.
+// FloatingIPProfile : FloatingIPProfile struct
+type FloatingIPProfile struct {
+	// The product family this floating IP profile belongs to.
+	// - `provider`: The floating IP with this profile is owned by the provider.
+	// - `user`: The floating IP with this profile is owned by the user.
 	//
-	// The target resource must not already have a floating IP bound to it if the target
-	// resource is:
+	// The enumerated values for this property may
+	// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+	Family *string `json:"family" validate:"required"`
+
+	// The URL for this floating IP profile.
+	Href *string `json:"href" validate:"required"`
+
+	// The IP version for floating IPs with this profile:
+	// - `ipv4`: An IPv4 floating IP.
 	//
-	// - an instance network interface
-	// - a bare metal server network interface with `enable_infrastructure_nat` set to `true`
-	// - a virtual network interface with `enable_infrastructure_nat` set to `true`.
-	Target FloatingIPTargetPrototypeIntf `json:"target,omitempty"`
+	// The enumerated values for this property may
+	// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+	IPVersion *string `json:"ip_version" validate:"required"`
+
+	// The globally unique name for this floating IP profile.
+	Name *string `json:"name" validate:"required"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
 }
 
-func (*FloatingIPPrototype) isaFloatingIPPrototype() bool {
-	return true
-}
+// Constants associated with the FloatingIPProfile.Family property.
+// The product family this floating IP profile belongs to.
+// - `provider`: The floating IP with this profile is owned by the provider.
+// - `user`: The floating IP with this profile is owned by the user.
+//
+// The enumerated values for this property may
+// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+const (
+	FloatingIPProfileFamilyProviderConst = "provider"
+	FloatingIPProfileFamilyUserConst     = "user"
+)
 
-type FloatingIPPrototypeIntf interface {
-	isaFloatingIPPrototype() bool
-}
+// Constants associated with the FloatingIPProfile.IPVersion property.
+// The IP version for floating IPs with this profile:
+// - `ipv4`: An IPv4 floating IP.
+//
+// The enumerated values for this property may
+// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+const (
+	FloatingIPProfileIPVersionIpv4Const = "ipv4"
+)
 
-// UnmarshalFloatingIPPrototype unmarshals an instance of FloatingIPPrototype from the specified map of raw messages.
-func UnmarshalFloatingIPPrototype(m map[string]json.RawMessage, result interface{}) (err error) {
-	obj := new(FloatingIPPrototype)
+// Constants associated with the FloatingIPProfile.ResourceType property.
+// The resource type.
+const (
+	FloatingIPProfileResourceTypeFloatingIPProfileConst = "floating_ip_profile"
+)
+
+// UnmarshalFloatingIPProfile unmarshals an instance of FloatingIPProfile from the specified map of raw messages.
+func UnmarshalFloatingIPProfile(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(FloatingIPProfile)
+	err = core.UnmarshalPrimitive(m, "family", &obj.Family)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "family-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "href", &obj.Href)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "href-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "ip_version", &obj.IPVersion)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "ip_version-error", common.GetComponentInfo())
+		return
+	}
 	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
 		return
 	}
-	err = core.UnmarshalModel(m, "resource_group", &obj.ResourceGroup, UnmarshalResourceGroupIdentity)
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
 	if err != nil {
-		err = core.SDKErrorf(err, "", "resource_group-error", common.GetComponentInfo())
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
 		return
 	}
-	err = core.UnmarshalModel(m, "zone", &obj.Zone, UnmarshalZoneIdentity)
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// FloatingIPProfileCollection : FloatingIPProfileCollection struct
+type FloatingIPProfileCollection struct {
+	// A link to the first page of resources.
+	First *PageLink `json:"first" validate:"required"`
+
+	// The maximum number of resources that can be returned by the request.
+	Limit *int64 `json:"limit" validate:"required"`
+
+	// A link to the next page of resources. This property is present for all pages
+	// except the last page.
+	Next *PageLink `json:"next,omitempty"`
+
+	// A page of floating IP profiles.
+	Profiles []FloatingIPProfile `json:"profiles" validate:"required"`
+
+	// The total number of resources across all pages.
+	TotalCount *int64 `json:"total_count" validate:"required"`
+}
+
+// UnmarshalFloatingIPProfileCollection unmarshals an instance of FloatingIPProfileCollection from the specified map of raw messages.
+func UnmarshalFloatingIPProfileCollection(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(FloatingIPProfileCollection)
+	err = core.UnmarshalModel(m, "first", &obj.First, UnmarshalPageLink)
 	if err != nil {
-		err = core.SDKErrorf(err, "", "zone-error", common.GetComponentInfo())
+		err = core.SDKErrorf(err, "", "first-error", common.GetComponentInfo())
 		return
 	}
-	err = core.UnmarshalModel(m, "target", &obj.Target, UnmarshalFloatingIPTargetPrototype)
+	err = core.UnmarshalPrimitive(m, "limit", &obj.Limit)
 	if err != nil {
-		err = core.SDKErrorf(err, "", "target-error", common.GetComponentInfo())
+		err = core.SDKErrorf(err, "", "limit-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "next", &obj.Next, UnmarshalPageLink)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "next-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "profiles", &obj.Profiles, UnmarshalFloatingIPProfile)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "profiles-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "total_count", &obj.TotalCount)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "total_count-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// Retrieve the value to be passed to a request to access the next page of results
+func (resp *FloatingIPProfileCollection) GetNextStart() (*string, error) {
+	if core.IsNil(resp.Next) {
+		return nil, nil
+	}
+	start, err := core.GetQueryParam(resp.Next.Href, "start")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "read-query-param-error", common.GetComponentInfo())
+		return nil, err
+	} else if start == nil {
+		return nil, nil
+	}
+	return start, nil
+}
+
+// FloatingIPProfileReference : FloatingIPProfileReference struct
+type FloatingIPProfileReference struct {
+	// The URL for this floating IP profile.
+	Href *string `json:"href" validate:"required"`
+
+	// The globally unique name for this floating IP profile.
+	Name *string `json:"name" validate:"required"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
+}
+
+// Constants associated with the FloatingIPProfileReference.ResourceType property.
+// The resource type.
+const (
+	FloatingIPProfileReferenceResourceTypeFloatingIPProfileConst = "floating_ip_profile"
+)
+
+// UnmarshalFloatingIPProfileReference unmarshals an instance of FloatingIPProfileReference from the specified map of raw messages.
+func UnmarshalFloatingIPProfileReference(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(FloatingIPProfileReference)
+	err = core.UnmarshalPrimitive(m, "href", &obj.Href)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "href-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
 		return
 	}
 	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
@@ -57974,7 +59365,16 @@ type FloatingIPReference struct {
 
 	// The name for this floating IP. The name is unique across all floating IPs in the region.
 	Name *string `json:"name" validate:"required"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
 }
+
+// Constants associated with the FloatingIPReference.ResourceType property.
+// The resource type.
+const (
+	FloatingIPReferenceResourceTypeFloatingIPConst = "floating_ip"
+)
 
 // UnmarshalFloatingIPReference unmarshals an instance of FloatingIPReference from the specified map of raw messages.
 func UnmarshalFloatingIPReference(m map[string]json.RawMessage, result interface{}) (err error) {
@@ -58007,6 +59407,11 @@ func UnmarshalFloatingIPReference(m map[string]json.RawMessage, result interface
 	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
 		return
 	}
 	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
@@ -58120,10 +59525,13 @@ func UnmarshalFloatingIPTarget(m map[string]json.RawMessage, result interface{})
 // by another resource, such as a public gateway.
 //
 // The target resource must not already have a floating IP bound to it if the target resource is:
-//
 // - an instance network interface
 // - a bare metal server network interface with `enable_infrastructure_nat` set to `true`
 // - a virtual network interface with `enable_infrastructure_nat` set to `true`
+//
+// If the floating IP is allocated from an `authorized_cidr`, the target resource cannot be:
+// - an instance network interface
+// - a bare metal server network interface
 //
 // Specify `null` to remove an existing binding.
 // Models which "extend" this model:
@@ -58206,13 +59614,21 @@ func (floatingIPTargetPatch *FloatingIPTargetPatch) asPatch() (_patch map[string
 	return
 }
 
-// FloatingIPTargetPrototype : The target resource to bind this floating IP to.
+// FloatingIPTargetPrototype : The target resource to bind this floating IP to. Required if neither `address` nor `zone` is specified.
 //
 // The target resource must not already have a floating IP bound to it if the target resource is:
 //
 // - an instance network interface
 // - a bare metal server network interface with `enable_infrastructure_nat` set to `true`
-// - a virtual network interface with `enable_infrastructure_nat` set to `true`.
+// - a virtual network interface with `enable_infrastructure_nat` set to `true`
+//
+// If `address` is specified and the floating IP will be allocated from a public address range authorized CIDR, the
+// target cannot be:
+// - an instance network interface
+// - a bare metal server network interface
+//
+// If `address` is specified and the floating IP will be allocated from a public address range authorized CIDR with an
+// `availability_mode` value of `zonal`, the target must reside in the same `zone` as the authorized CIDR.
 // Models which "extend" this model:
 // - FloatingIPTargetPrototypeBareMetalServerNetworkInterfaceIdentity
 // - FloatingIPTargetPrototypeNetworkInterfaceIdentity
@@ -59555,6 +60971,34 @@ func (_options *GetFloatingIPOptions) SetID(id string) *GetFloatingIPOptions {
 
 // SetHeaders : Allow user to set Headers
 func (options *GetFloatingIPOptions) SetHeaders(param map[string]string) *GetFloatingIPOptions {
+	options.Headers = param
+	return options
+}
+
+// GetFloatingIPProfileOptions : The GetFloatingIPProfile options.
+type GetFloatingIPProfileOptions struct {
+	// The floating IP profile name.
+	Name *string `json:"name" validate:"required,ne="`
+
+	// Allows users to set headers on API requests.
+	Headers map[string]string
+}
+
+// NewGetFloatingIPProfileOptions : Instantiate GetFloatingIPProfileOptions
+func (*VpcV1) NewGetFloatingIPProfileOptions(name string) *GetFloatingIPProfileOptions {
+	return &GetFloatingIPProfileOptions{
+		Name: core.StringPtr(name),
+	}
+}
+
+// SetName : Allow user to set Name
+func (_options *GetFloatingIPProfileOptions) SetName(name string) *GetFloatingIPProfileOptions {
+	_options.Name = core.StringPtr(name)
+	return _options
+}
+
+// SetHeaders : Allow user to set Headers
+func (options *GetFloatingIPProfileOptions) SetHeaders(param map[string]string) *GetFloatingIPProfileOptions {
 	options.Headers = param
 	return options
 }
@@ -60913,6 +62357,72 @@ func (options *GetPrivatePathServiceGatewayOptions) SetHeaders(param map[string]
 	return options
 }
 
+// GetPublicAddressRangeAuthorizedCIDRAllocationOptions : The GetPublicAddressRangeAuthorizedCIDRAllocation options.
+type GetPublicAddressRangeAuthorizedCIDRAllocationOptions struct {
+	// The public address range authorized CIDR identifier.
+	AuthorizedCIDRID *string `json:"authorized_cidr_id" validate:"required,ne="`
+
+	// The public address range authorized CIDR identifier.
+	ID *string `json:"id" validate:"required,ne="`
+
+	// Allows users to set headers on API requests.
+	Headers map[string]string
+}
+
+// NewGetPublicAddressRangeAuthorizedCIDRAllocationOptions : Instantiate GetPublicAddressRangeAuthorizedCIDRAllocationOptions
+func (*VpcV1) NewGetPublicAddressRangeAuthorizedCIDRAllocationOptions(authorizedCIDRID string, id string) *GetPublicAddressRangeAuthorizedCIDRAllocationOptions {
+	return &GetPublicAddressRangeAuthorizedCIDRAllocationOptions{
+		AuthorizedCIDRID: core.StringPtr(authorizedCIDRID),
+		ID:               core.StringPtr(id),
+	}
+}
+
+// SetAuthorizedCIDRID : Allow user to set AuthorizedCIDRID
+func (_options *GetPublicAddressRangeAuthorizedCIDRAllocationOptions) SetAuthorizedCIDRID(authorizedCIDRID string) *GetPublicAddressRangeAuthorizedCIDRAllocationOptions {
+	_options.AuthorizedCIDRID = core.StringPtr(authorizedCIDRID)
+	return _options
+}
+
+// SetID : Allow user to set ID
+func (_options *GetPublicAddressRangeAuthorizedCIDRAllocationOptions) SetID(id string) *GetPublicAddressRangeAuthorizedCIDRAllocationOptions {
+	_options.ID = core.StringPtr(id)
+	return _options
+}
+
+// SetHeaders : Allow user to set Headers
+func (options *GetPublicAddressRangeAuthorizedCIDRAllocationOptions) SetHeaders(param map[string]string) *GetPublicAddressRangeAuthorizedCIDRAllocationOptions {
+	options.Headers = param
+	return options
+}
+
+// GetPublicAddressRangeAuthorizedCIDROptions : The GetPublicAddressRangeAuthorizedCIDR options.
+type GetPublicAddressRangeAuthorizedCIDROptions struct {
+	// The public address range authorized CIDR identifier.
+	ID *string `json:"id" validate:"required,ne="`
+
+	// Allows users to set headers on API requests.
+	Headers map[string]string
+}
+
+// NewGetPublicAddressRangeAuthorizedCIDROptions : Instantiate GetPublicAddressRangeAuthorizedCIDROptions
+func (*VpcV1) NewGetPublicAddressRangeAuthorizedCIDROptions(id string) *GetPublicAddressRangeAuthorizedCIDROptions {
+	return &GetPublicAddressRangeAuthorizedCIDROptions{
+		ID: core.StringPtr(id),
+	}
+}
+
+// SetID : Allow user to set ID
+func (_options *GetPublicAddressRangeAuthorizedCIDROptions) SetID(id string) *GetPublicAddressRangeAuthorizedCIDROptions {
+	_options.ID = core.StringPtr(id)
+	return _options
+}
+
+// SetHeaders : Allow user to set Headers
+func (options *GetPublicAddressRangeAuthorizedCIDROptions) SetHeaders(param map[string]string) *GetPublicAddressRangeAuthorizedCIDROptions {
+	options.Headers = param
+	return options
+}
+
 // GetPublicAddressRangeOptions : The GetPublicAddressRange options.
 type GetPublicAddressRangeOptions struct {
 	// The public address range identifier.
@@ -60937,6 +62447,34 @@ func (_options *GetPublicAddressRangeOptions) SetID(id string) *GetPublicAddress
 
 // SetHeaders : Allow user to set Headers
 func (options *GetPublicAddressRangeOptions) SetHeaders(param map[string]string) *GetPublicAddressRangeOptions {
+	options.Headers = param
+	return options
+}
+
+// GetPublicAddressRangeProfileOptions : The GetPublicAddressRangeProfile options.
+type GetPublicAddressRangeProfileOptions struct {
+	// The public address range profile name.
+	Name *string `json:"name" validate:"required,ne="`
+
+	// Allows users to set headers on API requests.
+	Headers map[string]string
+}
+
+// NewGetPublicAddressRangeProfileOptions : Instantiate GetPublicAddressRangeProfileOptions
+func (*VpcV1) NewGetPublicAddressRangeProfileOptions(name string) *GetPublicAddressRangeProfileOptions {
+	return &GetPublicAddressRangeProfileOptions{
+		Name: core.StringPtr(name),
+	}
+}
+
+// SetName : Allow user to set Name
+func (_options *GetPublicAddressRangeProfileOptions) SetName(name string) *GetPublicAddressRangeProfileOptions {
+	_options.Name = core.StringPtr(name)
+	return _options
+}
+
+// SetHeaders : Allow user to set Headers
+func (options *GetPublicAddressRangeProfileOptions) SetHeaders(param map[string]string) *GetPublicAddressRangeProfileOptions {
 	options.Headers = param
 	return options
 }
@@ -76265,6 +77803,41 @@ func (options *ListEndpointGatewaysOptions) SetHeaders(param map[string]string) 
 	return options
 }
 
+// ListFloatingIPProfilesOptions : The ListFloatingIPProfiles options.
+type ListFloatingIPProfilesOptions struct {
+	// A server-provided token determining what resource to start the page on.
+	Start *string `json:"start,omitempty"`
+
+	// The number of resources to return on a page.
+	Limit *int64 `json:"limit,omitempty"`
+
+	// Allows users to set headers on API requests.
+	Headers map[string]string
+}
+
+// NewListFloatingIPProfilesOptions : Instantiate ListFloatingIPProfilesOptions
+func (*VpcV1) NewListFloatingIPProfilesOptions() *ListFloatingIPProfilesOptions {
+	return &ListFloatingIPProfilesOptions{}
+}
+
+// SetStart : Allow user to set Start
+func (_options *ListFloatingIPProfilesOptions) SetStart(start string) *ListFloatingIPProfilesOptions {
+	_options.Start = core.StringPtr(start)
+	return _options
+}
+
+// SetLimit : Allow user to set Limit
+func (_options *ListFloatingIPProfilesOptions) SetLimit(limit int64) *ListFloatingIPProfilesOptions {
+	_options.Limit = core.Int64Ptr(limit)
+	return _options
+}
+
+// SetHeaders : Allow user to set Headers
+func (options *ListFloatingIPProfilesOptions) SetHeaders(param map[string]string) *ListFloatingIPProfilesOptions {
+	options.Headers = param
+	return options
+}
+
 // ListFloatingIpsOptions : The ListFloatingIps options.
 type ListFloatingIpsOptions struct {
 	// A server-provided token determining what resource to start the page on.
@@ -76280,6 +77853,9 @@ type ListFloatingIpsOptions struct {
 	// to sort in descending order. For example, the value `-created_at` sorts the collection by the `created_at` property
 	// in descending order, and the value `name` sorts it by the `name` property in ascending order.
 	Sort *string `json:"sort,omitempty"`
+
+	// Filter the collection based on profile name.
+	ProfileName *string `json:"profile.name,omitempty"`
 
 	// Filters the collection to resources with a `target.id` property matching the specified identifier.
 	TargetID *string `json:"target.id,omitempty"`
@@ -76332,6 +77908,12 @@ func (_options *ListFloatingIpsOptions) SetResourceGroupID(resourceGroupID strin
 // SetSort : Allow user to set Sort
 func (_options *ListFloatingIpsOptions) SetSort(sort string) *ListFloatingIpsOptions {
 	_options.Sort = core.StringPtr(sort)
+	return _options
+}
+
+// SetProfileName : Allow user to set ProfileName
+func (_options *ListFloatingIpsOptions) SetProfileName(profileName string) *ListFloatingIpsOptions {
+	_options.ProfileName = core.StringPtr(profileName)
 	return _options
 }
 
@@ -78372,6 +79954,164 @@ func (options *ListPrivatePathServiceGatewaysOptions) SetHeaders(param map[strin
 	return options
 }
 
+// ListPublicAddressRangeAuthorizedCIDRAllocationsOptions : The ListPublicAddressRangeAuthorizedCIDRAllocations options.
+type ListPublicAddressRangeAuthorizedCIDRAllocationsOptions struct {
+	// The public address range authorized CIDR identifier.
+	AuthorizedCIDRID *string `json:"authorized_cidr_id" validate:"required,ne="`
+
+	// A server-provided token determining what resource to start the page on.
+	Start *string `json:"start,omitempty"`
+
+	// The number of resources to return on a page.
+	Limit *int64 `json:"limit,omitempty"`
+
+	// Filters the collection to resources with an item in the `allocations` property with a
+	// `resource_type` property matching the specified value.
+	AllocationsResourceType *string `json:"allocations[].resource_type,omitempty"`
+
+	// Allows users to set headers on API requests.
+	Headers map[string]string
+}
+
+// NewListPublicAddressRangeAuthorizedCIDRAllocationsOptions : Instantiate ListPublicAddressRangeAuthorizedCIDRAllocationsOptions
+func (*VpcV1) NewListPublicAddressRangeAuthorizedCIDRAllocationsOptions(authorizedCIDRID string) *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions {
+	return &ListPublicAddressRangeAuthorizedCIDRAllocationsOptions{
+		AuthorizedCIDRID: core.StringPtr(authorizedCIDRID),
+	}
+}
+
+// SetAuthorizedCIDRID : Allow user to set AuthorizedCIDRID
+func (_options *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions) SetAuthorizedCIDRID(authorizedCIDRID string) *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions {
+	_options.AuthorizedCIDRID = core.StringPtr(authorizedCIDRID)
+	return _options
+}
+
+// SetStart : Allow user to set Start
+func (_options *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions) SetStart(start string) *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions {
+	_options.Start = core.StringPtr(start)
+	return _options
+}
+
+// SetLimit : Allow user to set Limit
+func (_options *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions) SetLimit(limit int64) *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions {
+	_options.Limit = core.Int64Ptr(limit)
+	return _options
+}
+
+// SetAllocationsResourceType : Allow user to set AllocationsResourceType
+func (_options *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions) SetAllocationsResourceType(allocationsResourceType string) *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions {
+	_options.AllocationsResourceType = core.StringPtr(allocationsResourceType)
+	return _options
+}
+
+// SetHeaders : Allow user to set Headers
+func (options *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions) SetHeaders(param map[string]string) *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions {
+	options.Headers = param
+	return options
+}
+
+// ListPublicAddressRangeAuthorizedCIDRsOptions : The ListPublicAddressRangeAuthorizedCIDRs options.
+type ListPublicAddressRangeAuthorizedCIDRsOptions struct {
+	// A server-provided token determining what resource to start the page on.
+	Start *string `json:"start,omitempty"`
+
+	// The number of resources to return on a page.
+	Limit *int64 `json:"limit,omitempty"`
+
+	// Filters the collection to resources with an `allocation.profile_family` property matching the exact specified value.
+	AllocationProfileFamily *string `json:"allocation.profile_family,omitempty"`
+
+	// Filters the collection to resources with an `availability_mode` property matching the exact specified value.
+	AvailabilityMode *string `json:"availability_mode,omitempty"`
+
+	// Allows users to set headers on API requests.
+	Headers map[string]string
+}
+
+// Constants associated with the ListPublicAddressRangeAuthorizedCIDRsOptions.AllocationProfileFamily property.
+// Filters the collection to resources with an `allocation.profile_family` property matching the exact specified value.
+const (
+	ListPublicAddressRangeAuthorizedCIDRsOptionsAllocationProfileFamilyProviderConst = "provider"
+	ListPublicAddressRangeAuthorizedCIDRsOptionsAllocationProfileFamilyUserConst     = "user"
+)
+
+// Constants associated with the ListPublicAddressRangeAuthorizedCIDRsOptions.AvailabilityMode property.
+// Filters the collection to resources with an `availability_mode` property matching the exact specified value.
+const (
+	ListPublicAddressRangeAuthorizedCIDRsOptionsAvailabilityModeRegionalConst = "regional"
+	ListPublicAddressRangeAuthorizedCIDRsOptionsAvailabilityModeZonalConst    = "zonal"
+)
+
+// NewListPublicAddressRangeAuthorizedCIDRsOptions : Instantiate ListPublicAddressRangeAuthorizedCIDRsOptions
+func (*VpcV1) NewListPublicAddressRangeAuthorizedCIDRsOptions() *ListPublicAddressRangeAuthorizedCIDRsOptions {
+	return &ListPublicAddressRangeAuthorizedCIDRsOptions{}
+}
+
+// SetStart : Allow user to set Start
+func (_options *ListPublicAddressRangeAuthorizedCIDRsOptions) SetStart(start string) *ListPublicAddressRangeAuthorizedCIDRsOptions {
+	_options.Start = core.StringPtr(start)
+	return _options
+}
+
+// SetLimit : Allow user to set Limit
+func (_options *ListPublicAddressRangeAuthorizedCIDRsOptions) SetLimit(limit int64) *ListPublicAddressRangeAuthorizedCIDRsOptions {
+	_options.Limit = core.Int64Ptr(limit)
+	return _options
+}
+
+// SetAllocationProfileFamily : Allow user to set AllocationProfileFamily
+func (_options *ListPublicAddressRangeAuthorizedCIDRsOptions) SetAllocationProfileFamily(allocationProfileFamily string) *ListPublicAddressRangeAuthorizedCIDRsOptions {
+	_options.AllocationProfileFamily = core.StringPtr(allocationProfileFamily)
+	return _options
+}
+
+// SetAvailabilityMode : Allow user to set AvailabilityMode
+func (_options *ListPublicAddressRangeAuthorizedCIDRsOptions) SetAvailabilityMode(availabilityMode string) *ListPublicAddressRangeAuthorizedCIDRsOptions {
+	_options.AvailabilityMode = core.StringPtr(availabilityMode)
+	return _options
+}
+
+// SetHeaders : Allow user to set Headers
+func (options *ListPublicAddressRangeAuthorizedCIDRsOptions) SetHeaders(param map[string]string) *ListPublicAddressRangeAuthorizedCIDRsOptions {
+	options.Headers = param
+	return options
+}
+
+// ListPublicAddressRangeProfilesOptions : The ListPublicAddressRangeProfiles options.
+type ListPublicAddressRangeProfilesOptions struct {
+	// A server-provided token determining what resource to start the page on.
+	Start *string `json:"start,omitempty"`
+
+	// The number of resources to return on a page.
+	Limit *int64 `json:"limit,omitempty"`
+
+	// Allows users to set headers on API requests.
+	Headers map[string]string
+}
+
+// NewListPublicAddressRangeProfilesOptions : Instantiate ListPublicAddressRangeProfilesOptions
+func (*VpcV1) NewListPublicAddressRangeProfilesOptions() *ListPublicAddressRangeProfilesOptions {
+	return &ListPublicAddressRangeProfilesOptions{}
+}
+
+// SetStart : Allow user to set Start
+func (_options *ListPublicAddressRangeProfilesOptions) SetStart(start string) *ListPublicAddressRangeProfilesOptions {
+	_options.Start = core.StringPtr(start)
+	return _options
+}
+
+// SetLimit : Allow user to set Limit
+func (_options *ListPublicAddressRangeProfilesOptions) SetLimit(limit int64) *ListPublicAddressRangeProfilesOptions {
+	_options.Limit = core.Int64Ptr(limit)
+	return _options
+}
+
+// SetHeaders : Allow user to set Headers
+func (options *ListPublicAddressRangeProfilesOptions) SetHeaders(param map[string]string) *ListPublicAddressRangeProfilesOptions {
+	options.Headers = param
+	return options
+}
+
 // ListPublicAddressRangesOptions : The ListPublicAddressRanges options.
 type ListPublicAddressRangesOptions struct {
 	// A server-provided token determining what resource to start the page on.
@@ -78382,6 +80122,9 @@ type ListPublicAddressRangesOptions struct {
 
 	// Filters the collection to resources with a `resource_group.id` property matching the specified identifier.
 	ResourceGroupID *string `json:"resource_group.id,omitempty"`
+
+	// Filters the collection to resources with a `profile.name` property matching the specified value.
+	ProfileName *string `json:"profile.name,omitempty"`
 
 	// Allows users to set headers on API requests.
 	Headers map[string]string
@@ -78407,6 +80150,12 @@ func (_options *ListPublicAddressRangesOptions) SetLimit(limit int64) *ListPubli
 // SetResourceGroupID : Allow user to set ResourceGroupID
 func (_options *ListPublicAddressRangesOptions) SetResourceGroupID(resourceGroupID string) *ListPublicAddressRangesOptions {
 	_options.ResourceGroupID = core.StringPtr(resourceGroupID)
+	return _options
+}
+
+// SetProfileName : Allow user to set ProfileName
+func (_options *ListPublicAddressRangesOptions) SetProfileName(profileName string) *ListPublicAddressRangesOptions {
+	_options.ProfileName = core.StringPtr(profileName)
 	return _options
 }
 
@@ -90422,16 +92171,6 @@ func UnmarshalNetworkACLRuleGeneric(m map[string]json.RawMessage, result interfa
 		err = core.SDKErrorf(err, "", "source-error", common.GetComponentInfo())
 		return
 	}
-
-	// Attempt to unmarshal optional protocol-specific fields - ignore errors as these may not be present
-	_ = core.UnmarshalPrimitive(m, "code", &obj.Code)
-	_ = core.UnmarshalPrimitive(m, "type", &obj.Type)
-	_ = core.UnmarshalPrimitive(m, "destination_port_max", &obj.DestinationPortMax)
-	_ = core.UnmarshalPrimitive(m, "destination_port_min", &obj.DestinationPortMin)
-	_ = core.UnmarshalPrimitive(m, "source_port_max", &obj.SourcePortMax)
-	_ = core.UnmarshalPrimitive(m, "source_port_min", &obj.SourcePortMin)
-
-	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
 	return
 }
 
@@ -93378,6 +95117,9 @@ func UnmarshalPrivatePathServiceGatewayRemote(m map[string]json.RawMessage, resu
 
 // PublicAddressRange : PublicAddressRange struct
 type PublicAddressRange struct {
+	// The public address range authorized CIDR this public address range is allocated from.
+	AuthorizedCIDR *PublicAddressRangeAuthorizedCIDRReference `json:"authorized_cidr,omitempty"`
+
 	// The public IP address block for this public address range, expressed in CIDR format.
 	//
 	// This property may [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) to support IPv6 address
@@ -93396,6 +95138,9 @@ type PublicAddressRange struct {
 	// The unique identifier for this public address range.
 	ID *string `json:"id" validate:"required"`
 
+	// The IP version for this public address range.
+	IPVersion *string `json:"ip_version" validate:"required"`
+
 	// The number of IPv4 addresses in this public address range.
 	Ipv4AddressCount *int64 `json:"ipv4_address_count" validate:"required"`
 
@@ -93404,6 +95149,12 @@ type PublicAddressRange struct {
 
 	// The name for this public address range. The name is unique across all public address ranges in the region.
 	Name *string `json:"name" validate:"required"`
+
+	// The network prefix length for this public address range.
+	NetworkPrefixLength *int64 `json:"network_prefix_length" validate:"required"`
+
+	// The profile for this public address range.
+	Profile *PublicAddressRangeProfileReference `json:"profile" validate:"required"`
 
 	// The resource group for this public address range.
 	ResourceGroup *ResourceGroupReference `json:"resource_group" validate:"required"`
@@ -93420,6 +95171,12 @@ type PublicAddressRange struct {
 	// targets may omit the `vpc` property.
 	Target *PublicAddressRangeTarget `json:"target,omitempty"`
 }
+
+// Constants associated with the PublicAddressRange.IPVersion property.
+// The IP version for this public address range.
+const (
+	PublicAddressRangeIPVersionIpv4Const = "ipv4"
+)
 
 // Constants associated with the PublicAddressRange.LifecycleState property.
 // The lifecycle state of the public address range.
@@ -93442,6 +95199,11 @@ const (
 // UnmarshalPublicAddressRange unmarshals an instance of PublicAddressRange from the specified map of raw messages.
 func UnmarshalPublicAddressRange(m map[string]json.RawMessage, result interface{}) (err error) {
 	obj := new(PublicAddressRange)
+	err = core.UnmarshalModel(m, "authorized_cidr", &obj.AuthorizedCIDR, UnmarshalPublicAddressRangeAuthorizedCIDRReference)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "authorized_cidr-error", common.GetComponentInfo())
+		return
+	}
 	err = core.UnmarshalPrimitive(m, "cidr", &obj.CIDR)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "cidr-error", common.GetComponentInfo())
@@ -93467,6 +95229,11 @@ func UnmarshalPublicAddressRange(m map[string]json.RawMessage, result interface{
 		err = core.SDKErrorf(err, "", "id-error", common.GetComponentInfo())
 		return
 	}
+	err = core.UnmarshalPrimitive(m, "ip_version", &obj.IPVersion)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "ip_version-error", common.GetComponentInfo())
+		return
+	}
 	err = core.UnmarshalPrimitive(m, "ipv4_address_count", &obj.Ipv4AddressCount)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "ipv4_address_count-error", common.GetComponentInfo())
@@ -93482,6 +95249,16 @@ func UnmarshalPublicAddressRange(m map[string]json.RawMessage, result interface{
 		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
 		return
 	}
+	err = core.UnmarshalPrimitive(m, "network_prefix_length", &obj.NetworkPrefixLength)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "network_prefix_length-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "profile", &obj.Profile, UnmarshalPublicAddressRangeProfileReference)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "profile-error", common.GetComponentInfo())
+		return
+	}
 	err = core.UnmarshalModel(m, "resource_group", &obj.ResourceGroup, UnmarshalResourceGroupReference)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "resource_group-error", common.GetComponentInfo())
@@ -93495,6 +95272,618 @@ func UnmarshalPublicAddressRange(m map[string]json.RawMessage, result interface{
 	err = core.UnmarshalModel(m, "target", &obj.Target, UnmarshalPublicAddressRangeTarget)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "target-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangeAuthorizedCIDR : PublicAddressRangeAuthorizedCIDR struct
+type PublicAddressRangeAuthorizedCIDR struct {
+	Allocation *PublicAddressRangeAuthorizedCIDRAllocation `json:"allocation" validate:"required"`
+
+	// The availability mode of the public address range authorized CIDR:
+	// - `regional`: Resources allocated from the authorized CIDR can reside in any zone in the
+	//   region.
+	// - `zonal`: Resources allocated from the authorized CIDR must reside in the authorized
+	//   CIDR's `zone`.
+	//
+	// The enumerated values for this property may
+	// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+	AvailabilityMode *string `json:"availability_mode" validate:"required"`
+
+	// The public IP address block for the public address range authorized CIDR, expressed in CIDR format.
+	//
+	// This property may [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) to support IPv6 address
+	// blocks in the future.
+	CIDR *string `json:"cidr" validate:"required"`
+
+	// The URL for this public address range authorized CIDR.
+	Href *string `json:"href" validate:"required"`
+
+	// The unique identifier for this public address range authorized CIDR.
+	ID *string `json:"id" validate:"required"`
+
+	// The IP version for this public address range authorized CIDR:
+	// - `ipv4`: An IPv4 public address range authorized CIDR.
+	//
+	// The enumerated values for this property may
+	// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+	IPVersion *string `json:"ip_version" validate:"required"`
+
+	// The reasons for the current `lifecycle_state` (if any).
+	LifecycleReasons []PublicAddressRangeAuthorizedCIDRLifecycleReason `json:"lifecycle_reasons" validate:"required"`
+
+	// The lifecycle state of the public address range authorized CIDR.
+	LifecycleState *string `json:"lifecycle_state" validate:"required"`
+
+	// The name for this public address range authorized CIDR. The name is unique across all public address range
+	// authorized CIDRs in the region.
+	Name *string `json:"name" validate:"required"`
+
+	// The network prefix length for this public address range authorized CIDR.
+	NetworkPrefixLength *int64 `json:"network_prefix_length" validate:"required"`
+
+	// The resource_group for this public address range authorized CIDR.
+	ResourceGroup *ResourceGroupReference `json:"resource_group,omitempty"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
+
+	// The zone for this public address range authorized CIDR. Resources allocated from this
+	// authorized CIDR must reside in this zone.
+	Zone *ZoneReference `json:"zone,omitempty"`
+}
+
+// Constants associated with the PublicAddressRangeAuthorizedCIDR.AvailabilityMode property.
+// The availability mode of the public address range authorized CIDR:
+//   - `regional`: Resources allocated from the authorized CIDR can reside in any zone in the
+//     region.
+//   - `zonal`: Resources allocated from the authorized CIDR must reside in the authorized
+//     CIDR's `zone`.
+//
+// The enumerated values for this property may
+// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+const (
+	PublicAddressRangeAuthorizedCIDRAvailabilityModeRegionalConst = "regional"
+	PublicAddressRangeAuthorizedCIDRAvailabilityModeZonalConst    = "zonal"
+)
+
+// Constants associated with the PublicAddressRangeAuthorizedCIDR.IPVersion property.
+// The IP version for this public address range authorized CIDR:
+// - `ipv4`: An IPv4 public address range authorized CIDR.
+//
+// The enumerated values for this property may
+// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+const (
+	PublicAddressRangeAuthorizedCIDRIPVersionIpv4Const = "ipv4"
+)
+
+// Constants associated with the PublicAddressRangeAuthorizedCIDR.LifecycleState property.
+// The lifecycle state of the public address range authorized CIDR.
+const (
+	PublicAddressRangeAuthorizedCIDRLifecycleStateDeletingConst  = "deleting"
+	PublicAddressRangeAuthorizedCIDRLifecycleStateFailedConst    = "failed"
+	PublicAddressRangeAuthorizedCIDRLifecycleStatePendingConst   = "pending"
+	PublicAddressRangeAuthorizedCIDRLifecycleStateStableConst    = "stable"
+	PublicAddressRangeAuthorizedCIDRLifecycleStateSuspendedConst = "suspended"
+	PublicAddressRangeAuthorizedCIDRLifecycleStateUpdatingConst  = "updating"
+	PublicAddressRangeAuthorizedCIDRLifecycleStateWaitingConst   = "waiting"
+)
+
+// Constants associated with the PublicAddressRangeAuthorizedCIDR.ResourceType property.
+// The resource type.
+const (
+	PublicAddressRangeAuthorizedCIDRResourceTypePublicAddressRangeAuthorizedCIDRConst = "public_address_range_authorized_cidr"
+)
+
+// UnmarshalPublicAddressRangeAuthorizedCIDR unmarshals an instance of PublicAddressRangeAuthorizedCIDR from the specified map of raw messages.
+func UnmarshalPublicAddressRangeAuthorizedCIDR(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeAuthorizedCIDR)
+	err = core.UnmarshalModel(m, "allocation", &obj.Allocation, UnmarshalPublicAddressRangeAuthorizedCIDRAllocation)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "allocation-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "availability_mode", &obj.AvailabilityMode)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "availability_mode-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "cidr", &obj.CIDR)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "cidr-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "href", &obj.Href)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "href-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "id", &obj.ID)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "id-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "ip_version", &obj.IPVersion)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "ip_version-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "lifecycle_reasons", &obj.LifecycleReasons, UnmarshalPublicAddressRangeAuthorizedCIDRLifecycleReason)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "lifecycle_reasons-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "lifecycle_state", &obj.LifecycleState)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "lifecycle_state-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "network_prefix_length", &obj.NetworkPrefixLength)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "network_prefix_length-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "resource_group", &obj.ResourceGroup, UnmarshalResourceGroupReference)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_group-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "zone", &obj.Zone, UnmarshalZoneReference)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "zone-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangeAuthorizedCIDRAllocation : PublicAddressRangeAuthorizedCIDRAllocation struct
+type PublicAddressRangeAuthorizedCIDRAllocation struct {
+	// The number of resources allocated from this public address range authorized CIDR.
+	Count *int64 `json:"count" validate:"required"`
+
+	// The profile `family` for resources allocated from this public address range authorized CIDR.
+	// - `provider`: The resources allocated from this authorized CIDR will have a profile
+	//   with a `family` value of `provider`.
+	// - `user`: The resources allocated from this authorized CIDR will have a profile with
+	//   a `family` value of `user`.
+	//
+	// The enumerated values for this property may
+	// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+	ProfileFamily *string `json:"profile_family" validate:"required"`
+}
+
+// Constants associated with the PublicAddressRangeAuthorizedCIDRAllocation.ProfileFamily property.
+// The profile `family` for resources allocated from this public address range authorized CIDR.
+//   - `provider`: The resources allocated from this authorized CIDR will have a profile
+//     with a `family` value of `provider`.
+//   - `user`: The resources allocated from this authorized CIDR will have a profile with
+//     a `family` value of `user`.
+//
+// The enumerated values for this property may
+// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+const (
+	PublicAddressRangeAuthorizedCIDRAllocationProfileFamilyProviderConst = "provider"
+	PublicAddressRangeAuthorizedCIDRAllocationProfileFamilyUserConst     = "user"
+)
+
+// UnmarshalPublicAddressRangeAuthorizedCIDRAllocation unmarshals an instance of PublicAddressRangeAuthorizedCIDRAllocation from the specified map of raw messages.
+func UnmarshalPublicAddressRangeAuthorizedCIDRAllocation(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeAuthorizedCIDRAllocation)
+	err = core.UnmarshalPrimitive(m, "count", &obj.Count)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "count-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "profile_family", &obj.ProfileFamily)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "profile_family-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangeAuthorizedCIDRAllocationCollection : PublicAddressRangeAuthorizedCIDRAllocationCollection struct
+type PublicAddressRangeAuthorizedCIDRAllocationCollection struct {
+	// The floating IPs and public address ranges allocated from this public address range authorized CIDR.
+	Allocations []PublicAddressRangeAuthorizedCIDRAllocationItemIntf `json:"allocations" validate:"required"`
+
+	// A link to the first page of resources.
+	First *PageLink `json:"first" validate:"required"`
+
+	// The maximum number of resources that can be returned by the request.
+	Limit *int64 `json:"limit" validate:"required"`
+
+	// A link to the next page of resources. This property is present for all pages
+	// except the last page.
+	Next *PageLink `json:"next,omitempty"`
+
+	// The total number of resources across all pages.
+	TotalCount *int64 `json:"total_count" validate:"required"`
+}
+
+// UnmarshalPublicAddressRangeAuthorizedCIDRAllocationCollection unmarshals an instance of PublicAddressRangeAuthorizedCIDRAllocationCollection from the specified map of raw messages.
+func UnmarshalPublicAddressRangeAuthorizedCIDRAllocationCollection(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeAuthorizedCIDRAllocationCollection)
+	err = core.UnmarshalModel(m, "allocations", &obj.Allocations, UnmarshalPublicAddressRangeAuthorizedCIDRAllocationItem)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "allocations-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "first", &obj.First, UnmarshalPageLink)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "first-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "limit", &obj.Limit)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "limit-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "next", &obj.Next, UnmarshalPageLink)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "next-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "total_count", &obj.TotalCount)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "total_count-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// Retrieve the value to be passed to a request to access the next page of results
+func (resp *PublicAddressRangeAuthorizedCIDRAllocationCollection) GetNextStart() (*string, error) {
+	if core.IsNil(resp.Next) {
+		return nil, nil
+	}
+	start, err := core.GetQueryParam(resp.Next.Href, "start")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "read-query-param-error", common.GetComponentInfo())
+		return nil, err
+	} else if start == nil {
+		return nil, nil
+	}
+	return start, nil
+}
+
+// PublicAddressRangeAuthorizedCIDRAllocationItem : PublicAddressRangeAuthorizedCIDRAllocationItem struct
+// Models which "extend" this model:
+// - PublicAddressRangeAuthorizedCIDRAllocationItemFloatingIPReference
+// - PublicAddressRangeAuthorizedCIDRAllocationItemPublicAddressRangeReference
+type PublicAddressRangeAuthorizedCIDRAllocationItem struct {
+	// The globally unique IP address.
+	Address *string `json:"address,omitempty"`
+
+	// The CRN for this floating IP.
+	CRN *string `json:"crn,omitempty"`
+
+	// If present, this property indicates the referenced resource has been deleted, and provides
+	// some supplementary information.
+	Deleted *Deleted `json:"deleted,omitempty"`
+
+	// The URL for this floating IP.
+	Href *string `json:"href,omitempty"`
+
+	// The unique identifier for this floating IP.
+	ID *string `json:"id,omitempty"`
+
+	// The name for this floating IP. The name is unique across all floating IPs in the region.
+	Name *string `json:"name,omitempty"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type,omitempty"`
+
+	// The public IP address block for this public address range, expressed in CIDR format.
+	//
+	// This property may [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) to support IPv6 address
+	// blocks in the future.
+	CIDR *string `json:"cidr,omitempty"`
+}
+
+// Constants associated with the PublicAddressRangeAuthorizedCIDRAllocationItem.ResourceType property.
+// The resource type.
+const (
+	PublicAddressRangeAuthorizedCIDRAllocationItemResourceTypeFloatingIPConst = "floating_ip"
+)
+
+func (*PublicAddressRangeAuthorizedCIDRAllocationItem) isaPublicAddressRangeAuthorizedCIDRAllocationItem() bool {
+	return true
+}
+
+type PublicAddressRangeAuthorizedCIDRAllocationItemIntf interface {
+	isaPublicAddressRangeAuthorizedCIDRAllocationItem() bool
+}
+
+// UnmarshalPublicAddressRangeAuthorizedCIDRAllocationItem unmarshals an instance of PublicAddressRangeAuthorizedCIDRAllocationItem from the specified map of raw messages.
+func UnmarshalPublicAddressRangeAuthorizedCIDRAllocationItem(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeAuthorizedCIDRAllocationItem)
+	err = core.UnmarshalPrimitive(m, "address", &obj.Address)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "address-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "crn", &obj.CRN)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "crn-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "deleted", &obj.Deleted, UnmarshalDeleted)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "deleted-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "href", &obj.Href)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "href-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "id", &obj.ID)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "id-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "cidr", &obj.CIDR)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "cidr-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangeAuthorizedCIDRCollection : PublicAddressRangeAuthorizedCIDRCollection struct
+type PublicAddressRangeAuthorizedCIDRCollection struct {
+	// A page of public address range authorized CIDRs.
+	AuthorizedCIDRs []PublicAddressRangeAuthorizedCIDR `json:"authorized_cidrs" validate:"required"`
+
+	// A link to the first page of resources.
+	First *PageLink `json:"first" validate:"required"`
+
+	// The maximum number of resources that can be returned by the request.
+	Limit *int64 `json:"limit" validate:"required"`
+
+	// A link to the next page of resources. This property is present for all pages
+	// except the last page.
+	Next *PageLink `json:"next,omitempty"`
+
+	// The total number of resources across all pages.
+	TotalCount *int64 `json:"total_count" validate:"required"`
+}
+
+// UnmarshalPublicAddressRangeAuthorizedCIDRCollection unmarshals an instance of PublicAddressRangeAuthorizedCIDRCollection from the specified map of raw messages.
+func UnmarshalPublicAddressRangeAuthorizedCIDRCollection(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeAuthorizedCIDRCollection)
+	err = core.UnmarshalModel(m, "authorized_cidrs", &obj.AuthorizedCIDRs, UnmarshalPublicAddressRangeAuthorizedCIDR)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "authorized_cidrs-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "first", &obj.First, UnmarshalPageLink)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "first-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "limit", &obj.Limit)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "limit-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "next", &obj.Next, UnmarshalPageLink)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "next-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "total_count", &obj.TotalCount)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "total_count-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// Retrieve the value to be passed to a request to access the next page of results
+func (resp *PublicAddressRangeAuthorizedCIDRCollection) GetNextStart() (*string, error) {
+	if core.IsNil(resp.Next) {
+		return nil, nil
+	}
+	start, err := core.GetQueryParam(resp.Next.Href, "start")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "read-query-param-error", common.GetComponentInfo())
+		return nil, err
+	} else if start == nil {
+		return nil, nil
+	}
+	return start, nil
+}
+
+// PublicAddressRangeAuthorizedCIDRLifecycleReason : PublicAddressRangeAuthorizedCIDRLifecycleReason struct
+type PublicAddressRangeAuthorizedCIDRLifecycleReason struct {
+	// A reason code for this lifecycle state:
+	// - `finalizing`: System reconciliation in progress.
+	//
+	// The enumerated values for this property may
+	// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+	Code *string `json:"code" validate:"required"`
+
+	// An explanation of the reason for this lifecycle state.
+	Message *string `json:"message" validate:"required"`
+
+	// A link to documentation about the reason for this lifecycle state.
+	MoreInfo *string `json:"more_info,omitempty"`
+}
+
+// Constants associated with the PublicAddressRangeAuthorizedCIDRLifecycleReason.Code property.
+// A reason code for this lifecycle state:
+// - `finalizing`: System reconciliation in progress.
+//
+// The enumerated values for this property may
+// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+const (
+	PublicAddressRangeAuthorizedCIDRLifecycleReasonCodeFinalizingConst                  = "finalizing"
+	PublicAddressRangeAuthorizedCIDRLifecycleReasonCodeInternalErrorConst               = "internal_error"
+	PublicAddressRangeAuthorizedCIDRLifecycleReasonCodeResourceSuspendedByProviderConst = "resource_suspended_by_provider"
+)
+
+// UnmarshalPublicAddressRangeAuthorizedCIDRLifecycleReason unmarshals an instance of PublicAddressRangeAuthorizedCIDRLifecycleReason from the specified map of raw messages.
+func UnmarshalPublicAddressRangeAuthorizedCIDRLifecycleReason(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeAuthorizedCIDRLifecycleReason)
+	err = core.UnmarshalPrimitive(m, "code", &obj.Code)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "code-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "message", &obj.Message)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "message-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "more_info", &obj.MoreInfo)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "more_info-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangeAuthorizedCIDRReference : PublicAddressRangeAuthorizedCIDRReference struct
+type PublicAddressRangeAuthorizedCIDRReference struct {
+	// The public IP address block for the public address range authorized CIDR, expressed in CIDR format.
+	//
+	// This property may [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) to support IPv6 address
+	// blocks in the future.
+	CIDR *string `json:"cidr" validate:"required"`
+
+	// The URL for this public address range authorized CIDR.
+	Href *string `json:"href" validate:"required"`
+
+	// The unique identifier for this public address range authorized CIDR.
+	ID *string `json:"id" validate:"required"`
+
+	// The name for this public address range authorized CIDR. The name is unique across all public address range
+	// authorized CIDRs in the region.
+	Name *string `json:"name" validate:"required"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
+}
+
+// Constants associated with the PublicAddressRangeAuthorizedCIDRReference.ResourceType property.
+// The resource type.
+const (
+	PublicAddressRangeAuthorizedCIDRReferenceResourceTypePublicAddressRangeAuthorizedCIDRConst = "public_address_range_authorized_cidr"
+)
+
+// UnmarshalPublicAddressRangeAuthorizedCIDRReference unmarshals an instance of PublicAddressRangeAuthorizedCIDRReference from the specified map of raw messages.
+func UnmarshalPublicAddressRangeAuthorizedCIDRReference(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeAuthorizedCIDRReference)
+	err = core.UnmarshalPrimitive(m, "cidr", &obj.CIDR)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "cidr-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "href", &obj.Href)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "href-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "id", &obj.ID)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "id-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangeAuthorizedCIDRReferenceFloatingIPContext : PublicAddressRangeAuthorizedCIDRReferenceFloatingIPContext struct
+type PublicAddressRangeAuthorizedCIDRReferenceFloatingIPContext struct {
+	// The public IPv4 address block for the public address range authorized CIDR, expressed in CIDR format.
+	CIDR *string `json:"cidr" validate:"required"`
+
+	// The URL for this public address range authorized CIDR.
+	Href *string `json:"href" validate:"required"`
+
+	// The unique identifier for this public address range authorized CIDR.
+	ID *string `json:"id" validate:"required"`
+
+	// The name for this public address range authorized CIDR. The name is unique across all public address range
+	// authorized CIDRs in the region.
+	Name *string `json:"name" validate:"required"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
+}
+
+// Constants associated with the PublicAddressRangeAuthorizedCIDRReferenceFloatingIPContext.ResourceType property.
+// The resource type.
+const (
+	PublicAddressRangeAuthorizedCIDRReferenceFloatingIPContextResourceTypePublicAddressRangeAuthorizedCIDRConst = "public_address_range_authorized_cidr"
+)
+
+// UnmarshalPublicAddressRangeAuthorizedCIDRReferenceFloatingIPContext unmarshals an instance of PublicAddressRangeAuthorizedCIDRReferenceFloatingIPContext from the specified map of raw messages.
+func UnmarshalPublicAddressRangeAuthorizedCIDRReferenceFloatingIPContext(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeAuthorizedCIDRReferenceFloatingIPContext)
+	err = core.UnmarshalPrimitive(m, "cidr", &obj.CIDR)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "cidr-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "href", &obj.Href)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "href-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "id", &obj.ID)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "id-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
 		return
 	}
 	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
@@ -93612,8 +96001,279 @@ func (publicAddressRangePatch *PublicAddressRangePatch) AsPatch() (_patch map[st
 	return
 }
 
+// PublicAddressRangeProfile : PublicAddressRangeProfile struct
+type PublicAddressRangeProfile struct {
+	// The product family this public address range profile belongs to.
+	// - `provider`: The public IP addresses in the public address range with this profile are
+	//    owned by the provider.
+	// - `user`: The public IP addresses in the public address range with this profile are
+	//    owned by the user.
+	//
+	// The enumerated values for this property may
+	// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+	Family *string `json:"family" validate:"required"`
+
+	// The URL for this public address range profile.
+	Href *string `json:"href" validate:"required"`
+
+	// The IP version for public address ranges with this profile:
+	// - `ipv4`: An IPv4 public address range.
+	//
+	// The enumerated values for this property may
+	// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+	IPVersion *string `json:"ip_version" validate:"required"`
+
+	// The globally unique name for this public address range profile.
+	Name *string `json:"name" validate:"required"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
+}
+
+// Constants associated with the PublicAddressRangeProfile.Family property.
+// The product family this public address range profile belongs to.
+//   - `provider`: The public IP addresses in the public address range with this profile are
+//     owned by the provider.
+//   - `user`: The public IP addresses in the public address range with this profile are
+//     owned by the user.
+//
+// The enumerated values for this property may
+// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+const (
+	PublicAddressRangeProfileFamilyProviderConst = "provider"
+	PublicAddressRangeProfileFamilyUserConst     = "user"
+)
+
+// Constants associated with the PublicAddressRangeProfile.IPVersion property.
+// The IP version for public address ranges with this profile:
+// - `ipv4`: An IPv4 public address range.
+//
+// The enumerated values for this property may
+// [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) in the future.
+const (
+	PublicAddressRangeProfileIPVersionIpv4Const = "ipv4"
+)
+
+// Constants associated with the PublicAddressRangeProfile.ResourceType property.
+// The resource type.
+const (
+	PublicAddressRangeProfileResourceTypePublicAddressRangeProfileConst = "public_address_range_profile"
+)
+
+// UnmarshalPublicAddressRangeProfile unmarshals an instance of PublicAddressRangeProfile from the specified map of raw messages.
+func UnmarshalPublicAddressRangeProfile(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeProfile)
+	err = core.UnmarshalPrimitive(m, "family", &obj.Family)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "family-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "href", &obj.Href)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "href-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "ip_version", &obj.IPVersion)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "ip_version-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangeProfileCollection : PublicAddressRangeProfileCollection struct
+type PublicAddressRangeProfileCollection struct {
+	// A link to the first page of resources.
+	First *PageLink `json:"first" validate:"required"`
+
+	// The maximum number of resources that can be returned by the request.
+	Limit *int64 `json:"limit" validate:"required"`
+
+	// A link to the next page of resources. This property is present for all pages
+	// except the last page.
+	Next *PageLink `json:"next,omitempty"`
+
+	// A page of public address range profiles.
+	Profiles []PublicAddressRangeProfile `json:"profiles" validate:"required"`
+
+	// The total number of resources across all pages.
+	TotalCount *int64 `json:"total_count" validate:"required"`
+}
+
+// UnmarshalPublicAddressRangeProfileCollection unmarshals an instance of PublicAddressRangeProfileCollection from the specified map of raw messages.
+func UnmarshalPublicAddressRangeProfileCollection(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeProfileCollection)
+	err = core.UnmarshalModel(m, "first", &obj.First, UnmarshalPageLink)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "first-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "limit", &obj.Limit)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "limit-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "next", &obj.Next, UnmarshalPageLink)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "next-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "profiles", &obj.Profiles, UnmarshalPublicAddressRangeProfile)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "profiles-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "total_count", &obj.TotalCount)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "total_count-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// Retrieve the value to be passed to a request to access the next page of results
+func (resp *PublicAddressRangeProfileCollection) GetNextStart() (*string, error) {
+	if core.IsNil(resp.Next) {
+		return nil, nil
+	}
+	start, err := core.GetQueryParam(resp.Next.Href, "start")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "read-query-param-error", common.GetComponentInfo())
+		return nil, err
+	} else if start == nil {
+		return nil, nil
+	}
+	return start, nil
+}
+
+// PublicAddressRangeProfileReference : PublicAddressRangeProfileReference struct
+type PublicAddressRangeProfileReference struct {
+	// The URL for this public address range profile.
+	Href *string `json:"href" validate:"required"`
+
+	// The globally unique name for this public address range profile.
+	Name *string `json:"name" validate:"required"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
+}
+
+// Constants associated with the PublicAddressRangeProfileReference.ResourceType property.
+// The resource type.
+const (
+	PublicAddressRangeProfileReferenceResourceTypePublicAddressRangeProfileConst = "public_address_range_profile"
+)
+
+// UnmarshalPublicAddressRangeProfileReference unmarshals an instance of PublicAddressRangeProfileReference from the specified map of raw messages.
+func UnmarshalPublicAddressRangeProfileReference(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeProfileReference)
+	err = core.UnmarshalPrimitive(m, "href", &obj.Href)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "href-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangePrototype : PublicAddressRangePrototype struct
+// Models which "extend" this model:
+// - PublicAddressRangePrototypePublicAddressRangeByCIDR
+// - PublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount
+type PublicAddressRangePrototype struct {
+	// The name for this public address range. The name must not be used by another public address range in the region.
+	// Names starting with `ibm-` are reserved for provider-managed resources, and are not allowed. If unspecified, the
+	// name will be a hyphenated list of randomly-selected words.
+	Name *string `json:"name,omitempty"`
+
+	// The resource group to use. If unspecified, the account's [default resource
+	// group](https://cloud.ibm.com/apidocs/resource-manager#introduction) will be used.
+	ResourceGroup ResourceGroupIdentityIntf `json:"resource_group,omitempty"`
+
+	// The target to bind this public address range to. If unspecified, the public address
+	// range will not be bound to a target at creation.
+	Target *PublicAddressRangeTargetPrototype `json:"target,omitempty"`
+
+	// The public IP address block for this public address range, expressed in CIDR format.
+	//
+	// This property may [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) to support IPv6 address
+	// blocks in the future.
+	CIDR *string `json:"cidr,omitempty"`
+
+	// The total number of public IPv4 addresses required. Must be a power of 2.
+	Ipv4AddressCount *int64 `json:"ipv4_address_count,omitempty"`
+}
+
+func (*PublicAddressRangePrototype) isaPublicAddressRangePrototype() bool {
+	return true
+}
+
+type PublicAddressRangePrototypeIntf interface {
+	isaPublicAddressRangePrototype() bool
+}
+
+// UnmarshalPublicAddressRangePrototype unmarshals an instance of PublicAddressRangePrototype from the specified map of raw messages.
+func UnmarshalPublicAddressRangePrototype(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangePrototype)
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "resource_group", &obj.ResourceGroup, UnmarshalResourceGroupIdentity)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_group-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "target", &obj.Target, UnmarshalPublicAddressRangeTargetPrototype)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "target-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "cidr", &obj.CIDR)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "cidr-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "ipv4_address_count", &obj.Ipv4AddressCount)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "ipv4_address_count-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
 // PublicAddressRangeReference : PublicAddressRangeReference struct
 type PublicAddressRangeReference struct {
+	// The public IP address block for this public address range, expressed in CIDR format.
+	//
+	// This property may [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) to support IPv6 address
+	// blocks in the future.
+	CIDR *string `json:"cidr" validate:"required"`
+
 	// The CRN for this public address range.
 	CRN *string `json:"crn" validate:"required"`
 
@@ -93643,6 +96303,11 @@ const (
 // UnmarshalPublicAddressRangeReference unmarshals an instance of PublicAddressRangeReference from the specified map of raw messages.
 func UnmarshalPublicAddressRangeReference(m map[string]json.RawMessage, result interface{}) (err error) {
 	obj := new(PublicAddressRangeReference)
+	err = core.UnmarshalPrimitive(m, "cidr", &obj.CIDR)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "cidr-error", common.GetComponentInfo())
+		return
+	}
 	err = core.UnmarshalPrimitive(m, "crn", &obj.CRN)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "crn-error", common.GetComponentInfo())
@@ -93720,6 +96385,9 @@ type PublicAddressRangeTargetPatch struct {
 	VPC VPCIdentityIntf `json:"vpc,omitempty"`
 
 	// The zone this public address range will reside in, replacing any existing zone.
+	//
+	// Must have the same value as the `zone` for the public address range authorized CIDR
+	// this public address range is allocated from, if set.
 	Zone ZoneIdentityIntf `json:"zone,omitempty"`
 }
 
@@ -93760,6 +96428,9 @@ type PublicAddressRangeTargetPrototype struct {
 	VPC VPCIdentityIntf `json:"vpc" validate:"required"`
 
 	// The zone this public address range will reside in.
+	//
+	// Must have the same value as the `zone` for the public address range authorized CIDR
+	// this public address range is allocated from, if set.
 	Zone ZoneIdentityIntf `json:"zone" validate:"required"`
 }
 
@@ -93992,7 +96663,16 @@ type PublicGatewayFloatingIP struct {
 
 	// The name for this floating IP. The name is unique across all floating IPs in the region.
 	Name *string `json:"name" validate:"required"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
 }
+
+// Constants associated with the PublicGatewayFloatingIP.ResourceType property.
+// The resource type.
+const (
+	PublicGatewayFloatingIPResourceTypeFloatingIPConst = "floating_ip"
+)
 
 // UnmarshalPublicGatewayFloatingIP unmarshals an instance of PublicGatewayFloatingIP from the specified map of raw messages.
 func UnmarshalPublicGatewayFloatingIP(m map[string]json.RawMessage, result interface{}) (err error) {
@@ -94025,6 +96705,11 @@ func UnmarshalPublicGatewayFloatingIP(m map[string]json.RawMessage, result inter
 	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
 		return
 	}
 	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
@@ -128205,115 +130890,6 @@ func UnmarshalEndpointGatewayTargetProviderInfrastructureServiceReference(m map[
 	return
 }
 
-// FloatingIPPrototypeFloatingIPByTarget : FloatingIPPrototypeFloatingIPByTarget struct
-// This model "extends" FloatingIPPrototype
-type FloatingIPPrototypeFloatingIPByTarget struct {
-	// The name for this floating IP. The name must not be used by another floating IP in the region. If unspecified, the
-	// name will be a hyphenated list of randomly-selected words.
-	Name *string `json:"name,omitempty"`
-
-	ResourceGroup ResourceGroupIdentityIntf `json:"resource_group,omitempty"`
-
-	// The target resource to bind this floating IP to.
-	//
-	// The target resource must not already have a floating IP bound to it if the target
-	// resource is:
-	//
-	// - an instance network interface
-	// - a bare metal server network interface with `enable_infrastructure_nat` set to `true`
-	// - a virtual network interface with `enable_infrastructure_nat` set to `true`.
-	Target FloatingIPTargetPrototypeIntf `json:"target" validate:"required"`
-}
-
-// NewFloatingIPPrototypeFloatingIPByTarget : Instantiate FloatingIPPrototypeFloatingIPByTarget (Generic Model Constructor)
-func (*VpcV1) NewFloatingIPPrototypeFloatingIPByTarget(target FloatingIPTargetPrototypeIntf) (_model *FloatingIPPrototypeFloatingIPByTarget, err error) {
-	_model = &FloatingIPPrototypeFloatingIPByTarget{
-		Target: target,
-	}
-	err = core.ValidateStruct(_model, "required parameters")
-	if err != nil {
-		err = core.SDKErrorf(err, "", "model-missing-required", common.GetComponentInfo())
-	}
-	return
-}
-
-func (*FloatingIPPrototypeFloatingIPByTarget) isaFloatingIPPrototype() bool {
-	return true
-}
-
-// UnmarshalFloatingIPPrototypeFloatingIPByTarget unmarshals an instance of FloatingIPPrototypeFloatingIPByTarget from the specified map of raw messages.
-func UnmarshalFloatingIPPrototypeFloatingIPByTarget(m map[string]json.RawMessage, result interface{}) (err error) {
-	obj := new(FloatingIPPrototypeFloatingIPByTarget)
-	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
-	if err != nil {
-		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
-		return
-	}
-	err = core.UnmarshalModel(m, "resource_group", &obj.ResourceGroup, UnmarshalResourceGroupIdentity)
-	if err != nil {
-		err = core.SDKErrorf(err, "", "resource_group-error", common.GetComponentInfo())
-		return
-	}
-	err = core.UnmarshalModel(m, "target", &obj.Target, UnmarshalFloatingIPTargetPrototype)
-	if err != nil {
-		err = core.SDKErrorf(err, "", "target-error", common.GetComponentInfo())
-		return
-	}
-	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
-	return
-}
-
-// FloatingIPPrototypeFloatingIPByZone : FloatingIPPrototypeFloatingIPByZone struct
-// This model "extends" FloatingIPPrototype
-type FloatingIPPrototypeFloatingIPByZone struct {
-	// The name for this floating IP. The name must not be used by another floating IP in the region. If unspecified, the
-	// name will be a hyphenated list of randomly-selected words.
-	Name *string `json:"name,omitempty"`
-
-	ResourceGroup ResourceGroupIdentityIntf `json:"resource_group,omitempty"`
-
-	// The zone this floating IP will reside in.
-	Zone ZoneIdentityIntf `json:"zone" validate:"required"`
-}
-
-// NewFloatingIPPrototypeFloatingIPByZone : Instantiate FloatingIPPrototypeFloatingIPByZone (Generic Model Constructor)
-func (*VpcV1) NewFloatingIPPrototypeFloatingIPByZone(zone ZoneIdentityIntf) (_model *FloatingIPPrototypeFloatingIPByZone, err error) {
-	_model = &FloatingIPPrototypeFloatingIPByZone{
-		Zone: zone,
-	}
-	err = core.ValidateStruct(_model, "required parameters")
-	if err != nil {
-		err = core.SDKErrorf(err, "", "model-missing-required", common.GetComponentInfo())
-	}
-	return
-}
-
-func (*FloatingIPPrototypeFloatingIPByZone) isaFloatingIPPrototype() bool {
-	return true
-}
-
-// UnmarshalFloatingIPPrototypeFloatingIPByZone unmarshals an instance of FloatingIPPrototypeFloatingIPByZone from the specified map of raw messages.
-func UnmarshalFloatingIPPrototypeFloatingIPByZone(m map[string]json.RawMessage, result interface{}) (err error) {
-	obj := new(FloatingIPPrototypeFloatingIPByZone)
-	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
-	if err != nil {
-		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
-		return
-	}
-	err = core.UnmarshalModel(m, "resource_group", &obj.ResourceGroup, UnmarshalResourceGroupIdentity)
-	if err != nil {
-		err = core.SDKErrorf(err, "", "resource_group-error", common.GetComponentInfo())
-		return
-	}
-	err = core.UnmarshalModel(m, "zone", &obj.Zone, UnmarshalZoneIdentity)
-	if err != nil {
-		err = core.SDKErrorf(err, "", "zone-error", common.GetComponentInfo())
-		return
-	}
-	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
-	return
-}
-
 // FloatingIPTargetPatchBareMetalServerNetworkInterfaceIdentity : Identifies a bare metal server network interface by a unique property.
 // Models which "extend" this model:
 // - FloatingIPTargetPatchBareMetalServerNetworkInterfaceIdentityBareMetalServerNetworkInterfaceIdentityByID
@@ -145178,6 +147754,289 @@ func UnmarshalOperatingSystemIdentityByName(m map[string]json.RawMessage, result
 	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
 	if err != nil {
 		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangeAuthorizedCIDRAllocationItemFloatingIPReference : PublicAddressRangeAuthorizedCIDRAllocationItemFloatingIPReference struct
+// This model "extends" PublicAddressRangeAuthorizedCIDRAllocationItem
+type PublicAddressRangeAuthorizedCIDRAllocationItemFloatingIPReference struct {
+	// The globally unique IP address.
+	Address *string `json:"address" validate:"required"`
+
+	// The CRN for this floating IP.
+	CRN *string `json:"crn" validate:"required"`
+
+	// If present, this property indicates the referenced resource has been deleted, and provides
+	// some supplementary information.
+	Deleted *Deleted `json:"deleted,omitempty"`
+
+	// The URL for this floating IP.
+	Href *string `json:"href" validate:"required"`
+
+	// The unique identifier for this floating IP.
+	ID *string `json:"id" validate:"required"`
+
+	// The name for this floating IP. The name is unique across all floating IPs in the region.
+	Name *string `json:"name" validate:"required"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
+}
+
+// Constants associated with the PublicAddressRangeAuthorizedCIDRAllocationItemFloatingIPReference.ResourceType property.
+// The resource type.
+const (
+	PublicAddressRangeAuthorizedCIDRAllocationItemFloatingIPReferenceResourceTypeFloatingIPConst = "floating_ip"
+)
+
+func (*PublicAddressRangeAuthorizedCIDRAllocationItemFloatingIPReference) isaPublicAddressRangeAuthorizedCIDRAllocationItem() bool {
+	return true
+}
+
+// UnmarshalPublicAddressRangeAuthorizedCIDRAllocationItemFloatingIPReference unmarshals an instance of PublicAddressRangeAuthorizedCIDRAllocationItemFloatingIPReference from the specified map of raw messages.
+func UnmarshalPublicAddressRangeAuthorizedCIDRAllocationItemFloatingIPReference(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeAuthorizedCIDRAllocationItemFloatingIPReference)
+	err = core.UnmarshalPrimitive(m, "address", &obj.Address)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "address-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "crn", &obj.CRN)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "crn-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "deleted", &obj.Deleted, UnmarshalDeleted)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "deleted-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "href", &obj.Href)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "href-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "id", &obj.ID)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "id-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangeAuthorizedCIDRAllocationItemPublicAddressRangeReference : PublicAddressRangeAuthorizedCIDRAllocationItemPublicAddressRangeReference struct
+// This model "extends" PublicAddressRangeAuthorizedCIDRAllocationItem
+type PublicAddressRangeAuthorizedCIDRAllocationItemPublicAddressRangeReference struct {
+	// The public IP address block for this public address range, expressed in CIDR format.
+	//
+	// This property may [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) to support IPv6 address
+	// blocks in the future.
+	CIDR *string `json:"cidr" validate:"required"`
+
+	// The CRN for this public address range.
+	CRN *string `json:"crn" validate:"required"`
+
+	// If present, this property indicates the referenced resource has been deleted, and provides
+	// some supplementary information.
+	Deleted *Deleted `json:"deleted,omitempty"`
+
+	// The URL for this public address range.
+	Href *string `json:"href" validate:"required"`
+
+	// The unique identifier for this public address range.
+	ID *string `json:"id" validate:"required"`
+
+	// The name for this public address range. The name is unique across all public address ranges in the region.
+	Name *string `json:"name" validate:"required"`
+
+	// The resource type.
+	ResourceType *string `json:"resource_type" validate:"required"`
+}
+
+// Constants associated with the PublicAddressRangeAuthorizedCIDRAllocationItemPublicAddressRangeReference.ResourceType property.
+// The resource type.
+const (
+	PublicAddressRangeAuthorizedCIDRAllocationItemPublicAddressRangeReferenceResourceTypePublicAddressRangeConst = "public_address_range"
+)
+
+func (*PublicAddressRangeAuthorizedCIDRAllocationItemPublicAddressRangeReference) isaPublicAddressRangeAuthorizedCIDRAllocationItem() bool {
+	return true
+}
+
+// UnmarshalPublicAddressRangeAuthorizedCIDRAllocationItemPublicAddressRangeReference unmarshals an instance of PublicAddressRangeAuthorizedCIDRAllocationItemPublicAddressRangeReference from the specified map of raw messages.
+func UnmarshalPublicAddressRangeAuthorizedCIDRAllocationItemPublicAddressRangeReference(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangeAuthorizedCIDRAllocationItemPublicAddressRangeReference)
+	err = core.UnmarshalPrimitive(m, "cidr", &obj.CIDR)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "cidr-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "crn", &obj.CRN)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "crn-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "deleted", &obj.Deleted, UnmarshalDeleted)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "deleted-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "href", &obj.Href)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "href-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "id", &obj.ID)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "id-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "resource_type", &obj.ResourceType)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_type-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangePrototypePublicAddressRangeByCIDR : The public IP range for this public address range, expressed in CIDR format. The host identifier in the CIDR must be
+// zero. The CIDR must be an unallocated range in a public address range authorized CIDR.
+//
+// An IPv6 CIDR will be converted to its compressed format before processing.
+// This model "extends" PublicAddressRangePrototype
+type PublicAddressRangePrototypePublicAddressRangeByCIDR struct {
+	// The name for this public address range. The name must not be used by another public address range in the region.
+	// Names starting with `ibm-` are reserved for provider-managed resources, and are not allowed. If unspecified, the
+	// name will be a hyphenated list of randomly-selected words.
+	Name *string `json:"name,omitempty"`
+
+	ResourceGroup ResourceGroupIdentityIntf `json:"resource_group,omitempty"`
+
+	Target *PublicAddressRangeTargetPrototype `json:"target,omitempty"`
+
+	// The public IP address block for this public address range, expressed in CIDR format.
+	//
+	// This property may [expand](https://cloud.ibm.com/apidocs/vpc#property-value-expansion) to support IPv6 address
+	// blocks in the future.
+	CIDR *string `json:"cidr" validate:"required"`
+}
+
+// NewPublicAddressRangePrototypePublicAddressRangeByCIDR : Instantiate PublicAddressRangePrototypePublicAddressRangeByCIDR (Generic Model Constructor)
+func (*VpcV1) NewPublicAddressRangePrototypePublicAddressRangeByCIDR(cidr string) (_model *PublicAddressRangePrototypePublicAddressRangeByCIDR, err error) {
+	_model = &PublicAddressRangePrototypePublicAddressRangeByCIDR{
+		CIDR: core.StringPtr(cidr),
+	}
+	err = core.ValidateStruct(_model, "required parameters")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "model-missing-required", common.GetComponentInfo())
+	}
+	return
+}
+
+func (*PublicAddressRangePrototypePublicAddressRangeByCIDR) isaPublicAddressRangePrototype() bool {
+	return true
+}
+
+// UnmarshalPublicAddressRangePrototypePublicAddressRangeByCIDR unmarshals an instance of PublicAddressRangePrototypePublicAddressRangeByCIDR from the specified map of raw messages.
+func UnmarshalPublicAddressRangePrototypePublicAddressRangeByCIDR(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangePrototypePublicAddressRangeByCIDR)
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "resource_group", &obj.ResourceGroup, UnmarshalResourceGroupIdentity)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_group-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "target", &obj.Target, UnmarshalPublicAddressRangeTargetPrototype)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "target-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "cidr", &obj.CIDR)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "cidr-error", common.GetComponentInfo())
+		return
+	}
+	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
+	return
+}
+
+// PublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount : The number of contiguous IPv4 addresses to allocate from IBM's pool of available public addresses for the region.
+// This model "extends" PublicAddressRangePrototype
+type PublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount struct {
+	// The name for this public address range. The name must not be used by another public address range in the region.
+	// Names starting with `ibm-` are reserved for provider-managed resources, and are not allowed. If unspecified, the
+	// name will be a hyphenated list of randomly-selected words.
+	Name *string `json:"name,omitempty"`
+
+	ResourceGroup ResourceGroupIdentityIntf `json:"resource_group,omitempty"`
+
+	Target *PublicAddressRangeTargetPrototype `json:"target,omitempty"`
+
+	// The total number of public IPv4 addresses required. Must be a power of 2.
+	Ipv4AddressCount *int64 `json:"ipv4_address_count" validate:"required"`
+}
+
+// NewPublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount : Instantiate PublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount (Generic Model Constructor)
+func (*VpcV1) NewPublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount(ipv4AddressCount int64) (_model *PublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount, err error) {
+	_model = &PublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount{
+		Ipv4AddressCount: core.Int64Ptr(ipv4AddressCount),
+	}
+	err = core.ValidateStruct(_model, "required parameters")
+	if err != nil {
+		err = core.SDKErrorf(err, "", "model-missing-required", common.GetComponentInfo())
+	}
+	return
+}
+
+func (*PublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount) isaPublicAddressRangePrototype() bool {
+	return true
+}
+
+// UnmarshalPublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount unmarshals an instance of PublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount from the specified map of raw messages.
+func UnmarshalPublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount(m map[string]json.RawMessage, result interface{}) (err error) {
+	obj := new(PublicAddressRangePrototypePublicAddressRangeByIPv4AddressCount)
+	err = core.UnmarshalPrimitive(m, "name", &obj.Name)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "name-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "resource_group", &obj.ResourceGroup, UnmarshalResourceGroupIdentity)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "resource_group-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalModel(m, "target", &obj.Target, UnmarshalPublicAddressRangeTargetPrototype)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "target-error", common.GetComponentInfo())
+		return
+	}
+	err = core.UnmarshalPrimitive(m, "ipv4_address_count", &obj.Ipv4AddressCount)
+	if err != nil {
+		err = core.SDKErrorf(err, "", "ipv4_address_count-error", common.GetComponentInfo())
 		return
 	}
 	reflect.ValueOf(result).Elem().Set(reflect.ValueOf(obj))
@@ -172535,6 +175394,98 @@ func (pager *EndpointGatewayResourceBindingsPager) GetAll() (allItems []Endpoint
 	return
 }
 
+// FloatingIPProfilesPager can be used to simplify the use of the "ListFloatingIPProfiles" method.
+type FloatingIPProfilesPager struct {
+	hasNext     bool
+	options     *ListFloatingIPProfilesOptions
+	client      *VpcV1
+	pageContext struct {
+		next *string
+	}
+}
+
+// NewFloatingIPProfilesPager returns a new FloatingIPProfilesPager instance.
+func (vpc *VpcV1) NewFloatingIPProfilesPager(options *ListFloatingIPProfilesOptions) (pager *FloatingIPProfilesPager, err error) {
+	if options.Start != nil && *options.Start != "" {
+		err = core.SDKErrorf(nil, "the 'options.Start' field should not be set", "no-query-setting", common.GetComponentInfo())
+		return
+	}
+
+	var optionsCopy ListFloatingIPProfilesOptions = *options
+	pager = &FloatingIPProfilesPager{
+		hasNext: true,
+		options: &optionsCopy,
+		client:  vpc,
+	}
+	return
+}
+
+// HasNext returns true if there are potentially more results to be retrieved.
+func (pager *FloatingIPProfilesPager) HasNext() bool {
+	return pager.hasNext
+}
+
+// GetNextWithContext returns the next page of results using the specified Context.
+func (pager *FloatingIPProfilesPager) GetNextWithContext(ctx context.Context) (page []FloatingIPProfile, err error) {
+	if !pager.HasNext() {
+		return nil, fmt.Errorf("no more results available")
+	}
+
+	pager.options.Start = pager.pageContext.next
+
+	result, _, err := pager.client.ListFloatingIPProfilesWithContext(ctx, pager.options)
+	if err != nil {
+		err = core.RepurposeSDKProblem(err, "error-getting-next-page")
+		return
+	}
+
+	var next *string
+	if result.Next != nil {
+		var start *string
+		start, err = core.GetQueryParam(result.Next.Href, "start")
+		if err != nil {
+			errMsg := fmt.Sprintf("error retrieving 'start' query parameter from URL '%s': %s", *result.Next.Href, err.Error())
+			err = core.SDKErrorf(err, errMsg, "get-query-error", common.GetComponentInfo())
+			return
+		}
+		next = start
+	}
+	pager.pageContext.next = next
+	pager.hasNext = (pager.pageContext.next != nil)
+	page = result.Profiles
+
+	return
+}
+
+// GetAllWithContext returns all results by invoking GetNextWithContext() repeatedly
+// until all pages of results have been retrieved.
+func (pager *FloatingIPProfilesPager) GetAllWithContext(ctx context.Context) (allItems []FloatingIPProfile, err error) {
+	for pager.HasNext() {
+		var nextPage []FloatingIPProfile
+		nextPage, err = pager.GetNextWithContext(ctx)
+		if err != nil {
+			err = core.RepurposeSDKProblem(err, "error-getting-next-page")
+			return
+		}
+		allItems = append(allItems, nextPage...)
+	}
+	return
+}
+
+// GetNext invokes GetNextWithContext() using context.Background() as the Context parameter.
+func (pager *FloatingIPProfilesPager) GetNext() (page []FloatingIPProfile, err error) {
+	page, err = pager.GetNextWithContext(context.Background())
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// GetAll invokes GetAllWithContext() using context.Background() as the Context parameter.
+func (pager *FloatingIPProfilesPager) GetAll() (allItems []FloatingIPProfile, err error) {
+	allItems, err = pager.GetAllWithContext(context.Background())
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
 // FloatingIpsPager can be used to simplify the use of the "ListFloatingIps" method.
 type FloatingIpsPager struct {
 	hasNext     bool
@@ -174738,6 +177689,282 @@ func (pager *PrivatePathServiceGatewayEndpointGatewayBindingsPager) GetNext() (p
 
 // GetAll invokes GetAllWithContext() using context.Background() as the Context parameter.
 func (pager *PrivatePathServiceGatewayEndpointGatewayBindingsPager) GetAll() (allItems []PrivatePathServiceGatewayEndpointGatewayBinding, err error) {
+	allItems, err = pager.GetAllWithContext(context.Background())
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// PublicAddressRangeAuthorizedCIDRsPager can be used to simplify the use of the "ListPublicAddressRangeAuthorizedCIDRs" method.
+type PublicAddressRangeAuthorizedCIDRsPager struct {
+	hasNext     bool
+	options     *ListPublicAddressRangeAuthorizedCIDRsOptions
+	client      *VpcV1
+	pageContext struct {
+		next *string
+	}
+}
+
+// NewPublicAddressRangeAuthorizedCIDRsPager returns a new PublicAddressRangeAuthorizedCIDRsPager instance.
+func (vpc *VpcV1) NewPublicAddressRangeAuthorizedCIDRsPager(options *ListPublicAddressRangeAuthorizedCIDRsOptions) (pager *PublicAddressRangeAuthorizedCIDRsPager, err error) {
+	if options.Start != nil && *options.Start != "" {
+		err = core.SDKErrorf(nil, "the 'options.Start' field should not be set", "no-query-setting", common.GetComponentInfo())
+		return
+	}
+
+	var optionsCopy ListPublicAddressRangeAuthorizedCIDRsOptions = *options
+	pager = &PublicAddressRangeAuthorizedCIDRsPager{
+		hasNext: true,
+		options: &optionsCopy,
+		client:  vpc,
+	}
+	return
+}
+
+// HasNext returns true if there are potentially more results to be retrieved.
+func (pager *PublicAddressRangeAuthorizedCIDRsPager) HasNext() bool {
+	return pager.hasNext
+}
+
+// GetNextWithContext returns the next page of results using the specified Context.
+func (pager *PublicAddressRangeAuthorizedCIDRsPager) GetNextWithContext(ctx context.Context) (page []PublicAddressRangeAuthorizedCIDR, err error) {
+	if !pager.HasNext() {
+		return nil, fmt.Errorf("no more results available")
+	}
+
+	pager.options.Start = pager.pageContext.next
+
+	result, _, err := pager.client.ListPublicAddressRangeAuthorizedCIDRsWithContext(ctx, pager.options)
+	if err != nil {
+		err = core.RepurposeSDKProblem(err, "error-getting-next-page")
+		return
+	}
+
+	var next *string
+	if result.Next != nil {
+		var start *string
+		start, err = core.GetQueryParam(result.Next.Href, "start")
+		if err != nil {
+			errMsg := fmt.Sprintf("error retrieving 'start' query parameter from URL '%s': %s", *result.Next.Href, err.Error())
+			err = core.SDKErrorf(err, errMsg, "get-query-error", common.GetComponentInfo())
+			return
+		}
+		next = start
+	}
+	pager.pageContext.next = next
+	pager.hasNext = (pager.pageContext.next != nil)
+	page = result.AuthorizedCIDRs
+
+	return
+}
+
+// GetAllWithContext returns all results by invoking GetNextWithContext() repeatedly
+// until all pages of results have been retrieved.
+func (pager *PublicAddressRangeAuthorizedCIDRsPager) GetAllWithContext(ctx context.Context) (allItems []PublicAddressRangeAuthorizedCIDR, err error) {
+	for pager.HasNext() {
+		var nextPage []PublicAddressRangeAuthorizedCIDR
+		nextPage, err = pager.GetNextWithContext(ctx)
+		if err != nil {
+			err = core.RepurposeSDKProblem(err, "error-getting-next-page")
+			return
+		}
+		allItems = append(allItems, nextPage...)
+	}
+	return
+}
+
+// GetNext invokes GetNextWithContext() using context.Background() as the Context parameter.
+func (pager *PublicAddressRangeAuthorizedCIDRsPager) GetNext() (page []PublicAddressRangeAuthorizedCIDR, err error) {
+	page, err = pager.GetNextWithContext(context.Background())
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// GetAll invokes GetAllWithContext() using context.Background() as the Context parameter.
+func (pager *PublicAddressRangeAuthorizedCIDRsPager) GetAll() (allItems []PublicAddressRangeAuthorizedCIDR, err error) {
+	allItems, err = pager.GetAllWithContext(context.Background())
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// PublicAddressRangeAuthorizedCIDRAllocationsPager can be used to simplify the use of the "ListPublicAddressRangeAuthorizedCIDRAllocations" method.
+type PublicAddressRangeAuthorizedCIDRAllocationsPager struct {
+	hasNext     bool
+	options     *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions
+	client      *VpcV1
+	pageContext struct {
+		next *string
+	}
+}
+
+// NewPublicAddressRangeAuthorizedCIDRAllocationsPager returns a new PublicAddressRangeAuthorizedCIDRAllocationsPager instance.
+func (vpc *VpcV1) NewPublicAddressRangeAuthorizedCIDRAllocationsPager(options *ListPublicAddressRangeAuthorizedCIDRAllocationsOptions) (pager *PublicAddressRangeAuthorizedCIDRAllocationsPager, err error) {
+	if options.Start != nil && *options.Start != "" {
+		err = core.SDKErrorf(nil, "the 'options.Start' field should not be set", "no-query-setting", common.GetComponentInfo())
+		return
+	}
+
+	var optionsCopy ListPublicAddressRangeAuthorizedCIDRAllocationsOptions = *options
+	pager = &PublicAddressRangeAuthorizedCIDRAllocationsPager{
+		hasNext: true,
+		options: &optionsCopy,
+		client:  vpc,
+	}
+	return
+}
+
+// HasNext returns true if there are potentially more results to be retrieved.
+func (pager *PublicAddressRangeAuthorizedCIDRAllocationsPager) HasNext() bool {
+	return pager.hasNext
+}
+
+// GetNextWithContext returns the next page of results using the specified Context.
+func (pager *PublicAddressRangeAuthorizedCIDRAllocationsPager) GetNextWithContext(ctx context.Context) (page []PublicAddressRangeAuthorizedCIDRAllocationItemIntf, err error) {
+	if !pager.HasNext() {
+		return nil, fmt.Errorf("no more results available")
+	}
+
+	pager.options.Start = pager.pageContext.next
+
+	result, _, err := pager.client.ListPublicAddressRangeAuthorizedCIDRAllocationsWithContext(ctx, pager.options)
+	if err != nil {
+		err = core.RepurposeSDKProblem(err, "error-getting-next-page")
+		return
+	}
+
+	var next *string
+	if result.Next != nil {
+		var start *string
+		start, err = core.GetQueryParam(result.Next.Href, "start")
+		if err != nil {
+			errMsg := fmt.Sprintf("error retrieving 'start' query parameter from URL '%s': %s", *result.Next.Href, err.Error())
+			err = core.SDKErrorf(err, errMsg, "get-query-error", common.GetComponentInfo())
+			return
+		}
+		next = start
+	}
+	pager.pageContext.next = next
+	pager.hasNext = (pager.pageContext.next != nil)
+	page = result.Allocations
+
+	return
+}
+
+// GetAllWithContext returns all results by invoking GetNextWithContext() repeatedly
+// until all pages of results have been retrieved.
+func (pager *PublicAddressRangeAuthorizedCIDRAllocationsPager) GetAllWithContext(ctx context.Context) (allItems []PublicAddressRangeAuthorizedCIDRAllocationItemIntf, err error) {
+	for pager.HasNext() {
+		var nextPage []PublicAddressRangeAuthorizedCIDRAllocationItemIntf
+		nextPage, err = pager.GetNextWithContext(ctx)
+		if err != nil {
+			err = core.RepurposeSDKProblem(err, "error-getting-next-page")
+			return
+		}
+		allItems = append(allItems, nextPage...)
+	}
+	return
+}
+
+// GetNext invokes GetNextWithContext() using context.Background() as the Context parameter.
+func (pager *PublicAddressRangeAuthorizedCIDRAllocationsPager) GetNext() (page []PublicAddressRangeAuthorizedCIDRAllocationItemIntf, err error) {
+	page, err = pager.GetNextWithContext(context.Background())
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// GetAll invokes GetAllWithContext() using context.Background() as the Context parameter.
+func (pager *PublicAddressRangeAuthorizedCIDRAllocationsPager) GetAll() (allItems []PublicAddressRangeAuthorizedCIDRAllocationItemIntf, err error) {
+	allItems, err = pager.GetAllWithContext(context.Background())
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// PublicAddressRangeProfilesPager can be used to simplify the use of the "ListPublicAddressRangeProfiles" method.
+type PublicAddressRangeProfilesPager struct {
+	hasNext     bool
+	options     *ListPublicAddressRangeProfilesOptions
+	client      *VpcV1
+	pageContext struct {
+		next *string
+	}
+}
+
+// NewPublicAddressRangeProfilesPager returns a new PublicAddressRangeProfilesPager instance.
+func (vpc *VpcV1) NewPublicAddressRangeProfilesPager(options *ListPublicAddressRangeProfilesOptions) (pager *PublicAddressRangeProfilesPager, err error) {
+	if options.Start != nil && *options.Start != "" {
+		err = core.SDKErrorf(nil, "the 'options.Start' field should not be set", "no-query-setting", common.GetComponentInfo())
+		return
+	}
+
+	var optionsCopy ListPublicAddressRangeProfilesOptions = *options
+	pager = &PublicAddressRangeProfilesPager{
+		hasNext: true,
+		options: &optionsCopy,
+		client:  vpc,
+	}
+	return
+}
+
+// HasNext returns true if there are potentially more results to be retrieved.
+func (pager *PublicAddressRangeProfilesPager) HasNext() bool {
+	return pager.hasNext
+}
+
+// GetNextWithContext returns the next page of results using the specified Context.
+func (pager *PublicAddressRangeProfilesPager) GetNextWithContext(ctx context.Context) (page []PublicAddressRangeProfile, err error) {
+	if !pager.HasNext() {
+		return nil, fmt.Errorf("no more results available")
+	}
+
+	pager.options.Start = pager.pageContext.next
+
+	result, _, err := pager.client.ListPublicAddressRangeProfilesWithContext(ctx, pager.options)
+	if err != nil {
+		err = core.RepurposeSDKProblem(err, "error-getting-next-page")
+		return
+	}
+
+	var next *string
+	if result.Next != nil {
+		var start *string
+		start, err = core.GetQueryParam(result.Next.Href, "start")
+		if err != nil {
+			errMsg := fmt.Sprintf("error retrieving 'start' query parameter from URL '%s': %s", *result.Next.Href, err.Error())
+			err = core.SDKErrorf(err, errMsg, "get-query-error", common.GetComponentInfo())
+			return
+		}
+		next = start
+	}
+	pager.pageContext.next = next
+	pager.hasNext = (pager.pageContext.next != nil)
+	page = result.Profiles
+
+	return
+}
+
+// GetAllWithContext returns all results by invoking GetNextWithContext() repeatedly
+// until all pages of results have been retrieved.
+func (pager *PublicAddressRangeProfilesPager) GetAllWithContext(ctx context.Context) (allItems []PublicAddressRangeProfile, err error) {
+	for pager.HasNext() {
+		var nextPage []PublicAddressRangeProfile
+		nextPage, err = pager.GetNextWithContext(ctx)
+		if err != nil {
+			err = core.RepurposeSDKProblem(err, "error-getting-next-page")
+			return
+		}
+		allItems = append(allItems, nextPage...)
+	}
+	return
+}
+
+// GetNext invokes GetNextWithContext() using context.Background() as the Context parameter.
+func (pager *PublicAddressRangeProfilesPager) GetNext() (page []PublicAddressRangeProfile, err error) {
+	page, err = pager.GetNextWithContext(context.Background())
+	err = core.RepurposeSDKProblem(err, "")
+	return
+}
+
+// GetAll invokes GetAllWithContext() using context.Background() as the Context parameter.
+func (pager *PublicAddressRangeProfilesPager) GetAll() (allItems []PublicAddressRangeProfile, err error) {
 	allItems, err = pager.GetAllWithContext(context.Background())
 	err = core.RepurposeSDKProblem(err, "")
 	return
